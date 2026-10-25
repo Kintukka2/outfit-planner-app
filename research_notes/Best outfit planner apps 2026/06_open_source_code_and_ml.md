@@ -56,7 +56,7 @@ The commercial-grade options today are on-device OS segmenters (Apple Vision for
 - If you `pip install rembg` and use the default session in a commercial product, you now get a CC BY-NC model. Pin `u2net`, `isnet-general-use` or `birefnet-*` explicitly, as wardrowbe does. U²-Net's and IS-Net's own licences were not verified here (see Gaps).
 - Libre-Closet's in-browser approach costs nothing per image but inherits AGPL, which is unsuitable for a closed-source commercial client unless you buy a licence from IMG.LY.
 - Class-agnostic segmenters (Apple, ML Kit, BiRefNet) will happily keep the hanger, the bed, or the person's arm when the garment is worn or held. That is why garment-specific parsing (Q2) matters for photos that are not flat-lays.
-- For whole-pipeline unit economics: on-device costs $0. Self-hosted BiRefNet is around 60–90 ms of GPU time per image at 1024 px on A100/4090-class cards (from the BiRefNet table above), so GPU cost is negligible next to paid APIs at $0.02–$0.2 per image.
+- For whole-pipeline unit economics: on-device costs $0. Self-hosted BiRefNet is about 58–96 ms of GPU time per image at 1024 px on A100/4090-class cards (FP16–FP32, from the BiRefNet table above), so GPU cost is negligible next to paid APIs at $0.02–$0.2 per image.
 
 ### Gaps
 - I could not fetch the body of Apple's `VNGenerateForegroundInstanceMaskRequest` reference page, so exact OS minimums and on-device latency numbers are unverified. The WWDC23 transcript does not give them.
