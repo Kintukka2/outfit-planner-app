@@ -22,7 +22,7 @@ Cladwell is the original "capsule wardrobe" outfit app (Cincinnati, since 2016).
 - Erin Flynn is presented as "the founder of Cladwell". She also wrote *The Road Less Worn* and co-owns East Main Cabinets & Design. — [cladwell.com/from-the-founder](https://cladwell.com/from-the-founder)
 - One secondary source tells a different story. It lists the founders as Blake Allsmith, Erin Flynn, Tim Brunk, Chris Merchich and Greg Brunk, and says Erin Flynn and her husband Colin Flynn bought the company in Aug 2019 for an undisclosed price. — [theygotacquired.com](https://theygotacquired.com/saas/cladwell-acquired/) (not confirmed by a primary source)
 - Platforms are iPhone, iPad, Android (100K+ installs) and a web subscription. A ChatGPT connector also exists. New accounts must sign up in the mobile apps. — [cladwell.com/faq](https://cladwell.com/faq); [Google Play](https://play.google.com/store/apps/details?id=com.cladwell)
-- Status: very active. Six App Store releases shipped between 3 and 24 Oct 2026: 5.13.0, 5.14.0, 5.14.1, 5.15.0, 6.0, 6.1, 6.2, 6.3 and 6.4. Version 6.5 was in TestFlight on 25 Oct 2026. — [App Store version history](https://apps.apple.com/us/app/id1140550878); [cladwell.com/outfit-apps](https://cladwell.com/outfit-apps)
+- Status: very active. Nine App Store releases shipped between 3 and 24 Oct 2026: 5.13.0, 5.14.0, 5.14.1, 5.15.0, 6.0, 6.1, 6.2, 6.3 and 6.4. Version 6.5 was in TestFlight on 25 Oct 2026. — [App Store version history](https://apps.apple.com/us/app/id1140550878); [cladwell.com/outfit-apps](https://cladwell.com/outfit-apps)
 
 **Classic mechanics (2016–2023, for context on the "capsule engine")**
 - In 2017 TechCrunch described the core idea as first shrinking your wardrobe, then using every piece "like a bartender with a full bar". It said the app weighed weather, season and current trends when recommending pieces. — [TechCrunch, 2 Oct 2017](https://techcrunch.com/2017/10/02/cladwell-helps-you-pick-out-your-clothes)
@@ -128,7 +128,7 @@ Cladwell is the original "capsule wardrobe" outfit app (Cincinnati, since 2016).
 ### Inferences
 - Cladwell's moat is the capsule abstraction combined with "outfits unlocked per purchase" gap math. The 2026 rebuild layers LLM generation over that structure rather than replacing it. Its seasonal ~33-piece capsule is the closest thing in the category to a published, opinionated recommendation framework.
 - The free tier no longer generates outfits, so free users get a catalog app. Weekly and quarterly SKUs suggest aggressive paywall testing.
-- Shipping six releases in three weeks right before the research date suggests a re-platforming push. Stability and retention of the new AI features are unproven.
+- Shipping nine releases in three weeks right before the research date suggests a re-platforming push. Stability and retention of the new AI features are unproven.
 - Best for people who want to be told what to wear from what they own, especially capsule and minimalist users, and men (menswear support). It is weak for people who want creative collage, social, or deep manual organisation.
 
 ### Gaps
@@ -264,7 +264,7 @@ Pureple is a 2013-vintage manual outfit maker. In 2025–26 it was rebuilt aroun
 - Source: [App Store version history](https://apps.apple.com/us/app/id628106373)
 
 **UI**
-- White, photo-forward layouts; violet (#7B61FF-like) primary buttons and selection states; rounded chips.
+- White, photo-forward layouts; violet primary buttons and selection states; rounded chips.
 - Tab bar: Wardrobe, Outfits, AI (sparkle icon), Community, Profile.
 - Source: [App Store screenshots](https://apps.apple.com/us/app/id628106373)
 
@@ -631,7 +631,7 @@ It monetises through the "Circle" membership ($12.99/mo, $79/yr, $199 lifetime) 
 - Source: [App Store version history](https://apps.apple.com/us/app/id1549029468)
 
 **UI**
-- Cream background, sage-green accents and buttons, a classic serif-free UI and photo-card wardrobes. Several screenshots show "TestFlight" in the status bar. — [App Store screenshots](https://apps.apple.com/us/app/id1549029468)
+- Cream background, sage-green accents and buttons, sans-serif type and photo-card wardrobes. Several screenshots show "TestFlight" in the status bar. — [App Store screenshots](https://apps.apple.com/us/app/id1549029468)
 
 ### Inferences
 - OpenWardrobe has the most complete "lifecycle" model in the set: acquire (browser copilot), use (wear, CPW), value (resale and retention), maintain (alterations), exit (Poshmark).
@@ -836,7 +836,7 @@ Free is capped at 100 items. AI credits are pay-as-you-go.
 - Source: [App Store version history](https://apps.apple.com/us/app/id656212466)
 
 **UI**
-- Clean white and blue (#0A84FF-like) accents, a green circular "+" FAB, and tabs Home / Clothes / Add / Outfits / Community. Marketing headlines are bold black with blue highlights. — [App Store screenshots](https://apps.apple.com/us/app/id656212466)
+- Clean white with bright-blue accents, a green circular "+" FAB, and tabs Home / Clothes / Add / Outfits / Community. Marketing headlines are bold black with blue highlights. — [App Store screenshots](https://apps.apple.com/us/app/id656212466)
 
 ### Inferences
 - GetWardrobe is the "power-user / family / pro stylist" option. Cross-platform web and Mac support, family profiles, Stylist Mode and data export are rare in the category.
