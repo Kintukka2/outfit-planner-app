@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -267,39 +266,41 @@ fun OutfitBuilderScreen(navController: NavHostController, outfitId: Long, date: 
         },
     ) { padding ->
         Column(Modifier.fillMaxSize().padding(padding)) {
-            Box(Modifier.weight(1f).fillMaxWidth().padding(horizontal = 20.dp), contentAlignment = Alignment.TopCenter) {
-                OutfitCanvas(
-                    placements = state.placements,
-                    items = itemsById,
-                    selected = state.selected,
-                    onSelect = vm::select,
-                    onTransform = vm::transform,
-                    modifier = Modifier.fillMaxHeight(),
-                )
-                if (state.placements.isEmpty()) {
-                    Text(
-                        "Tap pieces below to drop them on the canvas.\nDrag to move, pinch to resize and rotate.",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.align(Alignment.Center).padding(24.dp),
-                    )
+            BoxWithConstraints(Modifier.weight(1f).fillMaxWidth().padding(horizontal = 20.dp), contentAlignment = Alignment.TopCenter) {
+                // Largest 4:5 canvas that fits, leaving room for the edit toolbar and stylist feedback below it.
+                val reserved = if (state.selected != null) 150.dp else 100.dp
+                val canvasWidth = minOf(maxWidth, (maxHeight - reserved).coerceAtLeast(120.dp) * OutfitLayout.ASPECT)
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Box(contentAlignment = Alignment.Center) {
+                        OutfitCanvas(
+                            placements = state.placements,
+                            items = itemsById,
+                            selected = state.selected,
+                            onSelect = vm::select,
+                            onTransform = vm::transform,
+                            modifier = Modifier.width(canvasWidth),
+                        )
+                        if (state.placements.isEmpty()) {
+                            Text(
+                                "Tap pieces below to drop them on the canvas.\nDrag to move, pinch to resize and rotate.",
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(24.dp),
+                            )
+                        }
+                    }
+                    state.selected?.let { id ->
+                        Row(Modifier.padding(top = 4.dp), horizontalArrangement = Arrangement.Center) {
+                            IconButton(onClick = { vm.transform(id, 0f, 0f, 0.9f, 0f) }) { Icon(Icons.Outlined.ZoomOut, contentDescription = "Smaller") }
+                            IconButton(onClick = { vm.transform(id, 0f, 0f, 1.1f, 0f) }) { Icon(Icons.Outlined.ZoomIn, contentDescription = "Bigger") }
+                            IconButton(onClick = { vm.sendBack(id) }) { Icon(Icons.Outlined.FlipToBack, contentDescription = "Send backward") }
+                            IconButton(onClick = { vm.bringForward(id) }) { Icon(Icons.Outlined.FlipToFront, contentDescription = "Bring forward") }
+                            IconButton(onClick = { vm.remove(id) }) { Icon(Icons.Outlined.Delete, contentDescription = "Remove from outfit") }
+                        }
+                    }
+                    EvaluationStrip(state.evaluation, Modifier.width(canvasWidth).padding(vertical = 8.dp))
                 }
             }
-
-            state.selected?.let { id ->
-                Row(
-                    Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 4.dp),
-                    horizontalArrangement = Arrangement.Center,
-                ) {
-                    IconButton(onClick = { vm.transform(id, 0f, 0f, 0.9f, 0f) }) { Icon(Icons.Outlined.ZoomOut, contentDescription = "Smaller") }
-                    IconButton(onClick = { vm.transform(id, 0f, 0f, 1.1f, 0f) }) { Icon(Icons.Outlined.ZoomIn, contentDescription = "Bigger") }
-                    IconButton(onClick = { vm.sendBack(id) }) { Icon(Icons.Outlined.FlipToBack, contentDescription = "Send backward") }
-                    IconButton(onClick = { vm.bringForward(id) }) { Icon(Icons.Outlined.FlipToFront, contentDescription = "Bring forward") }
-                    IconButton(onClick = { vm.remove(id) }) { Icon(Icons.Outlined.Delete, contentDescription = "Remove from outfit") }
-                }
-            }
-
-            EvaluationStrip(state.evaluation, Modifier.padding(horizontal = 20.dp, vertical = 6.dp))
 
             Surface(color = MaterialTheme.colorScheme.surfaceContainerLow, tonalElevation = 1.dp) {
                 Column(Modifier.navigationBarsPadding().padding(vertical = 10.dp)) {
@@ -379,7 +380,7 @@ fun OutfitCanvas(
     val density = LocalDensity.current
     BoxWithConstraints(
         modifier
-            .aspectRatio(OutfitLayout.ASPECT, matchHeightConstraintsFirst = true)
+            .aspectRatio(OutfitLayout.ASPECT)
             .clip(MaterialTheme.shapes.extraLarge)
             .background(HangerTokens.extras.tile)
             .pointerInput(Unit) { detectTapGestures { onSelect(null) } }

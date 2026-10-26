@@ -240,9 +240,11 @@ class WardrobeRepository(
     /** Replace a trip's packing list and planned outfits with a fresh plan. Keeps "packed" ticks for lines that survive. */
     suspend fun applyPackingPlan(tripId: Long, plan: PackingPlan) = db.withTransaction {
         val trip = tripDao.get(tripId) ?: return@withTransaction
-        val previouslyPacked = tripDao.getAllPacking().filter { it.tripId == tripId && it.packed }
-            .map { it.itemId to it.label }.toSet()
+        val existing = tripDao.getAllPacking().filter { it.tripId == tripId }
+        val previouslyPacked = existing.filter { it.packed }.map { it.itemId to it.label }.toSet()
+        val custom = existing.filter { it.sortOrder >= CUSTOM_LINE_ORDER }
         tripDao.clearPacking(tripId)
+        tripDao.insertPacking(custom.map { it.copy(id = 0) })
         tripDao.insertPacking(plan.items.mapIndexed { i, line ->
             PackingItemEntity(
                 tripId = tripId,
@@ -265,7 +267,7 @@ class WardrobeRepository(
     suspend fun setPacked(item: PackingItemEntity, packed: Boolean) = tripDao.updatePacking(item.copy(packed = packed))
 
     suspend fun addPackingLine(tripId: Long, label: String, category: com.kintukka.hanger.engine.PackCategory) =
-        tripDao.insertPacking(listOf(PackingItemEntity(tripId = tripId, label = label, category = category, sortOrder = 10_000)))
+        tripDao.insertPacking(listOf(PackingItemEntity(tripId = tripId, label = label, category = category, sortOrder = CUSTOM_LINE_ORDER)))
 
     suspend fun deletePackingLine(item: PackingItemEntity) = tripDao.deletePacking(item)
 
@@ -315,4 +317,9 @@ class WardrobeRepository(
     }
 
     private fun itemToGarment(e: ItemEntity) = Item(e, 0, null, null).toGarment()
+
+    private companion object {
+        /** Packing lines the user typed themselves sort after generated ones and survive regeneration. */
+        const val CUSTOM_LINE_ORDER = 10_000
+    }
 }

@@ -107,7 +107,11 @@ fun ItemTile(
     onClick: (() -> Unit)? = null,
 ) {
     val extras = HangerTokens.extras
-    Column(modifier) {
+    Column(
+        modifier
+            .clip(MaterialTheme.shapes.medium)
+            .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier),
+    ) {
         Box(
             Modifier
                 .fillMaxWidth()
@@ -115,7 +119,6 @@ fun ItemTile(
                 .clip(MaterialTheme.shapes.medium)
                 .background(extras.tile)
                 .then(if (selected) Modifier.border(BorderStroke(2.5.dp, MaterialTheme.colorScheme.primary), MaterialTheme.shapes.medium) else Modifier)
-                .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
                 .semantics { contentDescription = item.name + if (item.status != GarmentStatus.CLEAN) ", ${item.status.label}" else "" },
         ) {
             ItemImage(item, Modifier.fillMaxSize().padding(10.dp))

@@ -15,6 +15,7 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
+import androidx.compose.ui.test.performScrollToIndex
 import androidx.compose.ui.test.hasScrollAction
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -53,9 +54,10 @@ class AppScreenshotTest {
 
     private fun settle() {
         repeat(4) {
-            ShadowLooper.idleMainLooper()
+            // Advance the paused main looper so delayed work (debounced evaluations) runs too.
+            ShadowLooper.idleMainLooper(400, java.util.concurrent.TimeUnit.MILLISECONDS)
             compose.waitForIdle()
-            Thread.sleep(150)
+            Thread.sleep(100)
         }
     }
 
@@ -66,8 +68,18 @@ class AppScreenshotTest {
 
     private fun tab(label: String) = compose.onNodeWithTag("tab-$label").performClick().also { settle() }
 
-    private fun clickText(text: String): SemanticsNodeInteraction =
-        compose.onAllNodesWithText(text).onFirst().performClick().also { settle() }
+    private fun clickText(text: String): SemanticsNodeInteraction {
+        if (compose.onAllNodesWithText(text).fetchSemanticsNodes().isEmpty()) {
+            compose.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText(text))
+            settle()
+        }
+        return compose.onAllNodesWithText(text).onFirst().performClick().also { settle() }
+    }
+
+    private fun scrollTop() {
+        compose.onAllNodes(hasScrollAction()).onFirst().performScrollToIndex(0)
+        settle()
+    }
 
     private fun back() {
         compose.activityRule.scenario.onActivity { it.onBackPressedDispatcher.onBackPressed() }
@@ -101,7 +113,7 @@ class AppScreenshotTest {
         shot("05_item_edit")
         back(); back()
 
-        compose.onNodeWithText("Add").performClick(); settle()
+        compose.onNodeWithText("Add", useUnmergedTree = true).performClick(); settle()
         shot("06_add_sheet")
         back()
 
@@ -113,14 +125,17 @@ class AppScreenshotTest {
         shot("09_builder")
         back(); back()
 
+        scrollTop()
         compose.onNode(hasText("Dress me") and hasClickAction()).performClick(); settle()
         shot("10_shuffle")
         back()
 
+        scrollTop()
         compose.onNode(hasText("Ideas") and hasClickAction()).performClick(); settle()
         shot("11_ideas")
         back()
 
+        scrollTop()
         clickText("Capsules")
         shot("12_capsules")
 
@@ -135,6 +150,7 @@ class AppScreenshotTest {
         shot("16_insights_more")
 
         tab("Today")
+        scrollTop()
         compose.onNodeWithContentDescription("Settings").performClick(); settle()
         shot("17_settings")
     }
@@ -159,7 +175,7 @@ class DarkModeScreenshotTest {
             DemoCloset.load(app.container.db, app.container.images)
         }
         compose.setContent { HangerTheme(darkTheme = true) { HangerNavHost() } }
-        fun settle() = repeat(4) { ShadowLooper.idleMainLooper(); compose.waitForIdle(); Thread.sleep(150) }
+        fun settle() = repeat(4) { ShadowLooper.idleMainLooper(400, java.util.concurrent.TimeUnit.MILLISECONDS); compose.waitForIdle(); Thread.sleep(100) }
         settle()
         compose.onRoot().captureRoboImage("screenshots/dark_today.png")
         compose.onNodeWithTag("tab-Closet").performClick(); settle()

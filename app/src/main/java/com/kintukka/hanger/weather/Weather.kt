@@ -47,26 +47,28 @@ data class Place(val name: String, val region: String, val country: String, val 
 class WeatherRepository(private val settings: SettingsRepository) {
     private val json = Json { ignoreUnknownKeys = true; explicitNulls = false }
     private val mutex = Mutex()
-    private var memory: Pair<String, Forecast>? = null
+    private val memory = mutableMapOf<String, Forecast>()
 
     suspend fun forecast(latitude: Double, longitude: Double, force: Boolean = false): Forecast? = mutex.withLock {
         val key = cacheKey(latitude, longitude)
         val now = System.currentTimeMillis()
-        memory?.let { (k, f) -> if (!force && k == key && now - f.fetchedAt < CACHE_MS) return f }
+        memory[key]?.let { f -> if (!force && now - f.fetchedAt < CACHE_MS) return f }
 
         val cached = settings.weatherCache()?.let { runCatching { json.decodeFromString<CachedForecast>(it) }.getOrNull() }
             ?.takeIf { it.key == key }
         if (!force && cached != null && now - cached.fetchedAt < CACHE_MS) {
-            return parse(cached.body, cached.fetchedAt).also { memory = key to it }
+            return parse(cached.body, cached.fetchedAt).also { memory[key] = it }
         }
 
         val fresh = runCatching { fetch(latitude, longitude) }.getOrNull()
         if (fresh != null) {
-            settings.setWeatherCache(json.encodeToString(CachedForecast(key, now, fresh)))
-            return parse(fresh, now).also { memory = key to it }
+            // Only the home location is persisted for offline use; other places stay in memory.
+            val home = settings.current().let { s -> if (s.latitude != null && s.longitude != null) cacheKey(s.latitude, s.longitude) else null }
+            if (home == null || home == key) settings.setWeatherCache(json.encodeToString(CachedForecast(key, now, fresh)))
+            return parse(fresh, now).also { memory[key] = it }
         }
         // Offline: fall back to the last forecast we had, even if stale.
-        return cached?.let { parse(it.body, it.fetchedAt) }?.also { memory = key to it }
+        return cached?.let { parse(it.body, it.fetchedAt) }?.also { memory[key] = it }
     }
 
     suspend fun searchPlaces(query: String): List<Place> = withContext(Dispatchers.IO) {

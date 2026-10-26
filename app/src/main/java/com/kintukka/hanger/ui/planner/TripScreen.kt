@@ -433,7 +433,7 @@ fun TripScreen(navController: NavHostController, id: Long) {
             text = {
                 Text(
                     "Hanger rebuilds the packing list and planned outfits from your closet and the latest forecast. " +
-                        "Things you've already ticked off stay packed; lines you added yourself are replaced.",
+                        "Things you've already ticked off stay packed, and lines you added yourself are kept.",
                 )
             },
             confirmButton = {
