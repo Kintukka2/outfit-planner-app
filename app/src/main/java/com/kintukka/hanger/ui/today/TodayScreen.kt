@@ -21,6 +21,7 @@ import androidx.compose.material.icons.outlined.AutoAwesome
 import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.Checkroom
 import androidx.compose.material.icons.outlined.Dashboard
+import androidx.compose.material.icons.outlined.Forum
 import androidx.compose.material.icons.outlined.LocalLaundryService
 import androidx.compose.material.icons.outlined.LocationOn
 import androidx.compose.material.icons.outlined.Refresh
@@ -195,6 +196,9 @@ fun TodayScreen(navController: NavHostController) {
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.weight(1f),
                         )
+                        IconButton(onClick = { navController.navigate(com.kintukka.hanger.ui.navigation.StylistRoute) }) {
+                            Icon(Icons.Outlined.Forum, contentDescription = "Ask your stylist")
+                        }
                         IconButton(onClick = { navController.navigate(SettingsRoute) }) {
                             Icon(Icons.Outlined.Settings, contentDescription = "Settings")
                         }

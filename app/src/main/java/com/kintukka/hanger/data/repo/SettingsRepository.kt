@@ -37,6 +37,8 @@ data class Settings(
     /** After this hour the Today screen looks ahead to tomorrow. */
     val tomorrowFromHour: Int = 18,
     val onboarded: Boolean = false,
+    /** Optional Anthropic API key for the AI stylist chat. Stored only in app-private storage. */
+    val stylistApiKey: String? = null,
 ) {
     val hasLocation: Boolean get() = latitude != null && longitude != null
     val hemisphere: Hemisphere get() = if ((latitude ?: 1.0) < 0) Hemisphere.SOUTH else Hemisphere.NORTH
@@ -63,6 +65,7 @@ class SettingsRepository(private val context: Context) {
         val onboarded = booleanPreferencesKey("onboarded")
         val affinity = stringPreferencesKey("affinity_model")
         val weatherCache = stringPreferencesKey("weather_cache")
+        val stylistApiKey = stringPreferencesKey("stylist_api_key")
     }
 
     val settings: Flow<Settings> = store.data.map { p ->
@@ -78,6 +81,7 @@ class SettingsRepository(private val context: Context) {
             defaultOccasion = p[Keys.defaultOccasion]?.let { runCatching { Occasion.valueOf(it) }.getOrNull() } ?: Occasion.CASUAL,
             tomorrowFromHour = p[Keys.tomorrowFromHour] ?: 18,
             onboarded = p[Keys.onboarded] ?: false,
+            stylistApiKey = p[Keys.stylistApiKey]?.takeIf { it.isNotBlank() },
         )
     }
 
@@ -103,6 +107,9 @@ class SettingsRepository(private val context: Context) {
     suspend fun setCurrency(symbol: String) = store.edit { it[Keys.currency] = symbol.take(3) }
     suspend fun setDefaultOccasion(occasion: Occasion) = store.edit { it[Keys.defaultOccasion] = occasion.name }
     suspend fun setOnboarded() = store.edit { it[Keys.onboarded] = true }
+    suspend fun setStylistApiKey(key: String?) = store.edit {
+        if (key.isNullOrBlank()) it.remove(Keys.stylistApiKey) else it[Keys.stylistApiKey] = key.trim()
+    }
 
     val affinity: Flow<AffinityModel> = store.data.map { p -> decodeAffinity(p[Keys.affinity]) }
 

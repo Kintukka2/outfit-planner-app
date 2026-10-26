@@ -61,7 +61,7 @@ android {
     }
 
     packaging {
-        resources { excludes += "/META-INF/{AL2.0,LGPL2.1}" }
+        resources { excludes += setOf("/META-INF/{AL2.0,LGPL2.1}", "/META-INF/DEPENDENCIES", "/META-INF/LICENSE*", "/META-INF/NOTICE*", "/META-INF/versions/9/OSGI-INF/MANIFEST.MF") }
     }
 }
 
@@ -102,6 +102,7 @@ dependencies {
     implementation(libs.mlkit.subject.segmentation)
     implementation(libs.mlkit.image.labeling)
     implementation(libs.play.services.location)
+    implementation(libs.anthropic.java)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)

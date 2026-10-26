@@ -40,6 +40,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.outlined.Checkroom
+import androidx.compose.material.icons.outlined.AutoAwesome
 import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.Cloud
 import androidx.compose.material.icons.outlined.DeleteOutline
@@ -141,7 +142,8 @@ private val Currencies = listOf("£" to "Pound", "$" to "Dollar", "€" to "Euro
 
 private const val PRIVACY_NOTE =
     "Everything stays on this phone. Cut-outs and tagging run on-device. Weather comes from Open-Meteo using " +
-        "only your location's coordinates. No account, no ads, no tracking."
+        "only your location's coordinates. No account, no ads, no tracking. The optional AI stylist sends your " +
+        "wardrobe list (never photos) to Anthropic only while you chat with it."
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -404,6 +406,10 @@ internal fun LazyListScope.settingsContent(
         }
     }
 
+    section("stylist", "AI stylist") {
+        StylistKeyCard(hasKey = s.stylistApiKey != null)
+    }
+
     section("backup", "Backup") {
         val running = state.busy == BusyTask.EXPORT || state.busy == BusyTask.RESTORE
         SettingsCard {
@@ -472,6 +478,49 @@ internal fun LazyListScope.settingsContent(
                 supportingContent = { Text("Forecasts by Open-Meteo.com, licensed under CC BY 4.0.") },
                 colors = rowColors(),
             )
+        }
+    }
+}
+
+/** Optional Anthropic API key for the Claude-powered stylist chat. */
+@Composable
+private fun StylistKeyCard(hasKey: Boolean) {
+    val container = appContainer()
+    val scope = rememberCoroutineScope()
+    var draft by remember { mutableStateOf("") }
+    SettingsCard {
+        ListItem(
+            leadingContent = { Icon(Icons.Outlined.AutoAwesome, contentDescription = null) },
+            headlineContent = { Text(if (hasKey) "Stylist chat is on" else "Chat with a stylist who knows your closet") },
+            supportingContent = {
+                Text(
+                    if (hasKey) "Your key is saved on this phone. Chats use Claude and are billed to your Anthropic account."
+                    else "Paste an Anthropic API key (console.anthropic.com) to turn on the stylist chat. Everything else works without it.",
+                )
+            },
+            colors = rowColors(),
+        )
+        if (hasKey) {
+            TextButton(
+                onClick = { scope.launch { container.settings.setStylistApiKey(null) } },
+                modifier = Modifier.padding(start = 8.dp, bottom = 8.dp),
+            ) { Text("Remove key") }
+        } else {
+            Row(Modifier.padding(start = 16.dp, end = 8.dp, bottom = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+                OutlinedTextField(
+                    value = draft,
+                    onValueChange = { draft = it.trim() },
+                    placeholder = { Text("sk-ant-…") },
+                    singleLine = true,
+                    visualTransformation = androidx.compose.ui.text.input.PasswordVisualTransformation(),
+                    keyboardOptions = KeyboardOptions(keyboardType = androidx.compose.ui.text.input.KeyboardType.Password),
+                    modifier = Modifier.weight(1f),
+                )
+                TextButton(
+                    onClick = { scope.launch { container.settings.setStylistApiKey(draft); draft = "" } },
+                    enabled = draft.length > 20,
+                ) { Text("Save") }
+            }
         }
     }
 }
