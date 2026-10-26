@@ -16,6 +16,7 @@ import com.kintukka.hanger.data.db.ItemEntity
 import com.kintukka.hanger.data.db.OutfitEntity
 import com.kintukka.hanger.data.db.PackingItemEntity
 import com.kintukka.hanger.data.db.TripEntity
+import com.kintukka.hanger.data.db.displayImageFile
 import com.kintukka.hanger.engine.FeedbackEvent
 import com.kintukka.hanger.engine.FeedbackLearner
 import com.kintukka.hanger.engine.FeedbackType
@@ -52,7 +53,7 @@ class WardrobeRepository(
         val byId = stats.associateBy { it.itemId }
         entities.map { e ->
             val s = byId[e.id]
-            Item(e, s?.wears ?: 0, s?.lastWorn, images.file(if (e.useOriginalImage) e.originalImageFile else e.imageFile ?: e.originalImageFile))
+            Item(e, s?.wears ?: 0, s?.lastWorn, images.file(e.displayImageFile))
         }
     }.stateIn(scope, SharingStarted.Eagerly, emptyList())
 
@@ -108,8 +109,14 @@ class WardrobeRepository(
 
     suspend fun setStatus(id: Long, status: GarmentStatus) {
         val item = itemDao.get(id) ?: return
-        val resetCount = status == GarmentStatus.CLEAN && item.status == GarmentStatus.DIRTY
-        updateItem(item.copy(status = status, wearsSinceWash = if (resetCount) 0 else item.wearsSinceWash))
+        val washed = status == GarmentStatus.CLEAN && item.status == GarmentStatus.DIRTY
+        updateItem(
+            item.copy(
+                status = status,
+                wearsSinceWash = if (washed) 0 else item.wearsSinceWash,
+                lastWashed = if (washed) LocalDate.now() else item.lastWashed,
+            ),
+        )
     }
 
     suspend fun toggleFavorite(id: Long) {
@@ -185,7 +192,8 @@ class WardrobeRepository(
         db.withTransaction {
             dayDao.update(entry.copy(worn = worn))
             val items = itemDao.getMany(dayDao.itemIds(entryId))
-            val updated = items.map { item ->
+            // Only wears on or after the last wash count towards the next one.
+            val updated = items.filter { it.lastWashed == null || !entry.date.isBefore(it.lastWashed) }.map { item ->
                 if (worn) {
                     val next = LaundryRules.afterWear(itemToGarment(item), entry.date)
                     item.copy(
@@ -195,7 +203,9 @@ class WardrobeRepository(
                     )
                 } else {
                     val since = (item.wearsSinceWash - 1).coerceAtLeast(0)
-                    val revert = item.status == GarmentStatus.DIRTY && (item.wearsBeforeWash == 0 || since < item.wearsBeforeWash)
+                    // Undo an automatic move to the laundry, never one the user made by hand.
+                    val revert = autoLaundry && item.status == GarmentStatus.DIRTY &&
+                        item.wearsBeforeWash > 0 && item.wearsSinceWash >= item.wearsBeforeWash && since < item.wearsBeforeWash
                     item.copy(
                         wearsSinceWash = since,
                         status = if (revert) GarmentStatus.CLEAN else item.status,
@@ -211,6 +221,19 @@ class WardrobeRepository(
         val entry = dayDao.get(entryId) ?: return
         if (entry.worn) setWorn(entryId, false)
         dayDao.delete(entryId)
+    }
+
+    /** Replace the pieces of an existing calendar entry (editing a look), keeping laundry state consistent. */
+    suspend fun replaceEntryItems(entryId: Long, itemIds: List<Long>, outfitId: Long?) {
+        val entry = dayDao.get(entryId) ?: return
+        val wasWorn = entry.worn
+        if (wasWorn) setWorn(entryId, false)
+        db.withTransaction {
+            dayDao.clearItems(entryId)
+            dayDao.insertItems(itemIds.distinct().map { DayEntryItemEntity(entryId, it) })
+            dayDao.update(entry.copy(outfitId = outfitId, worn = false))
+        }
+        if (wasWorn) setWorn(entryId, true)
     }
 
     suspend fun updateEntryNote(entryId: Long, note: String) {
@@ -305,7 +328,7 @@ class WardrobeRepository(
         val stats = itemDao.getWearStats().associateBy { it.itemId }
         return itemDao.getAll().map { e ->
             val s = stats[e.id]
-            Item(e, s?.wears ?: 0, s?.lastWorn, images.file(if (e.useOriginalImage) e.originalImageFile else e.imageFile ?: e.originalImageFile))
+            Item(e, s?.wears ?: 0, s?.lastWorn, images.file(e.displayImageFile))
         }
     }
 

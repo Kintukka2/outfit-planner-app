@@ -83,6 +83,46 @@ class RepositoryTest {
     }
 
     @Test
+    fun removingAWearFromBeforeTheLastWashLeavesLaundryAlone() = runBlocking {
+        val shirt = repo.addItem(ItemEntity(name = "Shirt", category = Category.TOP, wearsBeforeWash = 1))
+        val monday = repo.logWorn(LocalDate.now().minusDays(2), listOf(shirt))
+        assertEquals(GarmentStatus.DIRTY, db.items().get(shirt)!!.status)
+        repo.washAll()
+        repo.logWorn(LocalDate.now(), listOf(shirt))
+        assertEquals(GarmentStatus.DIRTY, db.items().get(shirt)!!.status)
+
+        // Monday's wear was washed out already; deleting it must not clean today's dirty shirt.
+        repo.deleteEntry(monday)
+        assertEquals(GarmentStatus.DIRTY, db.items().get(shirt)!!.status)
+        assertEquals(1, db.items().get(shirt)!!.wearsSinceWash)
+
+        // Logging an old outfit after a wash doesn't send fresh laundry back to the basket.
+        repo.washAll()
+        repo.logWorn(LocalDate.now().minusDays(5), listOf(shirt))
+        assertEquals(GarmentStatus.CLEAN, db.items().get(shirt)!!.status)
+    }
+
+    @Test
+    fun editingAWornLookUpdatesItInPlace() = runBlocking {
+        val tee = repo.addItem(ItemEntity(name = "Tee", category = Category.TOP, wearsBeforeWash = 1))
+        val shirt = repo.addItem(ItemEntity(name = "Shirt", category = Category.TOP, wearsBeforeWash = 1))
+        val jeans = repo.addItem(ItemEntity(name = "Jeans", category = Category.BOTTOM, wearsBeforeWash = 3))
+        val entry = repo.logWorn(LocalDate.now(), listOf(tee, jeans))
+
+        repo.replaceEntryItems(entry, listOf(shirt, jeans), null)
+
+        assertEquals(1, db.days().getAll().size)
+        assertEquals(setOf(shirt, jeans), db.days().itemIds(entry).toSet())
+        assertTrue(db.days().get(entry)!!.worn)
+        assertEquals(GarmentStatus.CLEAN, db.items().get(tee)!!.status)
+        assertEquals(GarmentStatus.DIRTY, db.items().get(shirt)!!.status)
+        assertEquals(1, db.items().get(jeans)!!.wearsSinceWash)
+        val wears = db.items().getWearStats().associateBy { it.itemId }
+        assertEquals(null, wears[tee])
+        assertEquals(1, wears[jeans]!!.wears)
+    }
+
+    @Test
     fun savedOutfitsKeepPlacementsAndCountWears() = runBlocking {
         val a = repo.addItem(ItemEntity(name = "Shirt", category = Category.TOP))
         val b = repo.addItem(ItemEntity(name = "Chinos", category = Category.BOTTOM))

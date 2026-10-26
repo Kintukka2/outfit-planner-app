@@ -46,11 +46,17 @@ data class Place(val name: String, val region: String, val country: String, val 
 /** Open-Meteo client: free, keyless, no account. */
 class WeatherRepository(private val settings: SettingsRepository) {
     private val json = Json { ignoreUnknownKeys = true; explicitNulls = false }
-    private val mutex = Mutex()
-    private val memory = mutableMapOf<String, Forecast>()
+    /** One lock per place, so a slow fetch for a trip destination never blocks the home forecast. */
+    private val locks = java.util.concurrent.ConcurrentHashMap<String, Mutex>()
+    private val memory = java.util.concurrent.ConcurrentHashMap<String, Forecast>()
 
-    suspend fun forecast(latitude: Double, longitude: Double, force: Boolean = false): Forecast? = mutex.withLock {
+    suspend fun forecast(latitude: Double, longitude: Double, force: Boolean = false): Forecast? {
         val key = cacheKey(latitude, longitude)
+        memory[key]?.let { f -> if (!force && System.currentTimeMillis() - f.fetchedAt < CACHE_MS) return f }
+        return locks.getOrPut(key) { Mutex() }.withLock { load(key, latitude, longitude, force) }
+    }
+
+    private suspend fun load(key: String, latitude: Double, longitude: Double, force: Boolean): Forecast? {
         val now = System.currentTimeMillis()
         memory[key]?.let { f -> if (!force && now - f.fetchedAt < CACHE_MS) return f }
 

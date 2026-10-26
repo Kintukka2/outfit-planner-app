@@ -16,6 +16,7 @@ import com.kintukka.hanger.engine.CategoryGuesser
 import com.kintukka.hanger.engine.ColorTools
 import com.kintukka.hanger.engine.FashionColor
 import com.kintukka.hanger.engine.SubcategoryPreset
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
@@ -55,7 +56,12 @@ class GarmentProcessor(private val context: Context, private val images: ImageSt
     suspend fun process(uri: Uri): ProcessedGarment = withContext(Dispatchers.Default) {
         val photo = images.decode(uri, maxSide = 1600)
         val originalFile = images.savePhoto(photo)
-        processBitmap(photo, originalFile)
+        try {
+            processBitmap(photo, originalFile)
+        } catch (e: CancellationException) {
+            images.delete(originalFile)
+            throw e
+        }
     }
 
     /** Redo the cut-out and analysis from a stored original photo. */
@@ -68,8 +74,15 @@ class GarmentProcessor(private val context: Context, private val images: ImageSt
         val working = photo.scaledToMax(1024)
         val cutout = cutOut(working)
         val cutoutFile = cutout?.let(images::saveCutout)
-        val colors = extractColors(cutout ?: working.centerCrop(0.6f))
-        val labels = label(working)
+        val colors: List<FashionColor>
+        val labels: List<Pair<String, Float>>
+        try {
+            colors = extractColors(cutout ?: working.centerCrop(0.6f))
+            labels = label(working)
+        } catch (e: CancellationException) {
+            images.delete(cutoutFile)
+            throw e
+        }
         return ProcessedGarment(
             originalFile = originalFile,
             cutoutFile = cutoutFile,

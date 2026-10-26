@@ -91,6 +91,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -112,12 +113,19 @@ class BuilderViewModel(
     private val outfitId: Long,
     private val date: LocalDate?,
     initialItemIds: List<Long>,
+    /** Calendar entry being edited, or 0. */
+    val entryId: Long = 0,
 ) : ViewModel() {
     private val _state = MutableStateFlow(BuilderState())
     val state: StateFlow<BuilderState> = _state
     private var evalJob: Job? = null
 
     val closet: StateFlow<List<Item>> = container.repo.closet.stateIn(viewModelScope, SharingStarted.Eagerly, emptyList())
+
+    /** Every item, including archived/wishlist ones that may still sit in an existing outfit. */
+    val allItems: StateFlow<Map<Long, Item>> = container.repo.allItems
+        .map { list -> list.associateBy { it.id } }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, emptyMap())
 
     init {
         viewModelScope.launch {
@@ -139,7 +147,7 @@ class BuilderViewModel(
         }
     }
 
-    private fun categoryOf(id: Long): Category? = closet.value.firstOrNull { it.id == id }?.category
+    private fun categoryOf(id: Long): Category? = allItems.value[id]?.category
 
     fun toggle(item: Item) {
         _state.update { s ->
@@ -215,7 +223,7 @@ class BuilderViewModel(
 
     fun defaultName(): String {
         val ids = _state.value.placements.map { it.itemId }
-        return autoOutfitName(closet.value.filter { it.id in ids })
+        return autoOutfitName(ids.mapNotNull { allItems.value[it] })
     }
 
     /** Save the outfit; optionally also plan it on [date] or log it as worn. */
@@ -223,8 +231,15 @@ class BuilderViewModel(
         val s = _state.value
         if (s.placements.isEmpty()) return@launch
         val ordered = s.placements.sortedBy { it.z }
-        val id = container.repo.saveOutfit(outfitId.takeIf { it > 0 }, name.ifBlank { defaultName() }, s.occasion, ordered)
         val ids = ordered.map { it.itemId }
+        if (entryId > 0) {
+            // Editing a calendar look: update it in place (and its saved outfit, if it came from one).
+            val savedId = if (outfitId > 0) container.repo.saveOutfit(outfitId, name.ifBlank { defaultName() }, s.occasion, ordered) else null
+            container.repo.replaceEntryItems(entryId, ids, savedId)
+            _state.update { it.copy(done = true) }
+            return@launch
+        }
+        val id = container.repo.saveOutfit(outfitId.takeIf { it > 0 }, name.ifBlank { defaultName() }, s.occasion, ordered)
         val day = date ?: LocalDate.now()
         when {
             wear -> container.repo.logWorn(day, ids, id, s.occasion)
@@ -236,23 +251,24 @@ class BuilderViewModel(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun OutfitBuilderScreen(navController: NavHostController, outfitId: Long, date: LocalDate?, initialItemIds: List<Long>) {
-    val vm = hangerViewModel(key = "builder-$outfitId-$date-${initialItemIds.joinToString()}") {
-        BuilderViewModel(it, outfitId, date, initialItemIds)
+fun OutfitBuilderScreen(navController: NavHostController, outfitId: Long, date: LocalDate?, initialItemIds: List<Long>, entryId: Long = 0) {
+    val vm = hangerViewModel(key = "builder-$outfitId-$date-$entryId-${initialItemIds.joinToString()}") {
+        BuilderViewModel(it, outfitId, date, initialItemIds, entryId)
     }
     val state by vm.state.collectAsStateWithLifecycle()
     val closet by vm.closet.collectAsStateWithLifecycle()
+    val allItems by vm.allItems.collectAsStateWithLifecycle()
     var category by remember { mutableStateOf<Category?>(Category.TOP) }
     var saving by remember { mutableStateOf(false) }
 
     LaunchedEffect(state.done) { if (state.done) navController.popBackStack() }
 
-    val itemsById = remember(closet) { closet.associateBy { it.id } }
+    val itemsById = allItems
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(if (outfitId > 0) "Edit outfit" else "Build an outfit") },
+                title = { Text(if (entryId > 0) "Edit look" else if (outfitId > 0) "Edit outfit" else "Build an outfit") },
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) { Icon(Icons.AutoMirrored.Outlined.ArrowBack, contentDescription = "Back") }
                 },
@@ -345,6 +361,12 @@ fun OutfitBuilderScreen(navController: NavHostController, outfitId: Long, date: 
                 }
                 val day = date ?: LocalDate.now()
                 val future = day.isAfter(LocalDate.now())
+                if (entryId > 0) {
+                    Button(onClick = { saving = false; vm.save(name, plan = false, wear = false) }, modifier = Modifier.fillMaxWidth().height(50.dp)) {
+                        Text("Update this look")
+                    }
+                    return@Column
+                }
                 Button(onClick = { saving = false; vm.save(name, plan = false, wear = false) }, modifier = Modifier.fillMaxWidth().height(50.dp)) {
                     Text("Save to outfits")
                 }

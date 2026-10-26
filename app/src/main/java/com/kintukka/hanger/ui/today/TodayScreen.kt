@@ -189,7 +189,7 @@ fun TodayScreen(navController: NavHostController) {
     LaunchedEffect(suggestVm) { suggestVm.messages.collect { snackbar.showSnackbar(it) } }
 
     // Re-run suggestions when the closet or laundry changes (e.g. after logging an outfit).
-    LaunchedEffect(state.closetSize, state.dirty, state.entries.size) { suggestVm.refresh() }
+    LaunchedEffect(state.closetSize, state.dirty, state.entries.size) { suggestVm.reload() }
 
     Box(Modifier.fillMaxSize()) {
         LazyColumn(

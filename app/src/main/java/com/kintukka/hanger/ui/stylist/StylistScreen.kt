@@ -100,14 +100,13 @@ class StylistViewModel(private val container: AppContainer) : ViewModel() {
     private val _messages = MutableSharedFlow<String>(extraBufferCapacity = 2)
     val messages: SharedFlow<String> = _messages
     private var session: StylistSession? = null
-    private var lastQuestion: String? = null
+    private var sessionKey: String? = null
 
     init {
         viewModelScope.launch {
             container.settings.settings.collect { s ->
-                val hadKey = _state.value.hasKey
                 _state.update { it.copy(hasKey = s.stylistApiKey != null) }
-                if (hadKey != (s.stylistApiKey != null)) session = null
+                if (s.stylistApiKey != sessionKey) session = null
             }
         }
     }
@@ -119,13 +118,15 @@ class StylistViewModel(private val container: AppContainer) : ViewModel() {
         val items = container.repo.snapshotCloset()
         _state.update { it.copy(items = container.repo.snapshotItems().associateBy { i -> i.id }) }
         val weather = runCatching { container.stylist.weatherFor(LocalDate.now()) }.getOrNull()
-        return StylistSession(key, StylistPrompt.build(items, settings, LocalDate.now(), weather)).also { session = it }
+        return StylistSession(key, StylistPrompt.build(items, settings, LocalDate.now(), weather)).also {
+            session = it
+            sessionKey = key
+        }
     }
 
     fun send(text: String) {
         val question = text.trim()
         if (question.isEmpty() || _state.value.sending) return
-        lastQuestion = question
         _state.update { it.copy(sending = true, messages = it.messages + ChatMessage(true, question)) }
         viewModelScope.launch {
             val s = ensureSession()

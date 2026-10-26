@@ -44,8 +44,12 @@ interface ItemDao {
     @Query("DELETE FROM items WHERE id = :id")
     suspend fun delete(id: Long)
 
-    @Query("UPDATE items SET status = :status, wearsSinceWash = 0, updatedAt = :now WHERE status = 'DIRTY'")
-    suspend fun washAll(status: GarmentStatus = GarmentStatus.CLEAN, now: Long = System.currentTimeMillis())
+    @Query("UPDATE items SET status = :status, wearsSinceWash = 0, lastWashed = :today, updatedAt = :now WHERE status = 'DIRTY'")
+    suspend fun washAll(
+        today: java.time.LocalDate = java.time.LocalDate.now(),
+        status: GarmentStatus = GarmentStatus.CLEAN,
+        now: Long = System.currentTimeMillis(),
+    )
 
     @Query(
         """

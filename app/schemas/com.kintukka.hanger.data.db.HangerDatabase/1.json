@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "ea6837a8e73a4e9b57d976d47232a818",
+    "identityHash": "b2669fa8f50bb17b1a4740a9573736bf",
     "entities": [
       {
         "tableName": "items",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `category` TEXT NOT NULL, `subcategory` TEXT NOT NULL, `colors` TEXT NOT NULL, `pattern` TEXT NOT NULL, `formality` INTEGER NOT NULL, `warmth` INTEGER NOT NULL, `seasons` TEXT NOT NULL, `sporty` INTEGER NOT NULL, `waterproof` INTEGER NOT NULL, `status` TEXT NOT NULL, `favorite` INTEGER NOT NULL, `archived` INTEGER NOT NULL, `wishlist` INTEGER NOT NULL, `brand` TEXT NOT NULL, `size` TEXT NOT NULL, `material` TEXT NOT NULL, `price` REAL, `purchaseDate` INTEGER, `notes` TEXT NOT NULL, `tags` TEXT NOT NULL, `imageFile` TEXT, `originalImageFile` TEXT, `useOriginalImage` INTEGER NOT NULL, `wearsSinceWash` INTEGER NOT NULL, `wearsBeforeWash` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, `isDemo` INTEGER NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `category` TEXT NOT NULL, `subcategory` TEXT NOT NULL, `colors` TEXT NOT NULL, `pattern` TEXT NOT NULL, `formality` INTEGER NOT NULL, `warmth` INTEGER NOT NULL, `seasons` TEXT NOT NULL, `sporty` INTEGER NOT NULL, `waterproof` INTEGER NOT NULL, `status` TEXT NOT NULL, `favorite` INTEGER NOT NULL, `archived` INTEGER NOT NULL, `wishlist` INTEGER NOT NULL, `brand` TEXT NOT NULL, `size` TEXT NOT NULL, `material` TEXT NOT NULL, `price` REAL, `purchaseDate` INTEGER, `notes` TEXT NOT NULL, `tags` TEXT NOT NULL, `imageFile` TEXT, `originalImageFile` TEXT, `useOriginalImage` INTEGER NOT NULL, `wearsSinceWash` INTEGER NOT NULL, `wearsBeforeWash` INTEGER NOT NULL, `lastWashed` INTEGER, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, `isDemo` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -169,6 +169,12 @@
             "columnName": "wearsBeforeWash",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "lastWashed",
+            "columnName": "lastWashed",
+            "affinity": "INTEGER",
+            "notNull": false
           },
           {
             "fieldPath": "createdAt",
@@ -840,7 +846,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ea6837a8e73a4e9b57d976d47232a818')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b2669fa8f50bb17b1a4740a9573736bf')"
     ]
   }
 }

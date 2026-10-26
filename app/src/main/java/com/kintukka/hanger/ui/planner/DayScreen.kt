@@ -319,6 +319,7 @@ fun DayScreen(navController: NavHostController, date: LocalDate) {
                                         outfitId = look.entry.entity.outfitId ?: 0,
                                         dateEpoch = dateEpoch,
                                         itemIds = look.entry.itemIds.joinToString(","),
+                                        entryId = look.entry.id,
                                     ),
                                 )
                             },

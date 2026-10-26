@@ -59,6 +59,8 @@ data class ItemEntity(
     val useOriginalImage: Boolean = false,
     val wearsSinceWash: Int = 0,
     val wearsBeforeWash: Int = 1,
+    /** Day the item was last washed; wears logged before it don't count towards the next wash. */
+    @Serializable(with = LocalDateSerializer::class) val lastWashed: LocalDate? = null,
     val createdAt: Long = System.currentTimeMillis(),
     val updatedAt: Long = System.currentTimeMillis(),
     val isDemo: Boolean = false,
@@ -195,6 +197,10 @@ data class CapsuleEntity(
 )
 @Serializable
 data class CapsuleItemEntity(val capsuleId: Long, val itemId: Long)
+
+/** The file the app shows for an item: the cut-out unless the user chose the original photo. */
+val ItemEntity.displayImageFile: String?
+    get() = if (useOriginalImage) originalImageFile ?: imageFile else imageFile ?: originalImageFile
 
 /** Aggregated wear stats per item, computed from worn day entries. */
 data class ItemWearStats(

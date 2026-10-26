@@ -98,6 +98,13 @@ class AddItemsViewModel(private val container: AppContainer) : ViewModel() {
 
     private suspend fun process(key: Int, uri: Uri) {
         val result = runCatching { container.processor.process(uri) }
+        val stillWanted = !_state.value.saved && _state.value.drafts.any { it.key == key }
+        if (!stillWanted) {
+            // Removed (or the batch was saved) while this photo was still processing.
+            result.getOrNull()?.let(::deleteFiles)
+            _state.update { it.copy(processedCount = it.processedCount + 1) }
+            return
+        }
         _state.update { s ->
             s.copy(
                 processedCount = s.processedCount + 1,
@@ -150,6 +157,7 @@ class AddItemsViewModel(private val container: AppContainer) : ViewModel() {
                 )
             }
             container.repo.addItems(entities)
+            savedKeys += ready.map { it.key }
             _state.update { it.copy(saving = false, saved = true) }
         }
     }
@@ -159,9 +167,11 @@ class AddItemsViewModel(private val container: AppContainer) : ViewModel() {
         container.images.delete(p.cutoutFile)
     }
 
+    private val savedKeys = mutableSetOf<Int>()
+
     override fun onCleared() {
         // Photos processed but never saved shouldn't linger in app storage.
-        if (!_state.value.saved) _state.value.drafts.mapNotNull { it.processed }.forEach(::deleteFiles)
+        _state.value.drafts.filter { it.key !in savedKeys }.mapNotNull { it.processed }.forEach(::deleteFiles)
     }
 }
 

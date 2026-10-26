@@ -58,6 +58,7 @@ import com.kintukka.hanger.ui.navigation.BuilderRoute
 import com.kintukka.hanger.ui.navigation.toEpochOrNone
 import com.kintukka.hanger.weather.DayWeather
 import com.kintukka.hanger.data.repo.TempUnit
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -92,31 +93,43 @@ class SuggestViewModel(
     val messages: SharedFlow<String> = _messages
     private var seed = date.toEpochDay()
     private var anchorId = anchorItemId
+    private var refreshJob: Job? = null
+    private val ready = kotlinx.coroutines.CompletableDeferred<Unit>()
 
     init {
         viewModelScope.launch {
             val settings = container.settings.current()
             _state.update { it.copy(occasion = settings.defaultOccasion, unit = settings.tempUnit) }
-            refresh()
+            ready.complete(Unit)
+            reload()
         }
     }
 
     fun setOccasion(occasion: Occasion) {
         _state.update { it.copy(occasion = occasion) }
-        viewModelScope.launch { refresh() }
+        reload()
     }
 
     fun clearAnchor() {
         anchorId = null
-        viewModelScope.launch { refresh() }
+        reload()
     }
 
     fun more() {
         seed += 7919
-        viewModelScope.launch { refresh() }
+        reload()
     }
 
-    suspend fun refresh() {
+    /** Recompute suggestions; a newer request cancels an older one still running. */
+    fun reload() {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
+            ready.await()
+            refresh()
+        }
+    }
+
+    private suspend fun refresh() {
         _state.update { it.copy(loading = true) }
         val date = _state.value.date
         val items = container.repo.snapshotItems().associateBy { it.id }

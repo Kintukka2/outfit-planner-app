@@ -50,11 +50,15 @@ object Reminders {
         val request = PeriodicWorkRequestBuilder<DailyOutfitWorker>(24, TimeUnit.HOURS)
             .setInitialDelay(delay, TimeUnit.MINUTES)
             .build()
-        wm.enqueueUniquePeriodicWork(WORK_NAME, ExistingPeriodicWorkPolicy.UPDATE, request)
+        // Re-enqueue so a new time (or the next app start) always measures from now.
+        wm.enqueueUniquePeriodicWork(WORK_NAME, ExistingPeriodicWorkPolicy.CANCEL_AND_REENQUEUE, request)
     }
 
-    fun canNotify(context: Context): Boolean =
-        ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+    fun canNotify(context: Context): Boolean {
+        val granted = android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.TIRAMISU ||
+            ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+        return granted && NotificationManagerCompat.from(context).areNotificationsEnabled()
+    }
 
     internal fun post(context: Context, title: String, text: String) {
         if (!canNotify(context)) return

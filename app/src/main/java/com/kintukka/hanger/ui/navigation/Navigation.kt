@@ -82,6 +82,8 @@ const val NO_DATE = Long.MIN_VALUE
     val outfitId: Long = 0,
     val dateEpoch: Long = NO_DATE,
     val itemIds: String = "",
+    /** When editing a calendar look, the entry to update instead of adding a new one. */
+    val entryId: Long = 0,
 )
 
 @Serializable data class ShuffleRoute(val dateEpoch: Long = NO_DATE)
@@ -169,6 +171,7 @@ fun HangerNavHost(navController: NavHostController = rememberNavController()) {
                     outfitId = r.outfitId,
                     date = r.dateEpoch.toDateOrNull(),
                     initialItemIds = r.itemIds.split(",").mapNotNull(String::toLongOrNull),
+                    entryId = r.entryId,
                 )
             }
             composable<ShuffleRoute> { ShuffleScreen(navController, it.toRoute<ShuffleRoute>().dateEpoch.toDateOrNull()) }

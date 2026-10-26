@@ -34,6 +34,7 @@ import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
 import com.kintukka.hanger.HangerApp
 import com.kintukka.hanger.MainActivity
+import com.kintukka.hanger.data.db.displayImageFile
 import com.kintukka.hanger.ui.formatTemp
 import java.time.LocalDate
 
@@ -62,7 +63,7 @@ class TodayWidget : GlanceAppWidget() {
             .firstOrNull()?.itemIds.orEmpty()
         val weather = runCatching { container.stylist.weatherFor(today) }.getOrNull()
         val bitmaps = ids.mapNotNull { items[it]?.entity }
-            .mapNotNull { e -> (if (e.useOriginalImage) e.originalImageFile else e.imageFile ?: e.originalImageFile) }
+            .mapNotNull { e -> e.displayImageFile }
             .take(4)
             .mapNotNull { container.images.decodeFile(it, 160) }
         val title = when {

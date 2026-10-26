@@ -62,6 +62,7 @@ import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.kintukka.hanger.AppContainer
 import com.kintukka.hanger.data.db.ItemEntity
+import com.kintukka.hanger.data.db.displayImageFile
 import com.kintukka.hanger.demo.DemoArt
 import com.kintukka.hanger.ui.hangerViewModel
 import com.kintukka.hanger.ui.navigation.ItemRoute
@@ -107,7 +108,7 @@ class EditItemViewModel(private val container: AppContainer, private val id: Lon
 
     fun imageFile(s: EditItemState): File? {
         val e = s.entity ?: return null
-        return container.images.file(if (e.useOriginalImage) e.originalImageFile else e.imageFile ?: e.originalImageFile)
+        return container.images.file(e.displayImageFile)
     }
 
     fun redoCutout() {
