@@ -26,8 +26,11 @@ things that earn them 1-star reviews (paywalls after hours of cataloguing, data 
 3. Open Hanger. Tap **Explore with a demo closet** to try everything with sample clothes, or **Add my first pieces** to start your own.
    You can remove the demo closet any time in Settings.
 
-Updates install over the top and keep your data, because every build is signed with the same key
-(`app/signing/hanger-personal.jks`, committed on purpose for this personal, sideloaded app).
+Updates install over the top and keep your data as long as they're signed with the same key.
+The signing key is **never committed**. Keep the `hanger-personal.jks` you were given somewhere safe, and to let
+CI publish signed builds add two repository secrets: `HANGER_KEYSTORE_BASE64` (the keystore, base64-encoded) and
+`HANGER_KEYSTORE_PASSWORD`. Locally, put the same values in a git-ignored `keystore.properties`
+(`storeFile`, `storePassword`, `keyAlias=hanger`, `keyPassword`). Without a key, builds use debug signing.
 
 ## What it does
 

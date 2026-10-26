@@ -1,3 +1,4 @@
+import java.util.Properties
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -8,6 +9,14 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.roborazzi)
 }
+
+// Release signing key is never committed. It comes from environment variables (CI secrets) or a
+// git-ignored keystore.properties file; without either, release builds fall back to debug signing.
+val keystoreProps = Properties().apply {
+    rootProject.file("keystore.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }
+}
+fun signingValue(env: String, prop: String): String? = System.getenv(env) ?: keystoreProps.getProperty(prop)
+val releaseKeystore: File? = signingValue("HANGER_KEYSTORE", "storeFile")?.let { rootProject.file(it) }?.takeIf { it.exists() }
 
 android {
     namespace = "com.kintukka.hanger"
@@ -20,26 +29,31 @@ android {
         versionCode = 1
         versionName = "1.0.0"
         vectorDrawables { useSupportLibrary = true }
+        // Modern Pixels are 64-bit ARM only; this drops ~30 MB of unused ML Kit native code.
+        ndk { abiFilters += listOf("arm64-v8a") }
     }
 
     signingConfigs {
-        // Personal sideload key, committed on purpose so every build (local or CI)
-        // can update the installed app in place without losing data.
-        create("personal") {
-            storeFile = file("signing/hanger-personal.jks")
-            storePassword = System.getenv("HANGER_KEYSTORE_PASSWORD")
-            keyAlias = "hanger"
-            keyPassword = System.getenv("HANGER_KEYSTORE_PASSWORD")
+        if (releaseKeystore != null) {
+            create("personal") {
+                storeFile = releaseKeystore
+                storePassword = signingValue("HANGER_KEYSTORE_PASSWORD", "storePassword")
+                keyAlias = signingValue("HANGER_KEY_ALIAS", "keyAlias") ?: "hanger"
+                keyPassword = signingValue("HANGER_KEY_PASSWORD", "keyPassword")
+            }
         }
     }
 
     buildTypes {
         debug {
-            signingConfig = signingConfigs.getByName("personal")
+            signingConfigs.findByName("personal")?.let { signingConfig = it }
         }
         release {
-            isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("personal")
+            // Shrink unused library code (mostly the extended icon set); names are kept, see proguard-rules.pro.
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.findByName("personal") ?: signingConfigs.getByName("debug")
         }
     }
 
@@ -122,7 +136,7 @@ dependencies {
 // Friendly file name for the release APK (used by CI downloads).
 tasks.register<Copy>("copyReleaseApk") {
     from(layout.buildDirectory.file("outputs/apk/release/app-release.apk"))
-    into(layout.buildDirectory.dir("outputs/apk/release"))
+    into(layout.buildDirectory.dir("outputs/hanger"))
     rename { "hanger.apk" }
 }
 afterEvaluate {
