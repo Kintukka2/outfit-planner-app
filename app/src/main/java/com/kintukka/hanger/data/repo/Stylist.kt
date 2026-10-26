@@ -41,7 +41,7 @@ class Stylist(
         return if (contexts.all { it != null }) contexts.filterNotNull() else emptyList()
     }
 
-    private suspend fun garments(): List<Garment> = repo.closet.first().map(Item::toGarment)
+    private suspend fun garments(): List<Garment> = repo.snapshotCloset().map(Item::toGarment)
 
     suspend fun suggest(
         date: LocalDate,
@@ -53,7 +53,7 @@ class Stylist(
     ): List<SuggestedOutfit> {
         val closet = garments()
         val wx = weatherContext ?: weatherFor(date)?.wearing
-        val recent = repo.dayEntries.value
+        val recent = repo.snapshotDayEntries()
             .filter { !it.date.isBefore(date.minusDays(14)) && !it.date.isAfter(date) }
             .map { com.kintukka.hanger.engine.OutfitSignature.of(it.itemIds) }
             .toSet()

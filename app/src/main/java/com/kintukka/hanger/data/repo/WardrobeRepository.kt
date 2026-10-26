@@ -298,7 +298,21 @@ class WardrobeRepository(
         demoFiles.forEach(images::delete)
     }
 
-    suspend fun snapshotItems(): List<Item> = allItems.first()
+    /** Fresh read straight from the database (safe on a cold start, before flows have emitted). */
+    suspend fun snapshotItems(): List<Item> {
+        val stats = itemDao.getWearStats().associateBy { it.itemId }
+        return itemDao.getAll().map { e ->
+            val s = stats[e.id]
+            Item(e, s?.wears ?: 0, s?.lastWorn, images.file(if (e.useOriginalImage) e.originalImageFile else e.imageFile ?: e.originalImageFile))
+        }
+    }
+
+    suspend fun snapshotCloset(): List<Item> = snapshotItems().filter { !it.entity.archived && !it.entity.wishlist }
+
+    suspend fun snapshotDayEntries(): List<DayEntry> {
+        val byEntry = dayDao.getAllItems().groupBy({ it.entryId }, { it.itemId })
+        return dayDao.getAll().map { DayEntry(it, byEntry[it.id].orEmpty()) }
+    }
 
     private fun itemToGarment(e: ItemEntity) = Item(e, 0, null, null).toGarment()
 }

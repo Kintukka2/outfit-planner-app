@@ -78,8 +78,8 @@ class DailyOutfitWorker(context: Context, params: WorkerParameters) : CoroutineW
         val container = (applicationContext as HangerApp).container
         val today = LocalDate.now()
         val settings = container.settings.current()
-        val items = container.repo.allItems.value.ifEmpty { container.repo.snapshotItems() }.associateBy { it.id }
-        val planned = container.repo.dayEntries.value.firstOrNull { it.date == today && !it.worn }
+        val items = container.repo.snapshotItems().associateBy { it.id }
+        val planned = container.repo.snapshotDayEntries().firstOrNull { it.date == today && !it.worn }
         val weather = runCatching { container.stylist.weatherFor(today) }.getOrNull()
         val weatherText = weather?.let { "${formatTemp(it.tempMinC, settings.tempUnit)}–${formatTemp(it.tempMaxC, settings.tempUnit)}, ${it.condition.label.lowercase()}" }
 

@@ -56,7 +56,7 @@ class TodayWidget : GlanceAppWidget() {
         val today = LocalDate.now()
         val settings = container.settings.current()
         val items = container.repo.snapshotItems().associateBy { it.id }
-        val entry = container.repo.dayEntries.value.firstOrNull { it.date == today }
+        val entry = container.repo.snapshotDayEntries().firstOrNull { it.date == today }
         val ids = entry?.itemIds ?: container.stylist
             .suggest(today, settings.defaultOccasion, seed = today.toEpochDay(), count = 1)
             .firstOrNull()?.itemIds.orEmpty()
