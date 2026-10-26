@@ -95,6 +95,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import java.time.LocalDate
@@ -144,7 +146,15 @@ class TodayViewModel(private val container: AppContainer, private val date: Loca
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), TodayUi())
 
-    init { refreshWeather(false) }
+    init {
+        // Refresh whenever the weather location changes (e.g. set from Settings).
+        viewModelScope.launch {
+            container.settings.settings
+                .map { it.latitude to it.longitude }
+                .distinctUntilChanged()
+                .collect { refreshWeather(false) }
+        }
+    }
 
     fun refreshWeather(force: Boolean) = viewModelScope.launch {
         weatherLoading.value = true
@@ -282,7 +292,7 @@ fun TodayScreen(navController: NavHostController) {
                             )
                             IconButton(onClick = suggestVm::more) { Icon(Icons.Outlined.Refresh, contentDescription = "New ideas") }
                         }
-                        SuggestHeader(ideas.copy(weather = null), onOccasion = suggestVm::setOccasion, onClearAnchor = null)
+                        SuggestHeader(ideas.copy(weather = null), onOccasion = suggestVm::setOccasion, onClearAnchor = null, showDate = false)
                     }
                 }
                 item(key = "ideas") {

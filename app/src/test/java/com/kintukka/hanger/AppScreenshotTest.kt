@@ -18,13 +18,11 @@ import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.hasScrollAction
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import coil.Coil
-import coil.ImageLoader
+import com.kintukka.hanger.ui.components.ImageLoading
 import com.github.takahirom.roborazzi.RobolectricDeviceQualifiers
 import com.github.takahirom.roborazzi.captureRoboImage
 import com.kintukka.hanger.demo.DemoCloset
 import com.kintukka.hanger.weather.WeatherRepository
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Rule
@@ -50,7 +48,7 @@ class AppScreenshotTest {
 
     @Before
     fun fastImages() {
-        Coil.setImageLoader(ImageLoader.Builder(app).dispatcher(Dispatchers.Unconfined).crossfade(false).build())
+        ImageLoading.synchronous = true
     }
 
     private fun settle() {
@@ -92,7 +90,7 @@ class AppScreenshotTest {
         // Re-open Today so it picks up the new location/forecast.
         tab("Closet"); tab("Today")
         shot("01_today")
-        compose.onNode(hasScrollAction()).performScrollToNode(hasText("Dress me"))
+        compose.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("Dress me"))
         shot("02_today_ideas")
 
         tab("Closet")
@@ -133,7 +131,7 @@ class AppScreenshotTest {
 
         tab("Insights")
         shot("15_insights")
-        compose.onNode(hasScrollAction()).performScrollToNode(hasText("Most worn"))
+        compose.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("Most worn"))
         shot("16_insights_more")
 
         tab("Today")
@@ -152,7 +150,7 @@ class DarkModeScreenshotTest {
     @Test
     fun darkTodayAndCloset() {
         val app = ApplicationProvider.getApplicationContext<HangerApp>()
-        Coil.setImageLoader(ImageLoader.Builder(app).dispatcher(Dispatchers.Unconfined).crossfade(false).build())
+        ImageLoading.synchronous = true
         runBlocking {
             app.container.settings.setLocation("London", 51.5072, -0.1276)
             app.container.settings.setWeatherCache(

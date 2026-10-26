@@ -251,9 +251,9 @@ fun SuggestScreen(navController: NavHostController, date: LocalDate?, anchorItem
 }
 
 @Composable
-fun SuggestHeader(state: SuggestState, onOccasion: (Occasion) -> Unit, onClearAnchor: (() -> Unit)?) {
+fun SuggestHeader(state: SuggestState, onOccasion: (Occasion) -> Unit, onClearAnchor: (() -> Unit)?, showDate: Boolean = true) {
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
+        if (showDate) Row(verticalAlignment = Alignment.CenterVertically) {
             Text(state.date.longLabel(), style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f))
             state.weather?.let { w ->
                 Icon(weatherIcon(w.condition), contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.size(18.dp))
