@@ -13,8 +13,8 @@ fun formatTemp(celsius: Double, unit: TempUnit): String = when (unit) {
 }
 
 fun formatMoney(amount: Double, currency: String): String =
-    if (amount >= 100 || amount == amount.roundToInt().toDouble()) "$currency${amount.roundToInt()}"
-    else "$currency${"%.2f".format(Locale.UK, amount)}"
+    if (amount >= 100 || amount == amount.roundToInt().toDouble()) "$currency${String.format(Locale.UK, "%,d", amount.roundToInt())}"
+    else "$currency${String.format(Locale.UK, "%.2f", amount)}"
 
 private val dayMonth = DateTimeFormatter.ofPattern("EEEE d MMMM", Locale.UK)
 private val shortDay = DateTimeFormatter.ofPattern("EEE d MMM", Locale.UK)

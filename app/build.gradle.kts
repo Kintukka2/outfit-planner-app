@@ -117,3 +117,14 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.androidx.room.testing)
 }
+
+// Friendly file name for the release APK (used by CI downloads).
+tasks.register<Copy>("copyReleaseApk") {
+    from(layout.buildDirectory.file("outputs/apk/release/app-release.apk"))
+    into(layout.buildDirectory.dir("outputs/apk/release"))
+    rename { "hanger.apk" }
+}
+afterEvaluate {
+    tasks.named("assembleRelease") { finalizedBy("copyReleaseApk") }
+}
+
