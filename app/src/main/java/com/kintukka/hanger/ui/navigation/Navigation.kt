@@ -27,6 +27,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavDestination.Companion.hierarchy
@@ -124,6 +125,7 @@ fun HangerNavHost(navController: NavHostController = rememberNavController()) {
                             },
                             icon = { Icon(if (selected) tab.selectedIcon else tab.icon, contentDescription = null) },
                             label = { Text(tab.label) },
+                            modifier = Modifier.testTag("tab-${tab.label}"),
                             colors = NavigationBarItemDefaults.colors(
                                 indicatorColor = MaterialTheme.colorScheme.primaryContainer,
                                 selectedIconColor = MaterialTheme.colorScheme.onPrimaryContainer,

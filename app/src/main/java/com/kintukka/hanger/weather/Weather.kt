@@ -50,7 +50,7 @@ class WeatherRepository(private val settings: SettingsRepository) {
     private var memory: Pair<String, Forecast>? = null
 
     suspend fun forecast(latitude: Double, longitude: Double, force: Boolean = false): Forecast? = mutex.withLock {
-        val key = "%.3f,%.3f".format(latitude, longitude)
+        val key = cacheKey(latitude, longitude)
         val now = System.currentTimeMillis()
         memory?.let { (k, f) -> if (!force && k == key && now - f.fetchedAt < CACHE_MS) return f }
 
@@ -145,6 +145,13 @@ class WeatherRepository(private val settings: SettingsRepository) {
 
     companion object {
         private const val CACHE_MS = 60 * 60 * 1000L
+
+        fun cacheKey(latitude: Double, longitude: Double): String =
+            String.format(java.util.Locale.ROOT, "%.3f,%.3f", latitude, longitude)
+
+        /** Serialized cache entry, as stored in settings (used by tests to seed a forecast). */
+        fun cacheEntry(latitude: Double, longitude: Double, fetchedAt: Long, body: String): String =
+            Json.encodeToString(CachedForecast(cacheKey(latitude, longitude), fetchedAt, body))
 
         /** WMO weather interpretation codes. */
         fun conditionFor(code: Int): WeatherCondition = when (code) {
