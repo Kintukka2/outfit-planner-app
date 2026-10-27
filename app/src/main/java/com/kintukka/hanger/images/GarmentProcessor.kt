@@ -15,6 +15,8 @@ import com.google.mlkit.vision.segmentation.subject.SubjectSegmenterOptions
 import com.kintukka.hanger.engine.CategoryGuesser
 import com.kintukka.hanger.engine.ColorTools
 import com.kintukka.hanger.engine.FashionColor
+import com.kintukka.hanger.engine.Silhouette
+import com.kintukka.hanger.engine.SilhouetteReader
 import com.kintukka.hanger.engine.SubcategoryPreset
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
@@ -87,7 +89,7 @@ class GarmentProcessor(private val context: Context, private val images: ImageSt
             originalFile = originalFile,
             cutoutFile = cutoutFile,
             colors = colors,
-            preset = CategoryGuesser.guess(labels),
+            preset = CategoryGuesser.guess(labels, cutout?.let(::silhouette) ?: Silhouette.UNKNOWN),
             labels = labels.map { it.first },
         )
     }
@@ -107,6 +109,13 @@ class GarmentProcessor(private val context: Context, private val images: ImageSt
                 .map { it.text to it.confidence }
         }.onFailure { Log.w(TAG, "Labelling failed", it) }.getOrNull()
     }.orEmpty()
+
+    private fun silhouette(cutout: Bitmap): Silhouette {
+        val small = cutout.scaledToMax(160)
+        val pixels = IntArray(small.width * small.height)
+        small.getPixels(pixels, 0, small.width, 0, 0, small.width, small.height)
+        return SilhouetteReader.read(BooleanArray(pixels.size) { Color.alpha(pixels[it]) > 128 }, small.width, small.height)
+    }
 
     private fun extractColors(bitmap: Bitmap): List<FashionColor> {
         val small = bitmap.scaledToMax(128)

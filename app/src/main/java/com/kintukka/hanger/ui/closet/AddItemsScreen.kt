@@ -31,7 +31,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -269,13 +268,7 @@ private fun DraftCard(draft: Draft, image: File?, onEdit: ((Draft) -> Draft) -> 
                     } else if (!draft.ready) {
                         Text("Cutting out…", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     } else {
-                        OutlinedTextField(
-                            value = draft.form.displayName(),
-                            onValueChange = { v -> onEdit { it.copy(form = it.form.copy(name = v, nameEdited = true)) } },
-                            label = { Text("Name") },
-                            singleLine = true,
-                            modifier = Modifier.fillMaxWidth(),
-                        )
+                        ItemNameField(draft.form, onEdit = { transform -> onEdit { it.copy(form = transform(it.form)) } })
                         if (draft.processed?.cutoutFile != null) {
                             Row(Modifier.padding(top = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                                 FilterChip(selected = draft.useCutout, onClick = { onEdit { it.copy(useCutout = true) } }, label = { Text("Cut-out") })
@@ -295,13 +288,23 @@ private fun DraftCard(draft: Draft, image: File?, onEdit: ((Draft) -> Draft) -> 
             }
 
             if (draft.ready) {
-                FieldLabel("Category")
-                CategoryPicker(draft.form.category, onSelect = { c -> onEdit { it.copy(form = it.form.withCategory(c)) } })
-                FieldLabel("Type")
-                SubcategoryPicker(draft.form.category, draft.form.subcategory, onSelect = { p -> onEdit { it.copy(form = it.form.withPreset(p)) } })
-                FieldLabel(if (draft.form.colors.isEmpty()) "Colours" else "Colours · ${draft.form.colors.joinToString { it.label }}")
-                ColorPicker(draft.form.colors, onChange = { c -> onEdit { it.copy(form = it.form.copy(colors = c)) } })
-                TextButton(onClick = { expanded = !expanded }, modifier = Modifier.padding(top = 6.dp)) {
+                CategoryPicker(
+                    draft.form.category,
+                    onSelect = { c -> onEdit { it.copy(form = it.form.withCategory(c)) } },
+                    modifier = Modifier.padding(top = 16.dp),
+                )
+                SubcategoryPicker(
+                    draft.form.category,
+                    draft.form.subcategory,
+                    onSelect = { p -> onEdit { it.copy(form = it.form.withPreset(p)) } },
+                    modifier = Modifier.padding(top = 10.dp),
+                )
+                ColorPicker(
+                    draft.form.colors,
+                    onChange = { c -> onEdit { it.copy(form = it.form.copy(colors = c)) } },
+                    modifier = Modifier.padding(top = 10.dp),
+                )
+                TextButton(onClick = { expanded = !expanded }, modifier = Modifier.padding(top = 2.dp)) {
                     Icon(if (expanded) Icons.Outlined.ExpandLess else Icons.Outlined.ExpandMore, contentDescription = null)
                     Spacer(Modifier.size(6.dp))
                     Text(if (expanded) "Fewer details" else "Pattern, formality, warmth, seasons")
