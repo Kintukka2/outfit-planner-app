@@ -197,3 +197,57 @@ class LaundryRulesTest {
         assertEquals(0, washedAway.wearsSinceWash)
     }
 }
+
+class SilhouetteTest {
+    private class Mask(val w: Int, val h: Int) {
+        val px = BooleanArray(w * h)
+        fun fill(x0: Int, y0: Int, x1: Int, y1: Int) = apply { for (y in y0 until y1) for (x in x0 until x1) px[y * w + x] = true }
+        fun read() = SilhouetteReader.read(px, w, h)
+    }
+
+    @Test
+    fun flatTeeReadsAsTop() {
+        // Torso plus sleeves spread across the shoulders.
+        val tee = Mask(100, 90).fill(30, 0, 70, 90).fill(5, 5, 95, 35)
+        assertEquals(Silhouette.TOP, tee.read())
+    }
+
+    @Test
+    fun trousersReadAsLegs() {
+        val jeans = Mask(60, 140).fill(10, 0, 50, 45).fill(10, 45, 28, 140).fill(32, 45, 50, 140)
+        assertEquals(Silhouette.LEGS, jeans.read())
+        val shorts = Mask(80, 60).fill(5, 0, 75, 40).fill(5, 40, 36, 60).fill(44, 40, 75, 60)
+        assertEquals(Silhouette.LEGS, shorts.read())
+    }
+
+    @Test
+    fun unclearShapesStayUnknown() {
+        val skirt = Mask(80, 80).apply {
+            for (y in 0 until 80) { val half = 15 + y * 15 / 80; fill(40 - half, y, 40 + half, y + 1) }
+        }
+        assertEquals(Silhouette.UNKNOWN, skirt.read())
+        val folded = Mask(70, 50).fill(5, 5, 65, 45)
+        assertEquals(Silhouette.UNKNOWN, folded.read())
+        val pairOfShoes = Mask(100, 60).fill(5, 10, 45, 50).fill(55, 10, 95, 50)
+        assertEquals(Silhouette.UNKNOWN, pairOfShoes.read())
+        // Someone wearing the clothes: head, shoulders and arms, then two legs.
+        val person = Mask(80, 200).fill(32, 0, 48, 25).fill(10, 25, 70, 100).fill(22, 100, 39, 200).fill(41, 100, 58, 200)
+        assertEquals(Silhouette.UNKNOWN, person.read())
+        assertEquals(Silhouette.UNKNOWN, Mask(10, 10).fill(0, 0, 10, 10).read())
+        assertEquals(Silhouette.UNKNOWN, Mask(40, 40).read())
+    }
+
+    @Test
+    fun outlineOverrulesContradictingLabels() {
+        fun guess(silhouette: Silhouette, vararg labels: Pair<String, Float>) = CategoryGuesser.guess(labels.toList(), silhouette)?.name
+        // A dark tee that the labeller calls jeans.
+        assertEquals("T-shirt", guess(Silhouette.TOP, "Jeans" to 0.8f, "Denim" to 0.6f))
+        assertEquals("Denim jacket", guess(Silhouette.TOP, "Jeans" to 0.8f, "Jacket" to 0.5f))
+        assertEquals("Jeans", guess(Silhouette.LEGS, "Shirt" to 0.7f, "Jeans" to 0.4f))
+        assertEquals("Trousers", guess(Silhouette.LEGS, "Shirt" to 0.7f))
+        assertEquals("Jumpsuit", guess(Silhouette.LEGS, "Dress" to 0.8f))
+        assertEquals("Jeans", guess(Silhouette.UNKNOWN, "Jeans" to 0.8f))
+        assertEquals("T-shirt", guess(Silhouette.TOP))
+        assertEquals(null, guess(Silhouette.UNKNOWN))
+    }
+}

@@ -22,6 +22,15 @@ enum class Category(val label: String, val order: Int) {
     OTHER("Other", 8);
 }
 
+/** Coarse outline of a cut-out garment, used to sanity-check label-based category guesses. */
+enum class Silhouette {
+    /** Sleeves or shoulders clearly wider than the body, one hem at the bottom. */
+    TOP,
+    /** One waistband splitting into two legs. */
+    LEGS,
+    UNKNOWN,
+}
+
 enum class Season(val label: String) { SPRING("Spring"), SUMMER("Summer"), AUTUMN("Autumn"), WINTER("Winter") }
 
 enum class Hemisphere { NORTH, SOUTH }

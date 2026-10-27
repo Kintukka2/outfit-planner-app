@@ -56,7 +56,13 @@ object CategoryGuesser {
      * Map on-device image-labeler labels (e.g. "Jeans", "Shoe", "Jacket", "Dress", "Handbag", "Sunglasses")
      * with confidences to a likely preset. Returns null when nothing clothing-like is recognised.
      */
-    fun guess(labels: List<Pair<String, Float>>): SubcategoryPreset? = Guesser.guess(labels)
+    fun guess(labels: List<Pair<String, Float>>, silhouette: Silhouette = Silhouette.UNKNOWN): SubcategoryPreset? =
+        Guesser.guess(labels, silhouette)
+}
+
+object SilhouetteReader {
+    /** Read a cut-out's outline from its opacity mask (row-major, `width * height`). */
+    fun read(opaque: BooleanArray, width: Int, height: Int): Silhouette = Outline.read(opaque, width, height)
 }
 
 object LaundryRules {

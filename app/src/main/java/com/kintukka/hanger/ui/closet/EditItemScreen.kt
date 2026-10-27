@@ -64,6 +64,7 @@ import com.kintukka.hanger.AppContainer
 import com.kintukka.hanger.data.db.ItemEntity
 import com.kintukka.hanger.data.db.displayImageFile
 import com.kintukka.hanger.demo.DemoArt
+import com.kintukka.hanger.engine.Subcategories
 import com.kintukka.hanger.ui.hangerViewModel
 import com.kintukka.hanger.ui.navigation.ItemRoute
 import com.kintukka.hanger.ui.shortLabel
@@ -250,26 +251,30 @@ fun EditItemScreen(navController: NavHostController, id: Long) {
                 Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
 
-            OutlinedTextField(
-                value = form.displayName(),
-                onValueChange = { v -> vm.edit { it.copy(name = v, nameEdited = true) } },
-                label = { Text("Name") },
-                singleLine = true,
-                modifier = Modifier.fillMaxWidth().padding(top = 12.dp),
+            ItemNameField(form, onEdit = vm::edit, modifier = Modifier.padding(top = 12.dp))
+            // Only text typed here shows here; picking from the Type list clears it.
+            var customType by remember {
+                mutableStateOf(form.subcategory.takeIf { t -> Subcategories.forCategory(form.category).none { it.name.equals(t, ignoreCase = true) } }.orEmpty())
+            }
+            CategoryPicker(
+                form.category,
+                onSelect = { c -> if (c != form.category) customType = ""; vm.edit { it.withCategory(c) } },
+                modifier = Modifier.padding(top = 10.dp),
             )
-            FieldLabel("Category")
-            CategoryPicker(form.category, onSelect = { c -> vm.edit { it.withCategory(c) } })
-            FieldLabel("Type")
-            SubcategoryPicker(form.category, form.subcategory, onSelect = { p -> vm.edit { it.withPreset(p) } })
+            SubcategoryPicker(
+                form.category,
+                form.subcategory,
+                onSelect = { p -> customType = ""; vm.edit { it.withPreset(p) } },
+                modifier = Modifier.padding(top = 10.dp),
+            )
             OutlinedTextField(
-                value = form.subcategory,
-                onValueChange = { v -> vm.edit { it.copy(subcategory = v) } },
+                value = customType,
+                onValueChange = { v -> customType = v; vm.edit { it.copy(subcategory = v) } },
                 label = { Text("Or type your own") },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
             )
-            FieldLabel(if (form.colors.isEmpty()) "Colours (tap up to 3, main first)" else "Colours · ${form.colors.joinToString { it.label }}")
-            ColorPicker(form.colors, onChange = { c -> vm.edit { it.copy(colors = c) } })
+            ColorPicker(form.colors, onChange = { c -> vm.edit { it.copy(colors = c) } }, modifier = Modifier.padding(top = 10.dp))
             FieldLabel("Pattern")
             PatternPicker(form.pattern, onSelect = { p -> vm.edit { it.copy(pattern = p) } })
             Spacer(Modifier.height(12.dp))

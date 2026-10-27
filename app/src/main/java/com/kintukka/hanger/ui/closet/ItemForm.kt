@@ -2,8 +2,6 @@ package com.kintukka.hanger.ui.closet
 
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,22 +11,35 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExposedDropdownMenuBox
+import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuAnchorType
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.luminance
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.unit.dp
 import com.kintukka.hanger.data.db.ItemEntity
 import com.kintukka.hanger.engine.Category
@@ -40,6 +51,7 @@ import com.kintukka.hanger.engine.Season
 import com.kintukka.hanger.engine.SubcategoryPreset
 import com.kintukka.hanger.engine.Subcategories
 import com.kintukka.hanger.engine.Warmth
+import com.kintukka.hanger.ui.components.ColorDot
 import java.time.LocalDate
 
 /** Editable fields shared by the add flow and the edit screen. */
@@ -73,6 +85,9 @@ data class ItemForm(
     }
 
     fun displayName(): String = if (nameEdited && name.isNotBlank()) name.trim() else suggestedName()
+
+    /** What the name field shows: the text exactly as typed, or the live suggestion until the user types. */
+    fun fieldName(): String = if (nameEdited) name else suggestedName()
 
     fun withPreset(preset: SubcategoryPreset): ItemForm = copy(
         category = preset.category,
@@ -146,51 +161,129 @@ val pickerCategories = listOf(
     Category.SHOES, Category.BAG, Category.ACCESSORY,
 )
 
-@OptIn(ExperimentalLayoutApi::class)
+/**
+ * Item name. Shows exactly what was typed (spaces included, and empty when cleared); until the
+ * user types, it shows the live suggestion, which is also what an empty name saves as.
+ */
 @Composable
-fun CategoryPicker(selected: Category, onSelect: (Category) -> Unit, modifier: Modifier = Modifier) {
-    FlowRow(modifier, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        pickerCategories.forEach { c ->
-            FilterChip(selected = c == selected, onClick = { onSelect(c) }, label = { Text(c.label) })
-        }
-    }
+fun ItemNameField(form: ItemForm, onEdit: ((ItemForm) -> ItemForm) -> Unit, modifier: Modifier = Modifier) {
+    OutlinedTextField(
+        value = form.fieldName(),
+        onValueChange = { v -> onEdit { it.copy(name = v, nameEdited = true) } },
+        label = { Text("Name") },
+        placeholder = { Text(form.suggestedName()) },
+        singleLine = true,
+        keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
+        modifier = modifier.fillMaxWidth(),
+    )
 }
 
-@OptIn(ExperimentalLayoutApi::class)
+@Composable
+fun CategoryPicker(selected: Category, onSelect: (Category) -> Unit, modifier: Modifier = Modifier) {
+    SelectField(
+        label = "Category",
+        value = selected.label,
+        options = pickerCategories,
+        optionLabel = { it.label },
+        isSelected = { it == selected },
+        onSelect = onSelect,
+        modifier = modifier,
+    )
+}
+
 @Composable
 fun SubcategoryPicker(category: Category, selected: String, onSelect: (SubcategoryPreset) -> Unit, modifier: Modifier = Modifier) {
     val presets = runCatching { Subcategories.forCategory(category) }.getOrDefault(emptyList())
     if (presets.isEmpty()) return
-    FlowRow(modifier, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        presets.forEach { p ->
-            FilterChip(
-                selected = p.name.equals(selected, ignoreCase = true),
-                onClick = { onSelect(p) },
-                label = { Text(p.name) },
-            )
+    SelectField(
+        label = "Type",
+        value = selected,
+        options = presets,
+        optionLabel = { it.name },
+        isSelected = { it.name.equals(selected, ignoreCase = true) },
+        onSelect = onSelect,
+        modifier = modifier,
+    )
+}
+
+/** Read-only dropdown for a single choice. */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun <T> SelectField(
+    label: String,
+    value: String,
+    options: List<T>,
+    optionLabel: (T) -> String,
+    isSelected: (T) -> Boolean,
+    onSelect: (T) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    var expanded by remember { mutableStateOf(false) }
+    ExposedDropdownMenuBox(expanded = expanded, onExpandedChange = { expanded = it }, modifier = modifier) {
+        OutlinedTextField(
+            value = value,
+            onValueChange = {},
+            readOnly = true,
+            singleLine = true,
+            label = { Text(label) },
+            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+            modifier = Modifier.fillMaxWidth().menuAnchor(MenuAnchorType.PrimaryNotEditable),
+        )
+        ExposedDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            options.forEach { option ->
+                val chosen = isSelected(option)
+                DropdownMenuItem(
+                    text = { Text(optionLabel(option), fontWeight = if (chosen) FontWeight.SemiBold else null) },
+                    onClick = {
+                        onSelect(option)
+                        expanded = false
+                    },
+                    trailingIcon = if (chosen) CheckIcon else null,
+                    contentPadding = ExposedDropdownMenuDefaults.ItemContentPadding,
+                    modifier = Modifier.semantics { selected = chosen },
+                )
+            }
         }
     }
 }
 
-/** Multi-select swatch grid; selection order is shown (1 = main colour). Max 3. */
-@OptIn(ExperimentalLayoutApi::class)
+private val CheckIcon: @Composable () -> Unit = { Icon(Icons.Filled.Check, contentDescription = null) }
+
+/**
+ * Multi-select colour dropdown, up to 3 in order (1 = main colour). The menu stays open while
+ * picking; tapping a picked colour again removes it.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ColorPicker(selected: List<FashionColor>, onChange: (List<FashionColor>) -> Unit, modifier: Modifier = Modifier) {
-    FlowRow(modifier, horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        FashionColor.entries.forEach { color ->
-            val index = selected.indexOf(color)
-            val swatch = Color(color.rgb or 0xFF000000.toInt())
-            Box(
-                Modifier
-                    .size(40.dp)
-                    .clip(CircleShape)
-                    .background(swatch)
-                    .border(
-                        width = if (index >= 0) 3.dp else 1.dp,
-                        color = if (index >= 0) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant,
-                        shape = CircleShape,
-                    )
-                    .clickable {
+    var expanded by remember { mutableStateOf(false) }
+    ExposedDropdownMenuBox(expanded = expanded, onExpandedChange = { expanded = it }, modifier = modifier) {
+        OutlinedTextField(
+            value = selected.joinToString { it.label },
+            onValueChange = {},
+            readOnly = true,
+            singleLine = true,
+            label = { Text("Colours") },
+            leadingIcon = if (selected.isEmpty()) null else ({ SwatchStack(selected) }),
+            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+            supportingText = { Text("Up to 3 · the first is the main colour") },
+            modifier = Modifier.fillMaxWidth().menuAnchor(MenuAnchorType.PrimaryNotEditable),
+        )
+        ExposedDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            Row(Modifier.fillMaxWidth().padding(start = 16.dp, end = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    "${selected.size} of 3 picked",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f),
+                )
+                TextButton(onClick = { expanded = false }) { Text("Done") }
+            }
+            FashionColor.entries.forEach { color ->
+                val index = selected.indexOf(color)
+                DropdownMenuItem(
+                    text = { Text(color.label, fontWeight = if (index >= 0) FontWeight.SemiBold else null) },
+                    onClick = {
                         onChange(
                             when {
                                 index >= 0 -> selected - color
@@ -198,24 +291,35 @@ fun ColorPicker(selected: List<FashionColor>, onChange: (List<FashionColor>) -> 
                                 else -> selected + color
                             },
                         )
-                    }
-                    .semantics {
-                        role = Role.Checkbox
-                        this.selected = index >= 0
-                        contentDescription = color.label + if (index == 0) ", main colour" else ""
                     },
-                contentAlignment = Alignment.Center,
-            ) {
-                if (index >= 0) {
-                    Text(
-                        "${index + 1}",
-                        color = if (swatch.luminance() > 0.5f) Color.Black else Color.White,
-                        style = MaterialTheme.typography.labelLarge,
-                        fontWeight = FontWeight.Bold,
-                    )
-                }
+                    leadingIcon = { ColorDot(color, size = 24.dp) },
+                    trailingIcon = if (index >= 0) ({ OrderBadge(index + 1) }) else null,
+                    contentPadding = ExposedDropdownMenuDefaults.ItemContentPadding,
+                    modifier = Modifier.semantics {
+                        this.selected = index >= 0
+                        if (index == 0) stateDescription = "Main colour"
+                    },
+                )
             }
         }
+    }
+}
+
+/** Overlapping dots for the picked colours, main colour on top. */
+@Composable
+private fun SwatchStack(colors: List<FashionColor>) {
+    Box(Modifier.padding(start = 12.dp, end = 4.dp)) {
+        colors.indices.reversed().forEach { i -> ColorDot(colors[i], size = 20.dp, modifier = Modifier.padding(start = (i * 13).dp)) }
+    }
+}
+
+@Composable
+private fun OrderBadge(number: Int) {
+    Box(
+        Modifier.size(24.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text("$number", color = MaterialTheme.colorScheme.onPrimary, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
     }
 }
 

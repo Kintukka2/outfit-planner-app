@@ -252,7 +252,7 @@ internal object Guesser {
             tokens.any { it == keyword || it == keyword + "s" || it == keyword + "es" }
         }
 
-    fun guess(labels: List<Pair<String, Float>>): SubcategoryPreset? {
+    fun guess(labels: List<Pair<String, Float>>, silhouette: Silhouette = Silhouette.UNKNOWN): SubcategoryPreset? {
         val scores = LinkedHashMap<String, Double>()
         val normalised = labels.map { (l, c) -> l.trim().lowercase() to c.toDouble().coerceIn(0.0, 1.0) }
         for ((label, confidence) in normalised) {
@@ -272,8 +272,17 @@ internal object Guesser {
             val rule = bestRule ?: continue
             scores[rule.preset] = (scores[rule.preset] ?: 0.0) + confidence * rule.specificity
         }
-        val best = scores.maxByOrNull { it.value } ?: return null
-        if (best.value < MIN_SCORE) return null
+        // The outline overrules labels it contradicts: dark cotton tees often come back as "Jeans".
+        val best = scores.filterKeys { fitsSilhouette(it, silhouette) }.maxByOrNull { it.value }
+        if (best == null || best.value < MIN_SCORE) {
+            val overruled = scores.maxByOrNull { it.value }?.key?.let(Catalog::find)
+            return when (silhouette) {
+                Silhouette.TOP -> Catalog.find("T-shirt")
+                // A "dress" with two legs is a jumpsuit.
+                Silhouette.LEGS -> Catalog.find(if (overruled?.category == Category.ONE_PIECE) "Jumpsuit" else "Trousers")
+                Silhouette.UNKNOWN -> null
+            }
+        }
         var name = best.key
         // Material hints refine a plain "Jacket".
         if (name == "Jacket") {
@@ -285,6 +294,77 @@ internal object Guesser {
             }
         }
         return Catalog.find(name)
+    }
+
+    private val legless = setOf("skirt", "dress", "evening dress")
+
+    private fun fitsSilhouette(preset: String, silhouette: Silhouette): Boolean {
+        val category = Catalog.find(preset)?.category ?: return true
+        return when (silhouette) {
+            Silhouette.TOP -> category != Category.BOTTOM
+            Silhouette.LEGS -> category !in setOf(Category.TOP, Category.LAYER, Category.OUTERWEAR) && preset.lowercase() !in legless
+            Silhouette.UNKNOWN -> true
+        }
+    }
+}
+
+/** Outline reading for cut-outs; deliberately conservative, anything unclear is UNKNOWN. */
+internal object Outline {
+    private class RowShape(val runs: List<IntRange>) {
+        val span: Int get() = if (runs.isEmpty()) 0 else runs.last().last - runs.first().first + 1
+    }
+
+    fun read(opaque: BooleanArray, width: Int, height: Int): Silhouette {
+        if (width < 16 || height < 16 || opaque.size < width * height) return Silhouette.UNKNOWN
+        val minGap = maxOf(1, (width * 0.03).toInt())
+        val minRun = maxOf(1, (width * 0.04).toInt())
+        val rows = (0 until height).map { y -> RowShape(runs(opaque, y * width, width, minGap, minRun)) }
+        val top = rows.indexOfFirst { it.span > 0 }
+        val bottom = rows.indexOfLast { it.span > 0 }
+        if (top < 0 || bottom - top + 1 < 16) return Silhouette.UNKNOWN
+        val h = bottom - top + 1
+        fun band(from: Double, to: Double) = rows.subList(top + (h * from).toInt(), top + maxOf((h * to).toInt(), (h * from).toInt() + 1))
+        fun share(rows: List<RowShape>, test: (RowShape) -> Boolean) = rows.count(test).toDouble() / rows.size
+
+        val waist = band(0.03, 0.20)
+        val hems = band(0.80, 0.97)
+        val centredGap = hems.count { r ->
+            r.runs.size == 2 && run {
+                val gapMid = (r.runs[0].last + r.runs[1].first) / 2.0
+                val left = r.runs[0].first
+                val right = r.runs[1].last
+                (gapMid - left) / (right - left).coerceAtLeast(1) in 0.3..0.7
+            }
+        }.toDouble() / hems.size
+        // A waistband spans nearly the whole garment; a worn photo's head is far narrower than its shoulders.
+        val waistSpan = waist.map { it.span }.sorted()[waist.size / 2]
+        val widest = rows.maxOf { it.span }
+        if (waistSpan >= widest * 0.6 && share(waist) { it.runs.size == 1 } >= 0.6 && centredGap >= 0.6) return Silhouette.LEGS
+
+        val shoulders = band(0.10, 0.40).map { it.span }.sorted()
+        val body = band(0.55, 0.90).map { it.span }.sorted()
+        val shoulderSpan = shoulders[(shoulders.size * 0.8).toInt().coerceAtMost(shoulders.size - 1)]
+        val bodySpan = body[body.size / 2]
+        if (bodySpan > 0 && shoulderSpan >= bodySpan * 1.25 && share(hems) { it.runs.size == 1 } >= 0.6) return Silhouette.TOP
+        return Silhouette.UNKNOWN
+    }
+
+    /** Opaque runs in one row, ignoring specks and bridging hairline gaps. */
+    private fun runs(opaque: BooleanArray, offset: Int, width: Int, minGap: Int, minRun: Int): List<IntRange> {
+        val raw = ArrayList<IntRange>()
+        var x = 0
+        while (x < width) {
+            if (!opaque[offset + x]) { x++; continue }
+            val start = x
+            while (x < width && opaque[offset + x]) x++
+            raw += start until x
+        }
+        val merged = ArrayList<IntRange>()
+        for (r in raw) {
+            val last = merged.lastOrNull()
+            if (last != null && r.first - last.last - 1 < minGap) merged[merged.size - 1] = last.first..r.last else merged += r
+        }
+        return merged.filter { it.last - it.first + 1 >= minRun }
     }
 }
 
