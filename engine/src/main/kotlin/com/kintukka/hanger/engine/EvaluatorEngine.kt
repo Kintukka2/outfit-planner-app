@@ -1,5 +1,6 @@
 package com.kintukka.hanger.engine
 
+import java.time.LocalDate
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.tanh
@@ -26,6 +27,7 @@ internal object Evaluator {
     private const val W_WEATHER = 0.30
 
     private val EMPTY = EvalResult(0.0, emptyList(), listOf(Note("Add some pieces to start an outfit", 1.0)), 0)
+    private val guide get() = StyleKnowledge.bundled
     private val categories = Category.entries
 
     private fun isCore(c: Category) = c == Category.TOP || c == Category.BOTTOM || c == Category.ONE_PIECE || c == Category.LAYER
@@ -36,9 +38,31 @@ internal object Evaluator {
 
     fun patternScore(bold: Int, first: Pattern?, second: Pattern?): Double = when {
         bold <= 1 -> 1.0
-        bold == 2 -> if (mixable(first!!, second!!)) 0.75 else 0.35
+        bold == 2 -> when (guide.patternScore(first!!, second!!)) {
+            2 -> 0.9
+            1 -> 0.75
+            -1 -> 0.45
+            -2 -> 0.3
+            else -> if (mixable(first, second)) 0.75 else 0.35
+        }
         else -> 0.1
     }
+
+    /** Guide verdict on one pair of garment types, split into lift and cost. */
+    fun typeLift(score: Int): Double = when (score) {
+        2 -> 0.025
+        1 -> 0.012
+        else -> 0.0
+    }
+
+    fun typeCost(score: Int): Double = when (score) {
+        -1 -> 0.06
+        -2 -> 0.14
+        else -> 0.0
+    }
+
+    /** Classic pairings lift a little (capped); clashing pairings cost more, so one bad pair still shows. */
+    fun typeAdjustment(lift: Double, cost: Double): Double = (min(lift, 0.05) - cost).coerceAtLeast(-0.3)
 
     fun formalityScore(spread: Int): Double = when {
         spread <= 1 -> 1.0
@@ -115,6 +139,8 @@ internal object Evaluator {
         assumedExtraWarmth: Double = 0.0,
         /** Skip missing-outerwear / waterproof penalties because outerwear will be added later. */
         deferOuterwear: Boolean = false,
+        /** Enables "on trend" notes for trends live on this date. */
+        date: LocalDate? = null,
     ): EvalResult {
         if (items.isEmpty()) return EMPTY
         val notes: MutableList<Note>? = if (explain) ArrayList() else null
@@ -144,6 +170,10 @@ internal object Evaluator {
         if (explain) {
             when {
                 bold == 1 -> notes!! += Note("The ${Words.phrase(firstBold!!)} ${Words.verb(Words.noun(firstBold), "are", "is")} the only print, so ${Words.verb(Words.noun(firstBold), "they take", "it takes")} centre stage", 0.6)
+                bold == 2 && guide.patternPairing(firstBold!!.pattern, secondBold!!.pattern) != null -> {
+                    val v = guide.patternPairing(firstBold.pattern, secondBold.pattern)!!
+                    if (v.score > 0) notes!! += Note(v.why, 0.58) else warnings!! += Note(v.why, if (v.score == -2) 0.84 else 0.6)
+                }
                 bold == 2 && patternScore >= 0.75 -> warnings!! += Note(
                     "${firstBold!!.pattern.label} with ${secondBold!!.pattern.label.lowercase()} can work — keep everything else simple", 0.5,
                 )
@@ -241,6 +271,14 @@ internal object Evaluator {
                 }
                 else -> {}
             }
+            // Pieces the dress-code guide rules out for this occasion.
+            var avoided: Garment? = null
+            guide.occasions[occasion]?.let { og ->
+                for (g in items) if (og.avoids(g.subcategory)) {
+                    s -= 0.25
+                    if (avoided == null && g !== sportyIssue) avoided = g
+                }
+            }
             occasionScore = s.coerceIn(0.0, 1.0)
             if (explain) {
                 val occ = Words.occasionPhrase(occasion)
@@ -256,11 +294,14 @@ internal object Evaluator {
                 sportyIssue?.let {
                     warnings!! += Note("The ${Words.phrase(it)} ${Words.verb(Words.noun(it), "read", "reads")} too sporty for $occ", 0.68)
                 }
+                avoided?.let {
+                    warnings!! += Note("The ${Words.phrase(it)} ${Words.verb(Words.noun(it), "aren't", "isn't")} right for $occ", 0.78)
+                }
                 if (occasion == Occasion.ACTIVE) {
                     if (allSporty) notes!! += Note("Sporty pieces throughout — ready to move", 0.7)
                     else nonSportyCore?.let { warnings!! += Note("Sporty pieces would move better than the ${Words.phrase(it)}", 0.55) }
                 }
-                if (occasionScore >= 0.95 && sportyIssue == null && (occasion != Occasion.ACTIVE || allSporty)) {
+                if (occasionScore >= 0.95 && sportyIssue == null && avoided == null && (occasion != Occasion.ACTIVE || allSporty)) {
                     notes!! += Note("Just right for $occ", 0.62)
                 }
             }
@@ -290,16 +331,25 @@ internal object Evaluator {
                 s -= 0.25
                 if (explain) warnings!! += Note("Light for $t — add a coat or jacket", 0.95)
             }
+            val chilly = HashSet<Long>()
             if (!needs.allowsShortsAndOpenShoes) {
                 for (g in items) {
                     if (Shapes.isShortsLike(g) || Shapes.isOpenShoe(g)) {
                         s -= 0.3
+                        chilly += g.id
                         if (explain) {
                             val n = Words.noun(g)
                             warnings!! += Note("${Words.cap(n)} ${Words.verb(n, "look", "looks")} chilly for $t", 0.9)
                         }
                     }
                 }
+            }
+            // Pieces the weather guide rules out today (suede in heavy rain, heavy knits in a heatwave...).
+            for (g in items) {
+                if (g.id in chilly) continue
+                val rule = weather.guideRules.firstOrNull { it.avoids(g.subcategory) } ?: continue
+                s -= 0.15
+                if (explain) warnings!! += Note("${rule.title}: swap the ${Words.phrase(g)}", 0.8)
             }
             if (needs.wantsWaterproof && !deferOuterwear) {
                 if (waterproofItem == null) {
@@ -379,9 +429,37 @@ internal object Evaluator {
             }
         }
 
+        // --- Garment pairings (style guide) -----------------------------------------------------
+        var lift = 0.0
+        var cost = 0.0
+        val typeIdx = IntArray(items.size) { guide.typeIndex(items[it].subcategory) }
+        for (i in items.indices) for (j in i + 1 until items.size) {
+            if (items[i].id == items[j].id) continue
+            val v = guide.typeScore(typeIdx[i], typeIdx[j])
+            lift += typeLift(v)
+            cost += typeCost(v)
+        }
+        val typeAdj = typeAdjustment(lift, cost)
+        if (explain) {
+            val verdicts = ArrayList<TypePairing>()
+            for (i in items.indices) for (j in i + 1 until items.size) {
+                if (items[i].id != items[j].id) guide.typePairing(items[i].subcategory, items[j].subcategory)?.let(verdicts::add)
+            }
+            verdicts.filter { it.score > 0 }.maxByOrNull { it.score }?.let { notes!! += Note(it.why, if (it.score == 2) 0.86 else 0.72) }
+            for (v in verdicts.filter { it.score < 0 }.sortedBy { it.score }.take(2)) {
+                warnings!! += Note(v.why, if (v.score == -2) 0.85 else 0.6)
+            }
+            Formulas.match(items, occasion)?.let { notes!! += Note("Proven formula: ${it.name}", 0.9) }
+            if (date != null) {
+                guide.liveTrends(date).firstOrNull { it.matchesOutfit(items) }?.let {
+                    notes!! += Note("On trend: ${it.name.replaceFirstChar(Char::lowercase)}", 0.66)
+                }
+            }
+        }
+
         // --- Combine --------------------------------------------------------------------------
         val base = combine(colorScore, patternScore, formalityScore, occasionScore, weatherScore)
-        val score = (base * factor + affinityAdj).coerceIn(0.0, 1.0)
+        val score = (base * factor + affinityAdj + typeAdj).coerceIn(0.0, 1.0)
 
         return if (explain) {
             EvalResult(score, dedupe(notes!!), dedupe(warnings!!), spread)

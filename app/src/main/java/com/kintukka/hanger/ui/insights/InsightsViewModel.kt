@@ -7,6 +7,8 @@ import com.kintukka.hanger.data.DayEntry
 import com.kintukka.hanger.data.Item
 import com.kintukka.hanger.data.repo.SettingsRepository
 import com.kintukka.hanger.data.repo.WardrobeRepository
+import com.kintukka.hanger.engine.ClosetInsight
+import com.kintukka.hanger.engine.StyleGuide
 import com.kintukka.hanger.engine.CapsuleAnalyzer
 import com.kintukka.hanger.engine.Category
 import com.kintukka.hanger.engine.CountedGarment
@@ -67,6 +69,10 @@ data class InsightsUiState(
     /** Null when the capsule engine is unavailable. */
     val outfitCount: Int? = null,
     val wishlist: List<WishlistRow> = emptyList(),
+    /** The style guide's closet checks that fire, and how many proven formulas the closet makes. */
+    val styleChecks: List<ClosetInsight> = emptyList(),
+    val formulasReady: Int? = null,
+    val formulasOneAway: Int = 0,
 ) {
     val isEmpty: Boolean get() = !loading && itemCount == 0
 }
@@ -101,6 +107,9 @@ class InsightsViewModel(
         // The engine may be unavailable (or throw on odd data); every engine call degrades to "section hidden".
         val stats: StatsReport? = runCatching { StatsCalculator.compute(garments, wearLog, today) }.getOrNull()
         val outfitCount: Int? = runCatching { CapsuleAnalyzer.outfitCount(garments) }.getOrNull()
+        val coverage = runCatching { StyleGuide.formulaCoverage(garments) }.getOrNull()
+        val wishlistCount = all.count { it.entity.wishlist && !it.entity.archived }
+        val styleChecks = runCatching { StyleGuide.closetInsights(garments, wearLog, today, wishlistCount, currency) }.getOrDefault(emptyList())
         val wishlist = all.asSequence()
             .filter { it.entity.wishlist && !it.entity.archived }
             .map { candidate ->
@@ -156,6 +165,9 @@ class InsightsViewModel(
                 .take(ROW_LIMIT),
             outfitCount = outfitCount,
             wishlist = wishlist,
+            styleChecks = styleChecks,
+            formulasReady = coverage?.ready?.size,
+            formulasOneAway = coverage?.oneAway?.size ?: 0,
         )
     }
 

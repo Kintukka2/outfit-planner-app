@@ -22,6 +22,8 @@ internal object Generator {
     private const val ITEM_JITTER = 0.03
     /** An alternative only counts for diversity if it is at least this good relative to the best remaining. */
     private const val QUALITY_FLOOR = 0.90
+    /** Ranking lift for outfits that follow one of the style guide's proven formulas for the occasion. */
+    private const val FORMULA_BONUS = 0.05
 
     private val CORE_SLOTS = setOf(Category.TOP, Category.BOTTOM, Category.ONE_PIECE, Category.SHOES)
     private val ADD_ON_SLOTS = setOf(Category.LAYER, Category.OUTERWEAR, Category.BAG, Category.ACCESSORY, Category.OTHER)
@@ -134,6 +136,11 @@ internal object Generator {
         val deferOuter = willAddOuter ||
             (needs?.wantsWaterproof == true && !forcedHas(Category.OUTERWEAR) && outerPool.any { it.waterproof })
 
+        fun formulaBoost(items: List<Garment>): Double {
+            val f = Formulas.match(items, ctx.occasion) ?: return 1.0
+            return if (f.occasions.isEmpty() || ctx.occasion in f.occasions) 1.0 + FORMULA_BONUS else 1.0
+        }
+
         fun priorFactor(items: List<Garment>): Double {
             var wSum = 0.0
             var pSum = 0.0
@@ -151,10 +158,22 @@ internal object Generator {
             val items = if (forced.isEmpty()) core else core + forced
             val r = Evaluator.run(items, weather, ctx.occasion, affinity, explain = false, assumedWarmth, deferOuter)
             val jitter = rnd.nextDouble(-JITTER, JITTER)
-            cores += Core(core, r.score * priorFactor(items) * (1.0 + jitter), jitter)
+            cores += Core(core, r.score * priorFactor(items) * formulaBoost(items) * (1.0 + jitter), jitter)
         }
         if (separatesTemplate) for (t in tops) for (b in bottoms) for (s in shoes) scoreCore(listOf(t, b, s))
         if (onePieceTemplate) for (d in onePieces) for (s in shoes) scoreCore(listOf(d, s))
+
+        // Proven formulas for this occasion and season, filled from the closet, join the pool even when
+        // their pieces sit outside the top-ranked few in each slot.
+        if (anchors.isEmpty()) {
+            val seen = cores.mapTo(HashSet()) { c -> OutfitSignature.of(c.items.map { it.id }) }
+            val corePool = listOf(Category.TOP, Category.BOTTOM, Category.ONE_PIECE, Category.SHOES).flatMap { ranked.getValue(it) }
+            for (f in Formulas.seeds(ctx.occasion, season)) {
+                val coreOnly = f.copy(slots = f.required.filter { it.category in CORE_SLOTS })
+                val picks = Formulas.fill(coreOnly, corePool) ?: continue
+                if (seen.add(OutfitSignature.of(picks.map { it.id }))) scoreCore(picks.sortedBy { it.category.order })
+            }
+        }
         if (cores.isEmpty()) return emptyList()
 
         // Shortlist: best few shoe options per top+bottom (or dress) so the pool stays varied.
@@ -174,7 +193,8 @@ internal object Generator {
         for (c in shortlist) {
             var items: List<Garment> = if (forced.isEmpty()) c.core.items else c.core.items + forced
             fun finalOf(list: List<Garment>) =
-                Evaluator.run(list, weather, ctx.occasion, affinity, explain = false).score * priorFactor(list) * (1.0 + c.core.jitter)
+                Evaluator.run(list, weather, ctx.occasion, affinity, explain = false).score * priorFactor(list) *
+                    formulaBoost(list) * (1.0 + c.core.jitter)
             var current = finalOf(items)
             if (needs != null && items.none { it.category == Category.OUTERWEAR }) {
                 val options = if (needs.needsOuterwear) outerPool else if (needs.wantsWaterproof) outerPool.filter { it.waterproof } else emptyList()
@@ -205,7 +225,7 @@ internal object Generator {
             c.items = items
             val eval = Evaluator.run(items, weather, ctx.occasion, affinity, explain = false)
             c.quality = eval.score
-            c.final = eval.score * priorFactor(items) * (1.0 + c.core.jitter)
+            c.final = eval.score * priorFactor(items) * formulaBoost(items) * (1.0 + c.core.jitter)
             c.signature = OutfitSignature.of(items.map { it.id })
         }
 
@@ -392,7 +412,7 @@ internal object Generator {
 
     /** 2–4 short stylist notes: best evaluator notes plus the story of a piece (neglected, new, favourite). */
     private fun reasons(items: List<Garment>, ctx: Ctx): List<String> {
-        val eval = Evaluator.run(items, ctx.weather, ctx.occasion, ctx.affinity, explain = true)
+        val eval = Evaluator.run(items, ctx.weather, ctx.occasion, ctx.affinity, explain = true, date = ctx.date)
         val notes = eval.notes.map { it.text }
         val neglected = ArrayList<Pair<Long, String>>()
         val firstOutings = ArrayList<String>()

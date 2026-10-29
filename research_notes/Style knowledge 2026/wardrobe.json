@@ -1,0 +1,1774 @@
+{
+  "sources": [
+    {
+      "id": "w1",
+      "title": "Valuing Our Clothes: the true cost of how we design, use and dispose of clothing in the UK",
+      "publisher": "WRAP",
+      "url": "https://wrap.ngo/resources/report/valuing-our-clothes-true-cost-how-we-design-use-and-dispose-clothing-uk-2012",
+      "date": "2012-07-11"
+    },
+    {
+      "id": "w2",
+      "title": "Valuing Our Clothes: the cost of UK fashion",
+      "publisher": "WRAP",
+      "url": "https://www.wrap.ngo/resources/report/valuing-our-clothes-cost-uk-fashion",
+      "date": "2017-07-17"
+    },
+    {
+      "id": "w3",
+      "title": "Previous campaigns: Love Your Clothes",
+      "publisher": "WRAP",
+      "url": "https://www.wrap.ngo/taking-action/citizen-behaviour-change/previous-campaigns",
+      "date": "n.d. (accessed 2026-10-29)"
+    },
+    {
+      "id": "w4",
+      "title": "A New Textiles Economy: Redesigning fashion's future",
+      "publisher": "Ellen MacArthur Foundation",
+      "url": "https://www.ellenmacarthurfoundation.org/a-new-textiles-economy",
+      "date": "2017-11-28"
+    },
+    {
+      "id": "w5",
+      "title": "Textiles: Your Clothes are Pollutants (quotes from A New Textiles Economy)",
+      "publisher": "Conversable Economist (Timothy Taylor)",
+      "url": "https://conversableeconomist.com/2018/01/22/textiles-your-clothes-are-pollutants/",
+      "date": "2018-01-22"
+    },
+    {
+      "id": "w6",
+      "title": "Truck of textiles landfilled or burned every second, says EMF report",
+      "publisher": "Circular Online",
+      "url": "https://www.circularonline.co.uk/news/one-truck-textiles-landfilled-burned-every-second-says-new-macarthur-report/",
+      "date": "2017-11-30"
+    },
+    {
+      "id": "w7",
+      "title": "Style that's sustainable: A new fast-fashion formula (Remy, Speelman, Swartz)",
+      "publisher": "McKinsey & Company",
+      "url": "https://www.mckinsey.com/capabilities/sustainability/our-insights/style-thats-sustainable-a-new-fast-fashion-formula",
+      "date": "2016-10"
+    },
+    {
+      "id": "w8",
+      "title": "Germans throw away their clothes: Greenpeace",
+      "publisher": "The Local Germany (dpa)",
+      "url": "https://www.thelocal.de/20151123/germans-throw-away-their-clothes-greenpeace",
+      "date": "2015-11-23"
+    },
+    {
+      "id": "w9",
+      "title": "Charity exposes Armagh women's wardrobe habits in clothing donation appeal (Barnardo's survey)",
+      "publisher": "Armagh I",
+      "url": "https://armaghi.com/news/charity-exposes-armagh-womens-wardrobe-habits-in-clothing-donation-appeal/28297",
+      "date": "2015-07-15"
+    },
+    {
+      "id": "w10",
+      "title": "Livia Firth wants to be remembered for being unapologetically outspoken (Colin Crummy)",
+      "publisher": "Stylist",
+      "url": "https://stylist.co.uk/people/livia-firth-interview-environment-fashion-brandmark-eco-age/250276",
+      "date": "2019-02-08"
+    },
+    {
+      "id": "w11",
+      "title": "What is Project 333? (David Friedlander)",
+      "publisher": "LifeEdited",
+      "url": "https://lifeedited.com/what-is-project-333/",
+      "date": "2013-08-23"
+    },
+    {
+      "id": "w12",
+      "title": "Caroline's 37-Piece Capsule Wardrobe + Creative Process",
+      "publisher": "Anuschka Rees",
+      "url": "https://anuschkarees.com/blog/2014/07/14/carolines-37-piece-capsule-wardrobe-creative-process",
+      "date": "2014-07-14"
+    },
+    {
+      "id": "w13",
+      "title": "Four by Four Wardrobes (Janice Riggs)",
+      "publisher": "The Vivienne Files",
+      "url": "https://www.theviviennefiles.com/four-by-four-wardrobes/",
+      "date": "n.d. (accessed 2026-10-29)"
+    },
+    {
+      "id": "w14",
+      "title": "Capsule wardrobe",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Capsule_wardrobe",
+      "date": "accessed 2026-10-29"
+    },
+    {
+      "id": "w15",
+      "title": "How to Build a Capsule Wardrobe",
+      "publisher": "L'AGENCE",
+      "url": "https://lagence.com/blogs/how-to-style/build-a-capsule-wardrobe",
+      "date": "n.d. (accessed 2026-10-29)"
+    },
+    {
+      "id": "w16",
+      "title": "Should You Pack More Tops Or Bottoms? Here's The Rule Frequent Travelers Swear By (Christine Dulion, quoting Anne McAlpin)",
+      "publisher": "Islands",
+      "url": "https://www.islands.com/1995162/should-pack-more-tops-bottoms-luggage/",
+      "date": "2025-10-18"
+    },
+    {
+      "id": "w17",
+      "title": "How to use the 5-4-3-2-1 method to nail holiday packing every time (Amy Beecham)",
+      "publisher": "Stylist",
+      "url": "https://stylist.co.uk/travel/54321-packing-method/889794",
+      "date": "2025-01-30"
+    },
+    {
+      "id": "w18",
+      "title": "20 Places to Apply the Pareto Principle to Help Minimize (Joshua Becker)",
+      "publisher": "Becoming Minimalist",
+      "url": "https://www.becomingminimalist.com/?p=32092",
+      "date": "n.d. (c. 2025)"
+    },
+    {
+      "id": "w19",
+      "title": "How We Saved One Billion Liters of Water (501 jeans lifecycle assessment)",
+      "publisher": "Levi Strauss & Co.",
+      "url": "https://www.levistrauss.com/2015/03/17/lca-findings/",
+      "date": "2015-03-17"
+    },
+    {
+      "id": "w20",
+      "title": "3 surprising insights about those 501 jeans",
+      "publisher": "Levi Strauss & Co.",
+      "url": "https://www.levistrauss.com/2015/03/26/3-surprising-insights-about-those-501-jeans/",
+      "date": "2015-03-26"
+    },
+    {
+      "id": "w21",
+      "title": "Cut your laundry costs this year (Rebecca Jakeman)",
+      "publisher": "Which?",
+      "url": "https://www.which.co.uk/news/article/cut-your-laundry-costs-by-162-this-year-an6GD2M0Hgnn",
+      "date": "2026-06-09"
+    },
+    {
+      "id": "w22",
+      "title": "The Ultimate Answer: How Many Shoes Should I Own?",
+      "publisher": "Tom James",
+      "url": "https://www.tomjames.com/blog/how-many-shoes-do-you-really-need",
+      "date": "2023-03-22"
+    },
+    {
+      "id": "w23",
+      "title": "What Is Your Cost Per Wear? Calculate Yours in 1 Easy Step! (Courtney Noble)",
+      "publisher": "Encircled",
+      "url": "https://encircled.co/blogs/live/cost-per-wear",
+      "date": "2020-05-14"
+    },
+    {
+      "id": "w24",
+      "title": "Textile waste generation per person in the EU per year",
+      "publisher": "European Environment Agency",
+      "url": "https://www.eea.europa.eu/en/circularity/sectoral-modules/textiles/textile-waste-generation-per-person-in-the-eu-per-year",
+      "date": "2025-03-19"
+    },
+    {
+      "id": "w25",
+      "title": "How to choose a colour palette (Claire Hartwell)",
+      "publisher": "The Capsule Report",
+      "url": "https://thecapsulereport.com/blog/how-to-choose-colour-palette",
+      "date": "2026-07-07"
+    },
+    {
+      "id": "w26",
+      "title": "Capsule Wardrobe Essentials (Bernice Blake)",
+      "publisher": "Powers of 10",
+      "url": "https://powersof10.com/?p=43053",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "w27",
+      "title": "Capsule wardrobe: the essentials",
+      "publisher": "Vogue Singapore",
+      "url": "https://vogue.sg/capsule-wardrobe/",
+      "date": "n.d. (accessed 2026-10-29)"
+    },
+    {
+      "id": "w28",
+      "title": "Neutral wardrobe colours (Geneva Vanderzeil)",
+      "publisher": "Geneva Vanderzeil",
+      "url": "https://genevavanderzeil.com/2017/04/neutral-wardrobe-colours/",
+      "date": "2017-04-20"
+    },
+    {
+      "id": "w29",
+      "title": "10x10 Capsule Wardrobe (after Lee Vosburgh's 10x10 challenge)",
+      "publisher": "Helen's Closet",
+      "url": "https://helensclosetpatterns.com/blogs/helens-closet/10x10-capsule-wardrobe",
+      "date": "2017-11-14"
+    },
+    {
+      "id": "w30",
+      "title": "The Curated Closet (Anuschka Rees)",
+      "publisher": "Ten Speed Press / Penguin Random House",
+      "url": "https://penguinrandomhouse.com/books/532611/the-curated-closet-by-anuschka-rees",
+      "date": "2016"
+    },
+    {
+      "id": "w31",
+      "title": "Once worn, thrice shy: women's wardrobe habits exposed (Barnardo's Scotland survey)",
+      "publisher": "Third Force News",
+      "url": "https://tfn.scot/news/once-worn-thrice-shy-womens-wardrobe-habits-exposed",
+      "date": "2015-06-11"
+    }
+  ],
+  "tips": [
+    {
+      "id": "tip01",
+      "topic": "capsule",
+      "text": "A capsule wardrobe is a small set of pieces that all work together. One popular challenge allows 33 items, shoes and accessories included, for three months.",
+      "src": [
+        "w11"
+      ]
+    },
+    {
+      "id": "tip02",
+      "topic": "capsule",
+      "text": "Build your capsule from what you already own. Pick favourites first, then list the real gaps before buying anything.",
+      "src": [
+        "w12",
+        "w29"
+      ]
+    },
+    {
+      "id": "tip03",
+      "topic": "capsule",
+      "text": "Refresh your capsule each season and store out-of-season pieces, so the rail only shows what works right now.",
+      "src": [
+        "w11",
+        "w12"
+      ]
+    },
+    {
+      "id": "tip04",
+      "topic": "capsule",
+      "text": "Plan around your actual week: list work days, weekends and events, then check each has an outfit before you shop.",
+      "src": [
+        "w12"
+      ]
+    },
+    {
+      "id": "tip05",
+      "topic": "capsule",
+      "text": "The classic capsule is a few timeless staples, such as trousers, a knit and a coat, topped up with a handful of seasonal pieces.",
+      "src": [
+        "w14"
+      ]
+    },
+    {
+      "id": "tip06",
+      "topic": "capsule",
+      "text": "Leave underwear, sleepwear, loungewear and gym kit out of your capsule count. Count what you actually get dressed in.",
+      "src": [
+        "w11"
+      ]
+    },
+    {
+      "id": "tip07",
+      "topic": "capsule",
+      "text": "Try ten pieces for ten days, shoes and jackets included. It shows how many outfits you can make from very little.",
+      "src": [
+        "w29"
+      ]
+    },
+    {
+      "id": "tip08",
+      "topic": "capsule",
+      "text": "Box up what's outside your capsule instead of giving it away at once. If you don't miss it in three months, let it go.",
+      "src": [
+        "w11"
+      ]
+    },
+    {
+      "id": "tip09",
+      "topic": "capsule",
+      "text": "Small capsule recipe: four pieces in one neutral, four in a second, four that mix both and four in an accent colour.",
+      "src": [
+        "w13"
+      ]
+    },
+    {
+      "id": "tip10",
+      "topic": "capsule",
+      "text": "A capsule works because it sets a limit. Choose a size that suits your life and hold it for a full season.",
+      "src": [
+        "w11",
+        "w12"
+      ]
+    },
+    {
+      "id": "tip11",
+      "topic": "colour",
+      "text": "Across your closet, aim for roughly 60–70% neutrals, 20–30% secondary colours and up to 10% bold accent.",
+      "src": [
+        "w25",
+        "w13"
+      ]
+    },
+    {
+      "id": "tip12",
+      "topic": "colour",
+      "text": "Two or three neutrals are enough for a base. Navy, grey, camel, cream or black: pick the ones you reach for most.",
+      "src": [
+        "w25",
+        "w26"
+      ]
+    },
+    {
+      "id": "tip13",
+      "topic": "colour",
+      "text": "Choose one or two accent colours and repeat each in at least two pieces, so an accent can anchor a whole outfit.",
+      "src": [
+        "w26"
+      ]
+    },
+    {
+      "id": "tip14",
+      "topic": "colour",
+      "text": "Keep shoes, belts and bags in the same neutral family and your outfits will look intentional with no effort.",
+      "src": [
+        "w26"
+      ]
+    },
+    {
+      "id": "tip15",
+      "topic": "colour",
+      "text": "Tonal dressing is easy: pair shades that sit side by side, such as camel with brown or grey with charcoal.",
+      "src": [
+        "w28"
+      ]
+    },
+    {
+      "id": "tip16",
+      "topic": "colour",
+      "text": "For crisp contrast, pair neutrals from opposite ends of the scale, such as navy with cream or black with white.",
+      "src": [
+        "w28"
+      ]
+    },
+    {
+      "id": "tip17",
+      "topic": "colour",
+      "text": "Put your accent colour into easy-to-swap pieces like a scarf or top, so one neutral outfit can look new each day.",
+      "src": [
+        "w26",
+        "w29"
+      ]
+    },
+    {
+      "id": "tip18",
+      "topic": "colour",
+      "text": "Solid pieces are the easiest to pair. Keep prints to a minority and wear each one with solids.",
+      "src": [
+        "w15"
+      ]
+    },
+    {
+      "id": "tip19",
+      "topic": "colour",
+      "text": "Too many accent colours make it feel as if nothing goes. Two or three you love beat eight you only like.",
+      "src": [
+        "w25",
+        "w26"
+      ]
+    },
+    {
+      "id": "tip20",
+      "topic": "colour",
+      "text": "Build around two neutrals and almost every top works with every bottom. That is the secret of a small closet.",
+      "src": [
+        "w13"
+      ]
+    },
+    {
+      "id": "tip21",
+      "topic": "versatility",
+      "text": "Mix-and-match maths: 5 tops and 3 bottoms give 15 outfits. Add 2 layers, worn or not, and you reach 45.",
+      "src": [
+        "w13"
+      ]
+    },
+    {
+      "id": "tip22",
+      "topic": "versatility",
+      "text": "Before adding a top, name three things you'd wear it with. Stylists plan about three tops for every bottom.",
+      "src": [
+        "w15",
+        "w16"
+      ]
+    },
+    {
+      "id": "tip23",
+      "topic": "versatility",
+      "text": "One cardigan or overshirt over five tops gives five new outfits. Plan about one layer for every three tops.",
+      "src": [
+        "w15"
+      ]
+    },
+    {
+      "id": "tip24",
+      "topic": "versatility",
+      "text": "Accessories refresh a repeat outfit fastest. Swap the scarf, belt or bag and the same pieces look new.",
+      "src": [
+        "w29"
+      ]
+    },
+    {
+      "id": "tip25",
+      "topic": "versatility",
+      "text": "A blazer is the hardest-working layer: over a T-shirt at the weekend, over a shirt for work.",
+      "src": [
+        "w27",
+        "w15"
+      ]
+    },
+    {
+      "id": "tip26",
+      "topic": "versatility",
+      "text": "A dress or jumpsuit is a whole outfit in one piece. Change the shoes and layer to take it from day to evening.",
+      "src": [
+        "w15"
+      ]
+    },
+    {
+      "id": "tip27",
+      "topic": "versatility",
+      "text": "Shoes set the formality: the same jeans and knit read casual with sneakers and smart with loafers.",
+      "src": [
+        "w22",
+        "w27"
+      ]
+    },
+    {
+      "id": "tip28",
+      "topic": "versatility",
+      "text": "Pieces that roll over between seasons, like knits, jeans and shirts, form the backbone of a capsule.",
+      "src": [
+        "w12"
+      ]
+    },
+    {
+      "id": "tip29",
+      "topic": "versatility",
+      "text": "Write down outfit formulas that work, such as shirt, trousers and loafers, then repeat them with different pieces.",
+      "src": [
+        "w30"
+      ]
+    },
+    {
+      "id": "tip30",
+      "topic": "versatility",
+      "text": "Repeating outfits is good style. Wearing favourites often is exactly what makes a closet work.",
+      "src": [
+        "w10"
+      ]
+    },
+    {
+      "id": "tip31",
+      "topic": "care",
+      "text": "Wash at 30°C instead of 40°C: tests found it saves around 38% of the energy per load.",
+      "src": [
+        "w21"
+      ]
+    },
+    {
+      "id": "tip32",
+      "topic": "care",
+      "text": "Fill the drum. A few full loads use less energy than daily small washes.",
+      "src": [
+        "w21"
+      ]
+    },
+    {
+      "id": "tip33",
+      "topic": "care",
+      "text": "Wash denim less. Wearing jeans ten times between washes cuts their water and climate impact by around 75%.",
+      "src": [
+        "w19"
+      ]
+    },
+    {
+      "id": "tip34",
+      "topic": "care",
+      "text": "Line-dry instead of tumble drying. A lifecycle study of jeans found it cut energy use and climate impact by around two-thirds.",
+      "src": [
+        "w20"
+      ]
+    },
+    {
+      "id": "tip35",
+      "topic": "care",
+      "text": "Turn the dial down: the same jeans study found a cold wash cut climate impact by about a quarter.",
+      "src": [
+        "w20"
+      ]
+    },
+    {
+      "id": "tip36",
+      "topic": "care",
+      "text": "Washing and care make up about a third of clothing's carbon footprint, so how you wash matters as much as what you buy.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip37",
+      "topic": "care",
+      "text": "Give leather shoes 24 hours' rest between wears so sweat can dry and the leather keeps its shape.",
+      "src": [
+        "w22"
+      ]
+    },
+    {
+      "id": "tip38",
+      "topic": "care",
+      "text": "Slip cedar shoe trees in within an hour of taking shoes off; they draw out moisture and prevent creasing.",
+      "src": [
+        "w22"
+      ]
+    },
+    {
+      "id": "tip39",
+      "topic": "care",
+      "text": "Rotate at least two pairs of everyday shoes. Each lasts longer when it gets a day off.",
+      "src": [
+        "w22"
+      ]
+    },
+    {
+      "id": "tip40",
+      "topic": "care",
+      "text": "Sew a loose button back on straight away. Nearly three in four people feel confident doing it, and it rescues a favourite.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip41",
+      "topic": "care",
+      "text": "Learn one repair a season. Only about a third of people feel able to take up a hem or darn a hole, yet both are quick to learn.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip42",
+      "topic": "care",
+      "text": "Tackle stains straight away rather than writing pieces off; most people already know how to remove them.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip43",
+      "topic": "care",
+      "text": "Clean the dryer filter after every load: a blocked filter can use 50% more energy on the last load.",
+      "src": [
+        "w21"
+      ]
+    },
+    {
+      "id": "tip44",
+      "topic": "care",
+      "text": "Take zips, pockets and resizing to an alterations shop. Few people feel able to do them at home, and repair beats replacing.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip45",
+      "topic": "care",
+      "text": "Air jeans and jackets between wears instead of washing after every outing. Less washing means a longer life.",
+      "src": [
+        "w19",
+        "w20"
+      ]
+    },
+    {
+      "id": "tip46",
+      "topic": "shopping",
+      "text": "Before buying, ask: will I wear this at least 30 times? If not, leave it on the rail.",
+      "src": [
+        "w10"
+      ]
+    },
+    {
+      "id": "tip47",
+      "topic": "shopping",
+      "text": "Shop from a list, not a mood. Note the gaps in your closet and buy only what fills them.",
+      "src": [
+        "w12"
+      ]
+    },
+    {
+      "id": "tip48",
+      "topic": "shopping",
+      "text": "Shop a few planned times a year rather than every week. Planning ahead takes the impulse out of buying.",
+      "src": [
+        "w12"
+      ]
+    },
+    {
+      "id": "tip49",
+      "topic": "shopping",
+      "text": "Buy for the life you have: if most days are work days, most of your closet should be work-ready.",
+      "src": [
+        "w12"
+      ]
+    },
+    {
+      "id": "tip50",
+      "topic": "shopping",
+      "text": "Check seams, fabric weight and finish before buying. Durable pieces lower your cost per wear over time.",
+      "src": [
+        "w23"
+      ]
+    },
+    {
+      "id": "tip51",
+      "topic": "shopping",
+      "text": "Look second-hand first. Buying pre-loved keeps clothes in use and avoids much of the footprint of making new ones.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip52",
+      "topic": "shopping",
+      "text": "Hire or borrow for one-off events. Hiring and repairing keep clothes in active use for longer, saving carbon and water.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip53",
+      "topic": "shopping",
+      "text": "A discount isn't a bargain if the piece never gets worn. Judge sale buys on cost per wear, not on the saving.",
+      "src": [
+        "w23"
+      ]
+    },
+    {
+      "id": "tip54",
+      "topic": "fit",
+      "text": "Poor fit is the main reason clothes go unworn. If it doesn't fit well in the shop, it won't fit better at home.",
+      "src": [
+        "w1"
+      ]
+    },
+    {
+      "id": "tip55",
+      "topic": "fit",
+      "text": "Four in five people own clothes they don't wear because they no longer fit or need altering. A tailor can fix most.",
+      "src": [
+        "w3"
+      ]
+    },
+    {
+      "id": "tip56",
+      "topic": "fit",
+      "text": "Having trousers hemmed to the right length is a quick, low-cost alteration that makes a piece look made for you.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip57",
+      "topic": "fit",
+      "text": "Keep clothes that fit you now. Pieces saved for 'one day' take up space and rarely get worn.",
+      "src": [
+        "w1"
+      ]
+    },
+    {
+      "id": "tip58",
+      "topic": "fit",
+      "text": "Leave taking in or letting out to an alterations specialist; only about one in eight people feel able to do it.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip59",
+      "topic": "fit",
+      "text": "Fit beats price. A piece that fits gets worn, and wear is what brings the cost per wear down.",
+      "src": [
+        "w23",
+        "w1"
+      ]
+    },
+    {
+      "id": "tip60",
+      "topic": "budget",
+      "text": "Cost per wear is price divided by wears. A £120 coat worn 120 times costs £1 a wear.",
+      "src": [
+        "w23"
+      ]
+    },
+    {
+      "id": "tip61",
+      "topic": "budget",
+      "text": "A cheap top worn three times can cost more per wear than a better one worn fifty times.",
+      "src": [
+        "w23"
+      ]
+    },
+    {
+      "id": "tip62",
+      "topic": "budget",
+      "text": "Set separate cost-per-wear goals for everyday and occasion pieces; event outfits will always cost more per wear.",
+      "src": [
+        "w23"
+      ]
+    },
+    {
+      "id": "tip63",
+      "topic": "budget",
+      "text": "Save ahead for a seasonal clothing budget so purchases are planned rather than impulsive.",
+      "src": [
+        "w12"
+      ]
+    },
+    {
+      "id": "tip64",
+      "topic": "budget",
+      "text": "Unworn clothes are money sitting idle: UK households own about £4,000 of clothing, and 30% goes unworn for a year.",
+      "src": [
+        "w1"
+      ]
+    },
+    {
+      "id": "tip65",
+      "topic": "budget",
+      "text": "Washing at 30°C instead of 40°C can save around £24 a year for a household running four washes a week.",
+      "src": [
+        "w21"
+      ]
+    },
+    {
+      "id": "tip66",
+      "topic": "budget",
+      "text": "Spend more on long-life pieces such as coats, knits and jeans; they're the garments where durability pays most.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip67",
+      "topic": "budget",
+      "text": "Repair before replacing: a new zip or hem costs a fraction of a new garment and keeps a favourite in use.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip68",
+      "topic": "sustainability",
+      "text": "Between 2000 and 2015 the number of times a garment was worn fell by 36%, while clothing production doubled.",
+      "src": [
+        "w4",
+        "w5"
+      ]
+    },
+    {
+      "id": "tip69",
+      "topic": "sustainability",
+      "text": "Less than 1% of the material used to make clothing is recycled into new clothing. Wearing things longer matters more.",
+      "src": [
+        "w5"
+      ]
+    },
+    {
+      "id": "tip70",
+      "topic": "sustainability",
+      "text": "Every second, the equivalent of a rubbish truck of textiles is landfilled or burned somewhere in the world.",
+      "src": [
+        "w6"
+      ]
+    },
+    {
+      "id": "tip71",
+      "topic": "sustainability",
+      "text": "Keeping half of the UK's clothes in use nine months longer would cut their carbon by 8% and water by 10%.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip72",
+      "topic": "sustainability",
+      "text": "UK clothes last about 3.3 years on average. Every extra season of wear trims their footprint.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip73",
+      "topic": "sustainability",
+      "text": "Since 2000, shoppers have bought about 60% more garments a year but kept them only half as long.",
+      "src": [
+        "w7"
+      ]
+    },
+    {
+      "id": "tip74",
+      "topic": "sustainability",
+      "text": "In one national survey, 40% of the clothes in people's wardrobes were rarely or never worn.",
+      "src": [
+        "w8"
+      ]
+    },
+    {
+      "id": "tip75",
+      "topic": "sustainability",
+      "text": "The 80/20 rule of thumb: most people wear about 20% of their clothes 80% of the time. Log your wears to find your 20%.",
+      "src": [
+        "w18"
+      ]
+    },
+    {
+      "id": "tip76",
+      "topic": "sustainability",
+      "text": "The EU generates around 16 kg of textile waste per person a year, and less than a third is collected separately.",
+      "src": [
+        "w24"
+      ]
+    },
+    {
+      "id": "tip77",
+      "topic": "sustainability",
+      "text": "Pass on what you don't wear. Resale or donation gives clothes a second life and keeps them out of the bin.",
+      "src": [
+        "w2"
+      ]
+    },
+    {
+      "id": "tip78",
+      "topic": "sustainability",
+      "text": "One UK survey found new clothes were worn only around seven times on average. Aim for at least 30.",
+      "src": [
+        "w9",
+        "w31",
+        "w10"
+      ]
+    },
+    {
+      "id": "tip79",
+      "topic": "sustainability",
+      "text": "Clothes shed microfibres in the wash; about half a million tonnes reach the ocean each year. Wash less, in full loads.",
+      "src": [
+        "w6",
+        "w21"
+      ]
+    },
+    {
+      "id": "tip80",
+      "topic": "packing",
+      "text": "Pack about three tops for every bottom. Bottoms can be worn several times between washes; tops can't.",
+      "src": [
+        "w16"
+      ]
+    },
+    {
+      "id": "tip81",
+      "topic": "packing",
+      "text": "Try 5-4-3-2-1 packing: five tops, four bottoms, three pairs of shoes, two swimsuits and one hat. Adjust for the trip.",
+      "src": [
+        "w17"
+      ]
+    },
+    {
+      "id": "tip82",
+      "topic": "packing",
+      "text": "Start with two or three neutral bottoms and four to six light tops, then add only what the trip demands.",
+      "src": [
+        "w16"
+      ]
+    },
+    {
+      "id": "tip83",
+      "topic": "packing",
+      "text": "Pack shoes that suit everything in the case. If a pair works with only one outfit, leave it at home.",
+      "src": [
+        "w17"
+      ]
+    },
+    {
+      "id": "tip84",
+      "topic": "packing",
+      "text": "A 16-piece capsule built from two neutrals and one accent colour fits in a carry-on and mixes endlessly.",
+      "src": [
+        "w13"
+      ]
+    },
+    {
+      "id": "tip85",
+      "topic": "packing",
+      "text": "Keep every piece in your travel palette, so any top goes with any bottom and nothing travels as a one-off.",
+      "src": [
+        "w16",
+        "w13"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "k01",
+      "title": "Palette needs a neutral base",
+      "metric": "neutralShare",
+      "op": "<",
+      "value": 0.4,
+      "minItems": 15,
+      "message": "Only {value} of your closet is neutral, so pieces are harder to pair. Mix-and-match closets sit nearer 60–70%.",
+      "action": "Add basics in navy, grey, white or camel that go with your colours.",
+      "src": [
+        "w25",
+        "w13"
+      ]
+    },
+    {
+      "id": "k02",
+      "title": "Mostly neutrals",
+      "metric": "neutralShare",
+      "op": ">",
+      "value": 0.85,
+      "minItems": 15,
+      "message": "Your closet is {value} neutrals. A few more pieces in one accent colour would add life without breaking the mix.",
+      "action": "Pick one accent you love and repeat it in two or three pieces.",
+      "src": [
+        "w25",
+        "w26"
+      ]
+    },
+    {
+      "id": "k03",
+      "title": "Too many accent colours",
+      "metric": "accentColours",
+      "op": ">",
+      "value": 5,
+      "minItems": 20,
+      "message": "{value} different accent colours are competing. Outfits pair more easily when one to three colours repeat.",
+      "action": "Favour your top two or three accents when you next shop.",
+      "src": [
+        "w26",
+        "w25"
+      ]
+    },
+    {
+      "id": "k04",
+      "title": "Focused colour palette",
+      "metric": "accentColours",
+      "op": "==",
+      "value": 2,
+      "minItems": 15,
+      "message": "Two accent colours on a neutral base: a tight palette where almost everything pairs.",
+      "action": "Repeat each accent in a top, a layer or an accessory.",
+      "src": [
+        "w26"
+      ]
+    },
+    {
+      "id": "k05",
+      "title": "Well-balanced palette",
+      "metric": "accentColours",
+      "op": "==",
+      "value": 3,
+      "minItems": 15,
+      "message": "Three accent colours give you variety while keeping outfits easy to mix.",
+      "action": "Keep new buys within these three accents and your neutrals.",
+      "src": [
+        "w25",
+        "w13"
+      ]
+    },
+    {
+      "id": "k06",
+      "title": "Prints are competing",
+      "metric": "boldPatternShare",
+      "op": ">",
+      "value": 0.35,
+      "minItems": 15,
+      "message": "{value} of your pieces are bold patterns. Prints clash easily, so you need solids to do the pairing.",
+      "action": "Pair each print with solids and make your next buy a plain piece.",
+      "src": [
+        "w15"
+      ]
+    },
+    {
+      "id": "k07",
+      "title": "Easy-pairing solids",
+      "metric": "boldPatternShare",
+      "op": "<=",
+      "value": 0.2,
+      "minItems": 15,
+      "message": "Only {value} of your closet is boldly patterned, so nearly every piece pairs with every other.",
+      "action": "Add one print you love to lift the solids.",
+      "src": [
+        "w15"
+      ]
+    },
+    {
+      "id": "k08",
+      "title": "Bigger than you need",
+      "metric": "items",
+      "op": ">",
+      "value": 150,
+      "minItems": 20,
+      "message": "{value} pieces is far beyond the 33 a three-month capsule uses. Surveys find much of a big closet sits unworn.",
+      "action": "Try a 33-piece capsule for three months and box up the rest.",
+      "src": [
+        "w11",
+        "w8",
+        "w1"
+      ]
+    },
+    {
+      "id": "k09",
+      "title": "Capsule-sized closet",
+      "metric": "items",
+      "op": "<=",
+      "value": 40,
+      "minItems": 20,
+      "message": "{value} pieces is capsule territory: small enough to see at a glance, big enough for weeks of outfits.",
+      "action": "Keep it lean: one in, one out.",
+      "src": [
+        "w11",
+        "w12"
+      ]
+    },
+    {
+      "id": "k10",
+      "title": "Short on tops",
+      "metric": "tops",
+      "op": "<",
+      "value": 5,
+      "minItems": 15,
+      "message": "Your tops count is {value}. Capsules usually carry 8–15, so laundry day comes round fast.",
+      "action": "Add two or three easy tops in your core neutrals.",
+      "src": [
+        "w12",
+        "w26"
+      ]
+    },
+    {
+      "id": "k11",
+      "title": "Few bottoms",
+      "metric": "bottoms",
+      "op": "<",
+      "value": 3,
+      "minItems": 15,
+      "message": "Your bottoms count is {value}. Capsules usually carry 5–9 so every top has something to go with it.",
+      "action": "Add neutral trousers or jeans that suit most of your tops.",
+      "src": [
+        "w26",
+        "w12"
+      ]
+    },
+    {
+      "id": "k12",
+      "title": "Instant outfits ready",
+      "metric": "onePieces",
+      "op": ">=",
+      "value": 2,
+      "minItems": 15,
+      "message": "{value} dresses, jumpsuits or other one-pieces: whole outfits in one go for busy mornings.",
+      "action": "Change the shoes and layer to take them from day to evening.",
+      "src": [
+        "w15"
+      ]
+    },
+    {
+      "id": "k13",
+      "title": "Add a layer",
+      "metric": "layers",
+      "op": "<",
+      "value": 2,
+      "minItems": 15,
+      "message": "Your layering count is {value}. A knit or overshirt worn over your tops multiplies your outfits.",
+      "action": "Add a neutral cardigan, knit or overshirt that goes over most tops.",
+      "src": [
+        "w15"
+      ]
+    },
+    {
+      "id": "k14",
+      "title": "Layers multiply outfits",
+      "metric": "layers",
+      "op": ">=",
+      "value": 4,
+      "minItems": 15,
+      "message": "{value} layering pieces: each one turns the tops you already own into new outfits.",
+      "action": "Try each layer over a top you rarely wear.",
+      "src": [
+        "w15"
+      ]
+    },
+    {
+      "id": "k15",
+      "title": "A lot of coats",
+      "metric": "outerwear",
+      "op": ">",
+      "value": 8,
+      "minItems": 30,
+      "message": "{value} coats and jackets is more than most climates need. One per type of weather usually covers it.",
+      "action": "Keep your best one per weather type and pass on the rest.",
+      "src": [
+        "w15"
+      ]
+    },
+    {
+      "id": "k16",
+      "title": "Shoes need a rest day",
+      "metric": "shoes",
+      "op": "<",
+      "value": 3,
+      "minItems": 15,
+      "message": "With only {value} in your shoe rotation, no pair gets the 24 hours it needs to dry out between wears.",
+      "action": "Aim for three pairs to rotate: casual, smart and weather-ready.",
+      "src": [
+        "w22",
+        "w26"
+      ]
+    },
+    {
+      "id": "k17",
+      "title": "Plenty of shoes",
+      "metric": "shoes",
+      "op": ">",
+      "value": 20,
+      "minItems": 30,
+      "message": "{value} pairs of shoes is more than double the nine a typical seasonal capsule uses.",
+      "action": "Pass on pairs you haven't worn this year.",
+      "src": [
+        "w12",
+        "w26"
+      ]
+    },
+    {
+      "id": "k18",
+      "title": "No bag logged",
+      "metric": "bags",
+      "op": "==",
+      "value": 0,
+      "minItems": 15,
+      "message": "No bags in your closet yet. One neutral everyday bag finishes most outfits.",
+      "action": "Add the bag you carry most, or plan one in a neutral.",
+      "src": [
+        "w14",
+        "w26"
+      ]
+    },
+    {
+      "id": "k19",
+      "title": "No accessories",
+      "metric": "accessories",
+      "op": "==",
+      "value": 0,
+      "minItems": 20,
+      "message": "No accessories yet. A belt, scarf or watch is the quickest way to change a repeat outfit.",
+      "action": "Add the accessories you own; a scarf in your accent colour is a good start.",
+      "src": [
+        "w29",
+        "w26"
+      ]
+    },
+    {
+      "id": "k20",
+      "title": "Accessories at work",
+      "metric": "accessories",
+      "op": ">=",
+      "value": 5,
+      "minItems": 15,
+      "message": "{value} accessories to change the look of the same core pieces, so repeat outfits never feel repeated.",
+      "action": "Restyle a favourite outfit with a different accessory this week.",
+      "src": [
+        "w29"
+      ]
+    },
+    {
+      "id": "k21",
+      "title": "Tops are thin on the ground",
+      "metric": "topsPerBottom",
+      "op": "<",
+      "value": 1.5,
+      "minItems": 12,
+      "message": "You have {value} tops per bottom. Tops do most of the work, and stylists plan two to three per bottom.",
+      "action": "Buy tops before bottoms until you reach two or three per bottom.",
+      "src": [
+        "w16",
+        "w15"
+      ]
+    },
+    {
+      "id": "k22",
+      "title": "Bottoms are overworked",
+      "metric": "topsPerBottom",
+      "op": ">",
+      "value": 5,
+      "minItems": 12,
+      "message": "You have {value} tops per bottom, so your bottoms carry every outfit and will wear out first.",
+      "action": "Add one versatile bottom in a neutral.",
+      "src": [
+        "w16",
+        "w15"
+      ]
+    },
+    {
+      "id": "k23",
+      "title": "No rain-ready coat",
+      "metric": "waterproofOuterwear",
+      "op": "==",
+      "value": 0,
+      "minItems": 10,
+      "message": "No waterproof coat yet. Wet days are the gap most closets leave, and one good coat closes it.",
+      "action": "Add a raincoat, trench coat or hooded parka.",
+      "src": [
+        "w15",
+        "w27"
+      ]
+    },
+    {
+      "id": "k24",
+      "title": "No warm coat",
+      "metric": "warmOuterwear",
+      "op": "==",
+      "value": 0,
+      "minItems": 15,
+      "message": "None of your outerwear is rated warm. Coats are among the longest-lived clothes, so one good one pays back.",
+      "action": "Add one insulated coat, parka or puffer in a neutral.",
+      "src": [
+        "w2",
+        "w14"
+      ]
+    },
+    {
+      "id": "k25",
+      "title": "No smart shoes",
+      "metric": "smartShoes",
+      "op": "==",
+      "value": 0,
+      "minItems": 15,
+      "message": "No smart shoes yet. Interviews, weddings and dinners all call for one polished pair.",
+      "action": "Add loafers, Chelsea boots or dress shoes in black or brown.",
+      "src": [
+        "w22",
+        "w27"
+      ]
+    },
+    {
+      "id": "k26",
+      "title": "Smart shoes covered",
+      "metric": "smartShoes",
+      "op": ">=",
+      "value": 2,
+      "minItems": 15,
+      "message": "{value} pairs of smart shoes: you're ready for dinners, interviews and dressier days.",
+      "action": "Rotate them and use shoe trees to keep their shape.",
+      "src": [
+        "w22"
+      ]
+    },
+    {
+      "id": "k27",
+      "title": "Nothing for formal days",
+      "metric": "formalPieces",
+      "op": "==",
+      "value": 0,
+      "minItems": 20,
+      "message": "Nothing in your closet reaches business level. One tailored piece covers interviews and events.",
+      "action": "Add a blazer or tailored trousers that also dress up jeans.",
+      "src": [
+        "w27",
+        "w15"
+      ]
+    },
+    {
+      "id": "k28",
+      "title": "Very casual closet",
+      "metric": "casualShare",
+      "op": ">",
+      "value": 0.85,
+      "minItems": 20,
+      "message": "{value} of your closet is casual. A few smart-casual pieces would stretch it to work, dinners and events.",
+      "action": "Make your next buy a shirt, knit polo or tailored trousers.",
+      "src": [
+        "w27",
+        "w22"
+      ]
+    },
+    {
+      "id": "k29",
+      "title": "Casual and smart in balance",
+      "metric": "casualShare",
+      "op": "<=",
+      "value": 0.6,
+      "minItems": 20,
+      "message": "A healthy spread of casual and smarter pieces: you're dressed for most occasions.",
+      "action": "Mix one smart piece into a casual outfit to stretch both.",
+      "src": [
+        "w15"
+      ]
+    },
+    {
+      "id": "k30",
+      "title": "Closet in active use",
+      "metric": "wornShare30",
+      "op": ">=",
+      "value": 0.5,
+      "minItems": 20,
+      "message": "You've worn {value} of your closet in the last 30 days. It's working hard.",
+      "action": "Keep logging wears to spot your true favourites.",
+      "src": [
+        "w18"
+      ]
+    },
+    {
+      "id": "k31",
+      "title": "Much of the closet is resting",
+      "metric": "wornShare90",
+      "op": "<",
+      "value": 0.5,
+      "minItems": 20,
+      "message": "Only {value} of your closet was worn in the last 90 days. Most people wear about 20% of their clothes 80% of the time.",
+      "action": "Style three unworn pieces this week, or move them on.",
+      "src": [
+        "w18",
+        "w1"
+      ]
+    },
+    {
+      "id": "k32",
+      "title": "Beating the 80/20 rule",
+      "metric": "wornShare90",
+      "op": ">=",
+      "value": 0.8,
+      "minItems": 20,
+      "message": "{value} of your closet was worn in the last 90 days, far better than the usual 80/20 pattern.",
+      "action": "Keep your buying this considered.",
+      "src": [
+        "w18",
+        "w1"
+      ]
+    },
+    {
+      "id": "k33",
+      "title": "Unworn pieces",
+      "metric": "neverWornShare",
+      "op": ">",
+      "value": 0.2,
+      "minItems": 15,
+      "message": "{value} of the pieces you've had over two months are still unworn. Poor fit is the usual reason.",
+      "action": "Wear each one this month, have it altered, or pass it on.",
+      "src": [
+        "w1",
+        "w3"
+      ]
+    },
+    {
+      "id": "k34",
+      "title": "Everything gets worn",
+      "metric": "neverWornShare",
+      "op": "==",
+      "value": 0,
+      "minItems": 25,
+      "message": "Every piece you've had for over two months has been worn. Nothing in your closet is idle.",
+      "action": "Keep shopping this way: only what you'll wear 30 times.",
+      "src": [
+        "w10",
+        "w1"
+      ]
+    },
+    {
+      "id": "k35",
+      "title": "High cost per wear",
+      "metric": "avgCostPerWear",
+      "op": ">",
+      "value": 10,
+      "minItems": 10,
+      "message": "Your average cost per wear is {value}. Wearing favourites more often is the fastest way to bring it down.",
+      "action": "Before buying, ask: will I wear this at least 30 times?",
+      "src": [
+        "w23",
+        "w10"
+      ]
+    },
+    {
+      "id": "k36",
+      "title": "Clothes earning their keep",
+      "metric": "avgCostPerWear",
+      "op": "<=",
+      "value": 2,
+      "minItems": 10,
+      "message": "Your average cost per wear is just {value}. Your clothes are earning their keep.",
+      "action": "Keep caring for favourites so they last even longer.",
+      "src": [
+        "w23"
+      ]
+    },
+    {
+      "id": "k37",
+      "title": "Few warm-weather pieces",
+      "metric": "summerPieces",
+      "op": "<",
+      "value": 5,
+      "minItems": 20,
+      "message": "Your hot-weather count is just {value}. A heatwave would leave you short of cool options.",
+      "action": "Add breathable tops and a light bottom in linen or cotton.",
+      "src": [
+        "w12",
+        "w11"
+      ]
+    },
+    {
+      "id": "k38",
+      "title": "Few cold-weather pieces",
+      "metric": "winterPieces",
+      "op": "<",
+      "value": 5,
+      "minItems": 20,
+      "message": "Your cold-weather count is just {value}. Winter needs knits and a warm layer.",
+      "action": "Add a warm knit and check you have a winter coat.",
+      "src": [
+        "w12",
+        "w2"
+      ]
+    },
+    {
+      "id": "k39",
+      "title": "Lots of lookalikes",
+      "metric": "duplicates",
+      "op": ">=",
+      "value": 5,
+      "minItems": 15,
+      "message": "You own {value} pieces of the same type in the same colour. Near-duplicates split wear without adding outfits.",
+      "action": "Skip this type and colour next time; try a new shape or accent.",
+      "src": [
+        "w12",
+        "w13"
+      ]
+    },
+    {
+      "id": "k40",
+      "title": "Every piece adds something",
+      "metric": "duplicates",
+      "op": "<=",
+      "value": 2,
+      "minItems": 25,
+      "message": "Little doubling-up: almost every piece brings a new colour or shape to your outfits.",
+      "action": "Keep checking new buys against what you own.",
+      "src": [
+        "w12",
+        "w13"
+      ]
+    },
+    {
+      "id": "k41",
+      "title": "Laundry pile-up",
+      "metric": "laundryShare",
+      "op": ">",
+      "value": 0.4,
+      "minItems": 15,
+      "message": "{value} of your closet is in the wash. Many pieces can be aired and worn again before washing.",
+      "action": "Run a full load at 30°C, and air jeans and knits between wears.",
+      "src": [
+        "w21",
+        "w19"
+      ]
+    },
+    {
+      "id": "k42",
+      "title": "Long wishlist",
+      "metric": "wishlist",
+      "op": ">",
+      "value": 15,
+      "minItems": 10,
+      "message": "{value} pieces on your wishlist. A long list tends to turn into impulse buys.",
+      "action": "Run each through the 30-wears test and keep your top five.",
+      "src": [
+        "w10",
+        "w12"
+      ]
+    }
+  ],
+  "ratios": {
+    "summary": "Stylists and published capsules land on two to three tops per bottom, just under one layer and one pair of shoes per bottom, and a small handful of coats.",
+    "perBottom": {
+      "TOP": 2.5,
+      "LAYER": 0.8,
+      "SHOES": 0.8,
+      "OUTERWEAR": 0.4,
+      "ONE_PIECE": 0.4,
+      "BAG": 0.4,
+      "ACCESSORY": 0.8
+    },
+    "src": [
+      "w15",
+      "w16",
+      "w12",
+      "w26",
+      "w14",
+      "w17"
+    ]
+  },
+  "essentials": [
+    {
+      "name": "Rain-ready coat",
+      "category": "OUTERWEAR",
+      "types": [
+        "Raincoat",
+        "Trench coat",
+        "Parka"
+      ],
+      "why": "Wet days are the gap most closets leave. A trench or hooded coat keeps every outfit wearable.",
+      "src": [
+        "w15",
+        "w27"
+      ]
+    },
+    {
+      "name": "Warm winter coat",
+      "category": "OUTERWEAR",
+      "types": [
+        "Coat",
+        "Puffer jacket",
+        "Parka"
+      ],
+      "why": "Coats were the longest-lasting garment in a UK survey, at about 4.6 years, so a good warm coat pays back.",
+      "src": [
+        "w2",
+        "w14"
+      ]
+    },
+    {
+      "name": "Light jacket",
+      "category": "OUTERWEAR",
+      "types": [
+        "Denim jacket",
+        "Jacket",
+        "Bomber jacket",
+        "Leather jacket"
+      ],
+      "why": "Covers mild days and the gaps between seasons, over almost any outfit.",
+      "src": [
+        "w26"
+      ]
+    },
+    {
+      "name": "Blazer",
+      "category": "LAYER",
+      "types": [
+        "Blazer"
+      ],
+      "why": "Dresses up jeans, smartens a T-shirt and handles interviews: the most versatile layer.",
+      "src": [
+        "w27",
+        "w15",
+        "w14"
+      ]
+    },
+    {
+      "name": "Neutral knit",
+      "category": "LAYER",
+      "types": [
+        "Knit sweater",
+        "Cardigan"
+      ],
+      "why": "One knit for every three tops multiplies outfits and carries you through the cooler months.",
+      "src": [
+        "w15",
+        "w14"
+      ]
+    },
+    {
+      "name": "Plain T-shirts",
+      "category": "TOP",
+      "types": [
+        "T-shirt"
+      ],
+      "why": "Plain tees in white or a core neutral are the base of countless outfits and the piece editors wear most.",
+      "src": [
+        "w27",
+        "w26"
+      ]
+    },
+    {
+      "name": "Crisp shirt",
+      "category": "TOP",
+      "types": [
+        "Shirt",
+        "Dress shirt",
+        "Blouse"
+      ],
+      "why": "A plain shirt moves from desk to dinner and layers neatly under knits and blazers.",
+      "src": [
+        "w27",
+        "w14"
+      ]
+    },
+    {
+      "name": "Dark jeans",
+      "category": "BOTTOM",
+      "types": [
+        "Jeans"
+      ],
+      "why": "Straight, dark denim goes with nearly every top and turns smart with a blazer.",
+      "src": [
+        "w15",
+        "w26"
+      ]
+    },
+    {
+      "name": "Tailored trousers",
+      "category": "BOTTOM",
+      "types": [
+        "Trousers",
+        "Wide-leg trousers",
+        "Chinos"
+      ],
+      "why": "Neutral trousers cover work, dinners and travel in a single piece.",
+      "src": [
+        "w15",
+        "w27",
+        "w14"
+      ]
+    },
+    {
+      "name": "Warm-weather bottom",
+      "category": "BOTTOM",
+      "types": [
+        "Tailored shorts",
+        "Midi skirt",
+        "Skirt",
+        "Shorts"
+      ],
+      "why": "A neat, light bottom keeps hot-weather outfits polished rather than beachy.",
+      "src": [
+        "w12",
+        "w14"
+      ]
+    },
+    {
+      "name": "One-piece outfit",
+      "category": "ONE_PIECE",
+      "types": [
+        "Dress",
+        "Shirt dress",
+        "Jumpsuit"
+      ],
+      "why": "A whole outfit in one piece that dresses up or down with a change of shoes.",
+      "src": [
+        "w15",
+        "w14"
+      ]
+    },
+    {
+      "name": "Clean sneakers",
+      "category": "SHOES",
+      "types": [
+        "Sneakers"
+      ],
+      "why": "Minimal leather or canvas sneakers work with jeans, trousers and relaxed tailoring.",
+      "src": [
+        "w26",
+        "w22"
+      ]
+    },
+    {
+      "name": "Smart shoes",
+      "category": "SHOES",
+      "types": [
+        "Loafers",
+        "Dress shoes",
+        "Chelsea boots"
+      ],
+      "why": "Interviews, weddings and dinners need one polished pair in black or brown.",
+      "src": [
+        "w27",
+        "w22"
+      ]
+    },
+    {
+      "name": "Weather-ready boots",
+      "category": "SHOES",
+      "types": [
+        "Boots",
+        "Chelsea boots",
+        "Ankle boots",
+        "Rain boots"
+      ],
+      "why": "Wet pavements ruin fabric shoes; a sealed leather or rubber boot keeps you going.",
+      "src": [
+        "w15",
+        "w12"
+      ]
+    },
+    {
+      "name": "Summer sandals",
+      "category": "SHOES",
+      "types": [
+        "Sandals",
+        "Espadrilles"
+      ],
+      "why": "Covers hot days and holidays when closed shoes feel heavy.",
+      "src": [
+        "w26",
+        "w17"
+      ]
+    },
+    {
+      "name": "Everyday bag",
+      "category": "BAG",
+      "types": [
+        "Tote",
+        "Crossbody",
+        "Backpack"
+      ],
+      "why": "One neutral bag that carries the daily essentials and suits most outfits.",
+      "src": [
+        "w14",
+        "w26"
+      ]
+    },
+    {
+      "name": "Evening bag",
+      "category": "BAG",
+      "types": [
+        "Handbag",
+        "Clutch"
+      ],
+      "why": "A smaller, structured bag for dinners and events where a tote looks too casual.",
+      "src": [
+        "w14"
+      ]
+    },
+    {
+      "name": "Leather belt",
+      "category": "ACCESSORY",
+      "types": [
+        "Belt"
+      ],
+      "why": "Finishes tucked shirts and trousers; choose one in the same neutral family as your shoes.",
+      "src": [
+        "w26"
+      ]
+    },
+    {
+      "name": "Scarf",
+      "category": "ACCESSORY",
+      "types": [
+        "Scarf"
+      ],
+      "why": "Adds warmth and colour, and changes a repeat outfit in seconds.",
+      "src": [
+        "w29",
+        "w26"
+      ]
+    }
+  ]
+}

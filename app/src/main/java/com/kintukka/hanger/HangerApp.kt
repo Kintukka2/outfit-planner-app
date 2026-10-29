@@ -14,6 +14,7 @@ class HangerApp : Application() {
         super.onCreate()
         container = AppContainer(this)
         Reminders.createChannel(this)
+        container.appScope.launch { container.settings.removeLegacyApiKey() }
         container.appScope.launch {
             container.settings.settings
                 .map { it.reminderEnabled to it.reminderMinutes }

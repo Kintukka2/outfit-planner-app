@@ -21,7 +21,7 @@ import androidx.compose.material.icons.outlined.AutoAwesome
 import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.Checkroom
 import androidx.compose.material.icons.outlined.Dashboard
-import androidx.compose.material.icons.outlined.Forum
+import androidx.compose.material.icons.outlined.Palette
 import androidx.compose.material.icons.outlined.LocalLaundryService
 import androidx.compose.material.icons.outlined.LocationOn
 import androidx.compose.material.icons.outlined.Refresh
@@ -206,8 +206,8 @@ fun TodayScreen(navController: NavHostController) {
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.weight(1f),
                         )
-                        IconButton(onClick = { navController.navigate(com.kintukka.hanger.ui.navigation.StylistRoute) }) {
-                            Icon(Icons.Outlined.Forum, contentDescription = "Ask your stylist")
+                        IconButton(onClick = { navController.navigate(com.kintukka.hanger.ui.navigation.StyleGuideRoute) }) {
+                            Icon(Icons.Outlined.Palette, contentDescription = "Style guide")
                         }
                         IconButton(onClick = { navController.navigate(SettingsRoute) }) {
                             Icon(Icons.Outlined.Settings, contentDescription = "Settings")
@@ -347,6 +347,13 @@ fun TodayScreen(navController: NavHostController) {
                     }
                 }
             }
+            item(key = "tip") {
+                com.kintukka.hanger.ui.guide.TipOfTheDayCard(
+                    date = date,
+                    onOpenGuide = { navController.navigate(com.kintukka.hanger.ui.navigation.StyleGuideRoute) },
+                    modifier = Modifier.padding(horizontal = 20.dp),
+                )
+            }
         }
         SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter))
     }
@@ -402,6 +409,9 @@ private fun WeatherCard(state: TodayUi, onRefresh: () -> Unit, onSetLocation: ()
                     }
                     val summary = runCatching { WeatherAdvisor.needs(w.wearing).summary }.getOrNull()
                     Text(summary ?: "${w.precipitationProbability}% chance of rain", style = MaterialTheme.typography.bodyMedium)
+                    com.kintukka.hanger.ui.guide.weatherAdvice(w.wearing, limit = 1).firstOrNull()?.let { rule ->
+                        Text(rule.advice, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 4.dp))
+                    }
                     Text(s.locationName.orEmpty(), style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(top = 4.dp))
                 }
             }

@@ -116,7 +116,6 @@ dependencies {
     implementation(libs.mlkit.subject.segmentation)
     implementation(libs.mlkit.image.labeling)
     implementation(libs.play.services.location)
-    implementation(libs.anthropic.java)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)

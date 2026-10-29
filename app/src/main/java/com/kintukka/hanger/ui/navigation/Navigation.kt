@@ -68,7 +68,7 @@ const val NO_DATE = Long.MIN_VALUE
 @Serializable object InsightsRoute
 @Serializable object SettingsRoute
 @Serializable object AddItemsRoute
-@Serializable object StylistRoute
+@Serializable object StyleGuideRoute
 @Serializable data class ItemRoute(val id: Long)
 @Serializable data class EditItemRoute(val id: Long)
 @Serializable data class OutfitRoute(val id: Long)
@@ -153,7 +153,7 @@ fun HangerNavHost(navController: NavHostController = rememberNavController()) {
             composable<InsightsRoute> { InsightsScreen(navController) }
             composable<SettingsRoute> { SettingsScreen(navController) }
             composable<AddItemsRoute> { AddItemsScreen(navController) }
-            composable<StylistRoute> { com.kintukka.hanger.ui.stylist.StylistScreen(navController) }
+            composable<StyleGuideRoute> { com.kintukka.hanger.ui.guide.StyleGuideScreen(navController) }
             composable<ItemRoute> { ItemDetailScreen(navController, it.toRoute<ItemRoute>().id) }
             composable<EditItemRoute> { EditItemScreen(navController, it.toRoute<EditItemRoute>().id) }
             composable<OutfitRoute> { OutfitDetailScreen(navController, it.toRoute<OutfitRoute>().id) }

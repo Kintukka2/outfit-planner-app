@@ -28,7 +28,7 @@ class OutfitEvaluatorTest {
     private fun weather(feels: Double, precip: Int = 0) = WeatherContext(feels - 2, feels + 2, feelsLikeC = feels, precipitationProbability = precip)
 
     @Test
-    fun cohesiveNeutralOutfitScoresHigh() {
+    fun cohesiveNeutralOutfitScoresHigh() = TestGuide.use {
         val e = OutfitEvaluator.evaluate(listOf(navyTee, camelChinos, sneakers))
         assertTrue("score ${e.score}", e.score >= 0.85)
         assertTrue(e.warnings.toString(), e.warnings.isEmpty())

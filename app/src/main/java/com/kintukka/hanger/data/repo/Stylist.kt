@@ -84,7 +84,7 @@ class Stylist(
         val wx = weatherFor(date)?.wearing
         val affinity = settings.affinity.first()
         return withContext(Dispatchers.Default) {
-            runCatching { OutfitEvaluator.evaluate(items.map(Item::toGarment), wx, occasion, affinity) }.getOrNull()
+            runCatching { OutfitEvaluator.evaluate(items.map(Item::toGarment), wx, occasion, affinity, date) }.getOrNull()
         }
     }
 
