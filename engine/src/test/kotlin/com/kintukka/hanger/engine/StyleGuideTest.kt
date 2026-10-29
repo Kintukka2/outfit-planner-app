@@ -52,12 +52,12 @@ class StyleGuideTest {
     fun garmentPairingsLiftClassicsAndFlagClashes() {
         val good = listOf(shirt, chinos, loafers)
         val bad = listOf(shirt, trousers, runningShoes)
-        val plainGood = OutfitEvaluator.evaluate(good).score
-        val plainBad = OutfitEvaluator.evaluate(bad).score
+        val plainGood = TestGuide.with(TestGuide.empty) { OutfitEvaluator.evaluate(good).score }
+        val plainBad = TestGuide.with(TestGuide.empty) { OutfitEvaluator.evaluate(bad).score }
         TestGuide.use {
             val g = OutfitEvaluator.evaluate(good)
             assertTrue(g.notes.toString(), "Loafers sharpen chinos" in g.notes)
-            assertTrue(g.score >= plainGood || g.score == 1.0)
+            assertTrue("${g.score} vs $plainGood", g.score > plainGood)
             val b = OutfitEvaluator.evaluate(bad)
             assertTrue(b.warnings.toString(), "Running shoes undercut tailored trousers" in b.warnings)
             assertTrue("${b.score} vs $plainBad", b.score < plainBad - 0.1)
@@ -97,7 +97,7 @@ class StyleGuideTest {
     @Test
     fun trendsRunOnTheirDatesAndNoteMatchingOutfits() = TestGuide.use {
         val k = StyleGuide.knowledge
-        assertEquals(listOf("t1", "t2"), k.liveTrends(today).map { it.id })
+        assertEquals(listOf("t1", "t2", "t4"), k.liveTrends(today).map { it.id })
         assertEquals(listOf("t3"), k.upcomingTrends(today).map { it.id })
         assertEquals(listOf("t3"), k.liveTrends(LocalDate.of(2027, 5, 1)).map { it.id })
 
@@ -112,9 +112,15 @@ class StyleGuideTest {
         assertFalse(k.trends.trends.first { it.id == "t2" }.matchesOutfit(listOf(brown, whiteSneakers)))
         assertTrue(k.trends.trends.first { it.id == "t2" }.matchesOutfit(listOf(brown, blue, whiteSneakers)))
 
-        val pieces = StyleGuide.trendPieces(listOf(burgundyKnit, brown, jeans), today).associate { (t, g) -> t.id to g.map { it.id } }
+        val blackFloral = item(33, "Dress", FashionColor.BLACK, pattern = Pattern.FLORAL)
+        val pinkFloral = item(34, "Skirt", FashionColor.PINK, pattern = Pattern.FLORAL)
+        val blackBag = item(35, "Handbag", FashionColor.BLACK)
+        val closet = listOf(burgundyKnit, brown, jeans, blackFloral, pinkFloral, blackBag)
+        val pieces = StyleGuide.trendPieces(closet, today).associate { (t, g) -> t.id to g.map { it.id } }
         assertEquals(listOf(30L), pieces["t1"])
         assertEquals(listOf(31L), pieces["t2"])
+        // A piece must fit every part of an "all" trend: a black floral, not any floral or any black piece.
+        assertEquals(listOf(33L), pieces["t4"])
     }
 
     @Test

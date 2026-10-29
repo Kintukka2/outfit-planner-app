@@ -43,12 +43,15 @@ class OutfitEvaluatorTest {
 
     @Test
     fun twoBoldPatternsAreFlagged() {
+        // The guide rates floral with a graphic print as a clash; its own words explain why.
         val floralSkirt = item(20, "Skirt", FashionColor.PINK, pattern = Pattern.FLORAL)
-        val checkShirt = item(21, "Shirt", FashionColor.RED, FashionColor.BLACK, pattern = Pattern.CHECK)
-        val clash = OutfitEvaluator.evaluate(listOf(checkShirt, floralSkirt, sneakers))
-        assertTrue(clash.warnings.toString(), "Two bold patterns are competing — let one print lead" in clash.warnings)
+        val graphicTee = item(21, "T-shirt", FashionColor.RED, FashionColor.BLACK, pattern = Pattern.GRAPHIC)
+        val verdict = StyleGuide.knowledge.patternPairing(Pattern.FLORAL, Pattern.GRAPHIC)!!
+        assertTrue(verdict.score < 0)
+        val clash = OutfitEvaluator.evaluate(listOf(graphicTee, floralSkirt, sneakers))
+        assertTrue(clash.warnings.toString(), verdict.why in clash.warnings)
 
-        val calm = OutfitEvaluator.evaluate(listOf(checkShirt, item(22, "Skirt", FashionColor.BLACK), sneakers))
+        val calm = OutfitEvaluator.evaluate(listOf(graphicTee, item(22, "Skirt", FashionColor.BLACK), sneakers))
         assertTrue(calm.score > clash.score)
         assertTrue(calm.warnings.none { it.contains("pattern") })
     }
@@ -57,11 +60,12 @@ class OutfitEvaluatorTest {
     fun stripesWithAnotherPrintIsOnlyAMildWarning() {
         val breton = item(20, "Long-sleeve top", FashionColor.NAVY, FashionColor.WHITE, pattern = Pattern.STRIPE)
         val floralSkirt = item(21, "Skirt", FashionColor.PINK, pattern = Pattern.FLORAL)
-        val checkSkirt = item(22, "Skirt", FashionColor.RED, pattern = Pattern.CHECK)
+        val graphicSkirt = item(22, "Skirt", FashionColor.RED, pattern = Pattern.GRAPHIC)
         val floralShirt = item(23, "Shirt", FashionColor.PINK, pattern = Pattern.FLORAL)
+        // Stripes partner a floral (the guide's note), a floral and a graphic compete (its warning).
         val mild = OutfitEvaluator.evaluate(listOf(breton, floralSkirt, sneakers))
-        assertTrue(mild.warnings.toString(), mild.warnings.any { it.startsWith("Stripes with floral can work") })
-        val strong = OutfitEvaluator.evaluate(listOf(floralShirt, checkSkirt, sneakers))
+        assertTrue(mild.notes.toString(), StyleGuide.knowledge.patternPairing(Pattern.STRIPE, Pattern.FLORAL)!!.why in mild.notes)
+        val strong = OutfitEvaluator.evaluate(listOf(floralShirt, graphicSkirt, sneakers))
         assertTrue(mild.score > strong.score)
 
         val three = OutfitEvaluator.evaluate(listOf(breton, floralSkirt, item(24, "Sneakers", FashionColor.WHITE, pattern = Pattern.ANIMAL)))

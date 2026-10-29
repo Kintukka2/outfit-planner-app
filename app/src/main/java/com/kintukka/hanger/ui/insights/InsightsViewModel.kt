@@ -9,6 +9,7 @@ import com.kintukka.hanger.data.repo.SettingsRepository
 import com.kintukka.hanger.data.repo.WardrobeRepository
 import com.kintukka.hanger.engine.ClosetInsight
 import com.kintukka.hanger.engine.StyleGuide
+import com.kintukka.hanger.engine.headline
 import com.kintukka.hanger.engine.CapsuleAnalyzer
 import com.kintukka.hanger.engine.Category
 import com.kintukka.hanger.engine.CountedGarment
@@ -109,7 +110,7 @@ class InsightsViewModel(
         val outfitCount: Int? = runCatching { CapsuleAnalyzer.outfitCount(garments) }.getOrNull()
         val coverage = runCatching { StyleGuide.formulaCoverage(garments) }.getOrNull()
         val wishlistCount = all.count { it.entity.wishlist && !it.entity.archived }
-        val styleChecks = runCatching { StyleGuide.closetInsights(garments, wearLog, today, wishlistCount, currency) }.getOrDefault(emptyList())
+        val styleChecks = runCatching { StyleGuide.closetInsights(garments, wearLog, today, wishlistCount, currency).headline(3) }.getOrDefault(emptyList())
         val wishlist = all.asSequence()
             .filter { it.entity.wishlist && !it.entity.archived }
             .map { candidate ->

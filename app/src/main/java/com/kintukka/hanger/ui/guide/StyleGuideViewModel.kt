@@ -13,6 +13,7 @@ import com.kintukka.hanger.engine.FormulaMatch
 import com.kintukka.hanger.engine.StyleGuide
 import com.kintukka.hanger.engine.Tip
 import com.kintukka.hanger.engine.WearRecord
+import com.kintukka.hanger.engine.headline
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.SharingStarted
@@ -76,7 +77,7 @@ class StyleGuideViewModel(repo: WardrobeRepository, settings: SettingsRepository
             colorCounts = input.closet.mapNotNull { it.entity.colors.firstOrNull() }.groupingBy { it }.eachCount(),
             ready = coverage?.ready.orEmpty(),
             oneAway = coverage?.oneAway.orEmpty(),
-            insights = runCatching { StyleGuide.closetInsights(garments, input.wearLog, today, input.wishlist, input.currency) }.getOrDefault(emptyList()),
+            insights = runCatching { StyleGuide.closetInsights(garments, input.wearLog, today, input.wishlist, input.currency).headline(5) }.getOrDefault(emptyList()),
             trendPieces = runCatching { StyleGuide.trendPieces(garments, today) }.getOrDefault(emptyList())
                 .associate { (t, pieces) -> t.id to pieces.map { it.id } },
             essentialsOwned = knowledge.wardrobe.essentials.filter { it.ownedBy(garments) }.map { it.name }.toSet(),

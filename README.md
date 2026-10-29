@@ -4,6 +4,8 @@ Hanger is an all-in-one digital closet, outfit planner and stylist that runs ent
 It was designed from the [competitive research](reports/Best%20outfit%20planner%20apps%202026.md) in this repo:
 it keeps the mechanics people love in Whering, Acloset, Indyx, Stylebook, Cladwell and Alta, and avoids the
 things that earn them 1-star reviews (paywalls after hours of cataloguing, data you can't export, forced AI).
+Its style advice comes from a researched style guide built into the app, so nothing needs an account, an API key or
+a connection (apart from the weather forecast).
 
 <p align="center">
   <img src="docs/screenshots/01_today.png" width="200" alt="Today screen">
@@ -69,11 +71,21 @@ CI publish signed builds add two repository secrets: `HANGER_KEYSTORE_BASE64` (t
 - Closet value, cost per wear, % of closet worn in 30/90 days, streaks, outfits logged per month, category and colour
   breakdowns, most/least/never worn, best/worst cost per wear, forgotten pieces, and how many outfits your closet makes.
 
-**AI stylist (optional)**
-- Chat with a stylist that knows every piece you own, what's in the laundry and today's weather, and answers with
-  outfits built from your closet that you can wear or save in one tap. It runs on Claude (`claude-opus-5-5`) with
-  **your own Anthropic API key** (Settings → AI stylist); the rest of the app never needs it. Only the text wardrobe
-  list is sent, never photos. Requests opt into Anthropic's server-side refusal fallback.
+**Style guide (built in, offline)**
+- A researched style knowledge base ships inside the app ([what's in it and where it came from](research_notes/Style%20knowledge%202026/README.md)):
+  203 rated colour pairings, 48 palettes and a profile for every colour; 125 proven outfit formulas; 236 garment
+  pairings and every pattern-mixing combination; 92 styling rules; dress codes for 8 occasions and 22 invitation
+  wordings; 19 weather rules and 32 fabrics; 69 dated trends for autumn/winter 2026 and spring/summer 2027; 42 closet
+  checks, 85 tips and 19 essentials, all drawn from 300 cited sources.
+- It drives everything: outfit scores and the notes under every suggestion ("Loafers sharpen chinos", "Proven
+  formula: navy blazer, grey trousers, loafers", "On trend: chocolate and powder blue"), suggestions seeded from
+  formulas that fit the occasion and season, pieces the dress code or the weather rules out, and closet insights.
+- The **Style guide** screen (palette icon on Today): your closet check and tip of the day; a colour explorer showing
+  what goes with each colour and how many matching pieces you own; formulas you can wear now (one tap into the
+  builder) and the ones a single piece away; live and upcoming trends with the pieces you already own for each;
+  and the full rules, dress codes, weather and fabric guides, essentials checklist and sources.
+- Trends carry their season's dates and retire themselves. To refresh the guide, edit the research JSON and run
+  `python3 tools/build_knowledge.py`; it validates everything against the app's vocabulary before bundling it.
 
 **Your data**
 - Everything is stored on the phone (Room database + app-private image folder). No account, no ads, no tracking.
@@ -89,12 +101,14 @@ CI publish signed builds add two repository secrets: `HANGER_KEYSTORE_BASE64` (t
 | Images | ML Kit Subject Segmentation (Play services) + Image Labeling, Coil |
 | Weather | Open-Meteo forecast + geocoding, offline cache |
 | Background | WorkManager daily reminder, Glance widget |
-| AI | Anthropic Java SDK (optional) |
+| Style guide | Researched JSON knowledge base bundled in `:engine` (`tools/build_knowledge.py` validates and builds it) |
 
 ```
-engine/   pure Kotlin styling engine + tests
-app/      Android app (data, images, weather, backup, ui/*, widget, notify, ai)
-reports/  the market research this app is based on
+engine/          pure Kotlin styling engine + bundled style guide + tests
+app/             Android app (data, images, weather, backup, ui/*, widget, notify)
+research_notes/  the competitor research and the style-guide research (JSON + notes with sources)
+tools/           build_knowledge.py: validate the research and build the bundled guide
+reports/         the market research this app is based on
 ```
 
 ### Build locally

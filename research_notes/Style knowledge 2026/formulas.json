@@ -1,0 +1,7315 @@
+{
+  "sources": [
+    {
+      "id": "f1",
+      "title": "9 Basic Outfits Our Editors Wear Over and Over Again",
+      "publisher": "Who What Wear (Nicole Akhtarzad Eshaghpour)",
+      "url": "https://www.whowhatwear.com/easy-basic-outfits",
+      "date": "2020-02-06"
+    },
+    {
+      "id": "f2",
+      "title": "Outfit Repeat: The 8 Simple Looks We Wear More Than Any Others",
+      "publisher": "Who What Wear (Bobby Schuessler)",
+      "url": "https://www.whowhatwear.com/easy-winter-outfit-ideas",
+      "date": "2020-10-29"
+    },
+    {
+      "id": "f3",
+      "title": "The 3-Piece Outfit Formula Our Editors Always Wear to the Office",
+      "publisher": "Who What Wear (Kristen Nichols)",
+      "url": "https://www.whowhatwear.com/editor-office-outfits",
+      "date": "2019-04-07"
+    },
+    {
+      "id": "f4",
+      "title": "The Easy Outfit Every Single Fashion Girl Wears",
+      "publisher": "Who What Wear (Allyson Payer)",
+      "url": "https://www.whowhatwear.com/most-versatile-outfit-formula",
+      "date": "2017-02-16"
+    },
+    {
+      "id": "f5",
+      "title": "I'm a Minimalist Fashion Editor: 6 Classic Outfit Formulas I Come Back to Time and Time Again",
+      "publisher": "Who What Wear (Chloe Gallacher)",
+      "url": "https://www.whowhatwear.com/fashion/outfit-ideas/classic-outfit-formulas",
+      "date": "2025-12-21"
+    },
+    {
+      "id": "f6",
+      "title": "I'm Convinced These 7 Outfit Combos Are the Secret to Looking Put-Together With Very Little Effort",
+      "publisher": "Who What Wear (Michelle Scanga)",
+      "url": "https://www.whowhatwear.com/fashion/outfit-ideas/put-together-fall-outfit-formulas-2026",
+      "date": "2026-10-10"
+    },
+    {
+      "id": "f7",
+      "title": "5 Outfits With Tops, Jeans and Shoes Fashion People Will Be Rotating This Season",
+      "publisher": "Who What Wear (Katie Sims)",
+      "url": "https://www.whowhatwear.com/fashion/outfit-ideas/denim-outfit-formulas-2026",
+      "date": "2026-02-19"
+    },
+    {
+      "id": "f8",
+      "title": "From Paris to London: The Fall Outfit Formulas European Fashion People Are Wearing Right Now",
+      "publisher": "Who What Wear (Audry Hiaoui)",
+      "url": "https://www.whowhatwear.com/fashion/shopping/european-outfit-formulas-fall-2026",
+      "date": "2026-10-22"
+    },
+    {
+      "id": "f9",
+      "title": "The Chicest Women in Paris Always Reach For These Outfit Formulas When Fall Arrives",
+      "publisher": "Who What Wear (Sierra Mayhew)",
+      "url": "https://www.whowhatwear.com/fashion/outfit-ideas/paris-fall-transition-outfit-formulas",
+      "date": "2026-09-05"
+    },
+    {
+      "id": "f10",
+      "title": "I'm a Fashion Editor, and I Swear By This 3-Piece Outfit Formula",
+      "publisher": "Who What Wear (Chinazor 'Chichi' Offor)",
+      "url": "https://www.whowhatwear.com/adult-outfit-formula",
+      "date": "2022-11-29"
+    },
+    {
+      "id": "f11",
+      "title": "The Easy Two-Part Outfit Every Editor on Our Team Swears By (sweater and slip skirt)",
+      "publisher": "Who What Wear UK (Maxine Eggenberger)",
+      "url": "https://www.whowhatwear.com/jumper-and-slip-skirt-outfits",
+      "date": "2022-08-05"
+    },
+    {
+      "id": "f12",
+      "title": "My Friends and I All Live in Chunky Sweaters: 5 Outfits We Want to Try Now",
+      "publisher": "Who What Wear (Bobby Schuessler)",
+      "url": "https://www.whowhatwear.com/chunky-sweater",
+      "date": "2018-12-12"
+    },
+    {
+      "id": "f13",
+      "title": "11 Easy Ways to Make Your Favourite Dress-and-Boots Outfits Feel Fresh",
+      "publisher": "Who What Wear UK (Jess Kelham-Hohler)",
+      "url": "https://www.whowhatwear.co.uk/dresses-and-boots-winter-outfits",
+      "date": "2023-11-21"
+    },
+    {
+      "id": "f14",
+      "title": "I'm a Fashion Editor: 6 Easy Yet Impressive Outfits I'll Rely On This Winter",
+      "publisher": "Who What Wear UK (Harriet Davey)",
+      "url": "https://whowhatwear.com/what-to-wear-10-degree-weather",
+      "date": "2022-10-19"
+    },
+    {
+      "id": "f15",
+      "title": "I Live in NYC, so I Know How to Dress for the Rain: 6 Outfit Formulas I Recommend",
+      "publisher": "Who What Wear (Sierra Mayhew)",
+      "url": "https://www.whowhatwear.com/rainy-day-outfits",
+      "date": "2022-10-26"
+    },
+    {
+      "id": "f16",
+      "title": "The Cutest Outfits to Wear on a Rainy Fall Day",
+      "publisher": "Who What Wear (Eva Thomas)",
+      "url": "https://www.whowhatwear.com/fall-rain-boots-outfits",
+      "date": "2018-09-26"
+    },
+    {
+      "id": "f17",
+      "title": "Here Are 15 Outfit Ideas For When The Forecast Is Nothing But Rain",
+      "publisher": "Who What Wear (Yusra Siddiqui)",
+      "url": "https://www.whowhatwear.com/winter-rainy-day-outfits",
+      "date": "2018-11-05"
+    },
+    {
+      "id": "f18",
+      "title": "12 Ways Women in Paris, London, and NYC Dress for Rainy Summer Days",
+      "publisher": "Who What Wear (Jasmine Fox-Suliaman)",
+      "url": "https://www.whowhatwear.com/fashion/outfit-ideas/summer-rainy-day-outfits",
+      "date": "2024-07-14"
+    },
+    {
+      "id": "f19",
+      "title": "Q and Answer: How Should I Dress in the Rain?",
+      "publisher": "Put This On (Jesse Thorn)",
+      "url": "https://putthison.com/q-and-answer-how-should-i-dress-in-the-rain/",
+      "date": "2010-10-11"
+    },
+    {
+      "id": "f20",
+      "title": "5 Easy Summer Outfits to See You Through the Hot Weather This Week",
+      "publisher": "Who What Wear UK (Remy Farrell)",
+      "url": "https://www.whowhatwear.co.uk/what-to-wear-in-a-heatwave",
+      "date": "2020-06-22 (updated 2025-08-11)"
+    },
+    {
+      "id": "f21",
+      "title": "What to Wear When It's Way Too Hot Outside, According to a Style Editor",
+      "publisher": "InsideHook (Paolo Sandoval)",
+      "url": "https://www.insidehook.com/style-guides/wear-hot-outside-according-style-editor",
+      "date": "2026-07-13"
+    },
+    {
+      "id": "f22",
+      "title": "I'm a 49-year-old fashion editor - this is what I wear to the office in a heatwave",
+      "publisher": "HELLO! (Becky Donaldson, Head of Fashion)",
+      "url": "https://www.hellomagazine.com/fashion/913046/heatwave-office-outfits/",
+      "date": "2026-07-17"
+    },
+    {
+      "id": "f23",
+      "title": "It's Cuffing Season! 9 Date-Night Outfit Ideas That Will Come in Handy",
+      "publisher": "Who What Wear (Jasmine Fox-Suliaman)",
+      "url": "https://www.whowhatwear.com/date-night-outfits",
+      "date": "updated 2024-12-23"
+    },
+    {
+      "id": "f24",
+      "title": "I Think These Are the Chicest Outfits to Wear With Jeans for Date Night",
+      "publisher": "Who What Wear (Bobby Schuessler)",
+      "url": "https://www.whowhatwear.com/date-night-outfits-with-jeans",
+      "date": "2022-03-23"
+    },
+    {
+      "id": "f25",
+      "title": "Baby, It's Cold Outside! 24 Date-Night Outfits You Can Actually Wear in Winter",
+      "publisher": "Who What Wear (Jasmine Fox-Suliaman)",
+      "url": "https://www.whowhatwear.com/winter-date-night-outfits",
+      "date": "2017-11-19"
+    },
+    {
+      "id": "f26",
+      "title": "Take It From a Woman: Date-Night Outfits That Actually Hit",
+      "publisher": "InsideHook (Dani Brand, with stylist Sreya Halder)",
+      "url": "https://www.insidehook.com/take-it-from-a-woman/good-date-night-outfits",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "f27",
+      "title": "The Dos and Don'ts of Cocktail Attire, According to Fashion Editors",
+      "publisher": "Who What Wear (Lauren Eggertsen)",
+      "url": "https://www.whowhatwear.com/cocktail-attire-for-women",
+      "date": "updated 2026-04-15"
+    },
+    {
+      "id": "f28",
+      "title": "Cocktail Attire For Men - Dress Code Guide For Weddings, Parties & Events",
+      "publisher": "Gentleman's Gazette (Sven Raphael Schneider)",
+      "url": "https://www.gentlemansgazette.com/cocktail-attire-for-men/",
+      "date": "2024-04-17"
+    },
+    {
+      "id": "f29",
+      "title": "Black Tie Dress Code Explained",
+      "publisher": "Gentleman's Gazette (Peter Marshall)",
+      "url": "https://www.gentlemansgazette.com/tuxedo-black-tie-guide/etiquette/black-tie-dress-code/",
+      "date": "2018-11-21"
+    },
+    {
+      "id": "f30",
+      "title": "Black Tie Optional Dress Code Explained",
+      "publisher": "Gentleman's Gazette (Sven Raphael Schneider)",
+      "url": "https://www.gentlemansgazette.com/tuxedo-black-tie-guide/etiquette/black-tie-optional-dress-code/",
+      "date": "2022-07-20"
+    },
+    {
+      "id": "f31",
+      "title": "Black Tie Dress Code for Women - Ladies' Evening Wear",
+      "publisher": "Gentleman's Gazette",
+      "url": "https://www.gentlemansgazette.com/tuxedo-black-tie-guide/advanced/black-tie-white-women/",
+      "date": "2018-12-05"
+    },
+    {
+      "id": "f32",
+      "title": "Tuxedo Overcoats, Hats, Scarves & Black Tie Outerwear",
+      "publisher": "Gentleman's Gazette (Sven Raphael Schneider)",
+      "url": "https://www.gentlemansgazette.com/tuxedo-black-tie-guide/classic/tuxedo-overcoats-hats-gloves/",
+      "date": "2018-11-27"
+    },
+    {
+      "id": "f33",
+      "title": "Black tie",
+      "publisher": "Wikipedia (summarises Debrett's guidance)",
+      "url": "https://en.wikipedia.org/wiki/Black_tie",
+      "date": "accessed 2026-10-29"
+    },
+    {
+      "id": "f34",
+      "title": "Lounge suit",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lounge_suit",
+      "date": "accessed 2026-10-29"
+    },
+    {
+      "id": "f35",
+      "title": "Smart Casual Dress Code For Men Explained",
+      "publisher": "Gentleman's Gazette (Sven Raphael Schneider)",
+      "url": "https://www.gentlemansgazette.com/smart-casual-dress-code/",
+      "date": "2018-04-16"
+    },
+    {
+      "id": "f36",
+      "title": "Business Casual Attire for Men",
+      "publisher": "Gentleman's Gazette (Sven Raphael Schneider)",
+      "url": "https://www.gentlemansgazette.com/business-casual-men/",
+      "date": "2024-01-03"
+    },
+    {
+      "id": "f37",
+      "title": "Navy Serge Blazer Paired With Grey Worsted Trousers",
+      "publisher": "Gentleman's Gazette (Sven Raphael Schneider)",
+      "url": "https://www.gentlemansgazette.com/navy-blazer-grey-flannel-trousers/",
+      "date": "2012-01-07"
+    },
+    {
+      "id": "f38",
+      "title": "The Springboard Wardrobe",
+      "publisher": "Put This On (Derek Guy)",
+      "url": "https://putthison.com/the-springboard-wardrobe/",
+      "date": "2021-07-21"
+    },
+    {
+      "id": "f39",
+      "title": "How To Do Business Casual Without Looking Like A Schmuck",
+      "publisher": "Put This On (Derek Guy)",
+      "url": "https://putthison.com/how-to-do-business-casual-without-looking-like-a/",
+      "date": "2017-01-04"
+    },
+    {
+      "id": "f40",
+      "title": "A Basic Guide To Useful Knitwear",
+      "publisher": "Put This On (Derek Guy)",
+      "url": "https://putthison.com/a-basic-guide-to-useful-knitwear/",
+      "date": "2020-10-29"
+    },
+    {
+      "id": "f41",
+      "title": "The Most Versatile Sweater",
+      "publisher": "Put This On (Derek Guy)",
+      "url": "https://putthison.com/the-most-versatile-sweater/",
+      "date": "2018-10-15"
+    },
+    {
+      "id": "f42",
+      "title": "Adding interest to a navy blazer and grey trousers",
+      "publisher": "Permanent Style",
+      "url": "https://www.permanentstyle.com/2021/08/adding-interest-to-a-navy-blazer-and-grey-trousers.html",
+      "date": "2021-08"
+    },
+    {
+      "id": "f43",
+      "title": "Every Perfect Airport Outfit Has These 4 Components",
+      "publisher": "Who What Wear (Nicole Akhtarzad Eshaghpour)",
+      "url": "https://www.whowhatwear.com/airport-outfits",
+      "date": "2017-06-13"
+    },
+    {
+      "id": "f44",
+      "title": "6 Editor-Approved Airport Outfits That'll Double Your Chances of an Upgrade",
+      "publisher": "Who What Wear UK (Maxine Eggenberger)",
+      "url": "https://www.whowhatwear.com/airport-outfit-ideas",
+      "date": "2022-08-21"
+    },
+    {
+      "id": "f45",
+      "title": "I Travel 5 Times a Year: These Easy Outfits Have Never Once Failed Me",
+      "publisher": "Who What Wear (Lauren Adhav)",
+      "url": "https://www.whowhatwear.com/travel-outfits",
+      "date": "updated 2024-12-24"
+    },
+    {
+      "id": "f46",
+      "title": "I Go to the Gym Every Morning: These Athleisure Outfits Get Me There in Style",
+      "publisher": "Who What Wear (Sierra Mayhew)",
+      "url": "https://www.whowhatwear.com/athleisure-outfits",
+      "date": "2022-01-03"
+    },
+    {
+      "id": "f47",
+      "title": "These Hiking Outfits Are Peak Off-Duty Style",
+      "publisher": "Who What Wear (Sierra Mayhew)",
+      "url": "https://www.whowhatwear.com/hiking-outfits",
+      "date": "2021-08-12"
+    },
+    {
+      "id": "f48",
+      "title": "Since Moving to L.A. I've Been Hiking Nonstop: See the Cute Pieces I've Collected",
+      "publisher": "Who What Wear (Indya Brown)",
+      "url": "https://www.whowhatwear.com/what-to-wear-hiking",
+      "date": "2018-05-15"
+    },
+    {
+      "id": "f49",
+      "title": "I'm 59 Years Old, and I Consistently Wear These 5 Outfits With Sweatshirts",
+      "publisher": "Who What Wear (Bobby Schuessler, with Janet Gunn)",
+      "url": "https://www.whowhatwear.com/loungewear-outfits",
+      "date": "2020-12-02"
+    },
+    {
+      "id": "f50",
+      "title": "I'm an A-List Celeb Stylist: Here's How to Style a Puffer Jacket Right",
+      "publisher": "Who What Wear (Ana Escalante, with stylist Karla Welch)",
+      "url": "https://www.whowhatwear.com/puffer-jacket-outfits",
+      "date": "2018-11-16 (updated 2023)"
+    },
+    {
+      "id": "f51",
+      "title": "7 Simple Outfit Formulas That Always Look Ultra Elegant",
+      "publisher": "The Gloss (Sarah Macken)",
+      "url": "https://thegloss.ie/7-simple-spring-outfit-formulas-that-always-look-elegant/",
+      "date": "2026-06-02"
+    },
+    {
+      "id": "f52",
+      "title": "5 go-to outfit formulas for effortless style",
+      "publisher": "Eleven Loves (Hayley Thomas)",
+      "url": "https://elevenloves.co.uk/blogs/news/5-go-to-outfit-formulas-for-effortless-style",
+      "date": "2026-03-14"
+    },
+    {
+      "id": "f53",
+      "title": "7 Celebrity Outfit Formulas That Will Make You Look Like You Have a Personal Stylist",
+      "publisher": "Who What Wear (Audry Hiaoui)",
+      "url": "https://www.whowhatwear.com/fashion/outfit-ideas/celebrity-outfits-formulas-summer-2026",
+      "date": "2026-08-14"
+    }
+  ],
+  "formulas": [
+    {
+      "id": "f001",
+      "name": "White tee, straight jeans, white sneakers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Crossbody",
+            "Tote"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Crisp white against blue denim is the original uniform: clean, easy and hard to get wrong.",
+      "src": [
+        "f1",
+        "f24",
+        "f52"
+      ]
+    },
+    {
+      "id": "f002",
+      "name": "Blazer, white tee, jeans, loafers",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Scarf"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A tailored blazer gives a tee and jeans instant structure; loafers keep it polished, not stiff.",
+      "src": [
+        "f4",
+        "f1",
+        "f51",
+        "f5"
+      ]
+    },
+    {
+      "id": "f003",
+      "name": "Blazer, simple top, jeans, ankle boots",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Turtleneck",
+            "T-shirt",
+            "Long-sleeve top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Ankle boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART",
+        "WORK"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Trend-proof and fail-safe: a great blazer over a basic top works from the office to dinner.",
+      "src": [
+        "f2",
+        "f1",
+        "f5"
+      ]
+    },
+    {
+      "id": "f004",
+      "name": "Grey sweatshirt, jeans or chinos, sneakers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Sweatshirt"
+          ],
+          "colors": [
+            "GREY",
+            "LIGHT_GREY"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans",
+            "Chinos",
+            "Cargo trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Jacket",
+            "Leather jacket",
+            "Denim jacket"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Heather grey is the workhorse knit: it suits every wash of denim and sits under any casual jacket.",
+      "src": [
+        "f38",
+        "f40"
+      ]
+    },
+    {
+      "id": "f005",
+      "name": "Sweatshirt, leather jacket, black jeans, boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Leather jacket"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Sweatshirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Chelsea boots",
+            "Ankle boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Soft cotton under hard leather is an easy contrast; black denim and boots keep it sharp.",
+      "src": [
+        "f1",
+        "f38"
+      ]
+    },
+    {
+      "id": "f006",
+      "name": "Leather jacket, white tee, jeans, ankle boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Leather jacket"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Ankle boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "DATE"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Leather adds edge to the simplest base, so a plain tee and good jeans look deliberate.",
+      "src": [
+        "f1",
+        "f26"
+      ]
+    },
+    {
+      "id": "f007",
+      "name": "Cardigan, white tee, jeans",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Cardigan"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats",
+            "Sneakers",
+            "Loafers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Necklace"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A cardigan softens a tee and jeans; a fine chain or a good bag is all it needs.",
+      "src": [
+        "f2",
+        "f6"
+      ]
+    },
+    {
+      "id": "f008",
+      "name": "Camel coat, knit, jeans, loafers or boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": [
+            "CAMEL"
+          ]
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": [],
+          "optional": true
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers",
+            "Boots",
+            "Ankle boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A camel coat makes whatever is underneath look considered; change the knit and it never tires.",
+      "src": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f009",
+      "name": "Button-down shirt, jeans, loafers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Belt"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A crisp shirt and loafers make denim look expensive with almost no effort.",
+      "src": [
+        "f10",
+        "f52"
+      ]
+    },
+    {
+      "id": "f010",
+      "name": "V-neck jumper over a tee, jeans",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Loafers",
+            "Flats"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A V-neck layers neatly over a tee; go fine-gauge in spring and chunky in deep winter.",
+      "src": [
+        "f5",
+        "f51"
+      ]
+    },
+    {
+      "id": "f011",
+      "name": "White jeans, white tee, navy knit",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": [
+            "WHITE",
+            "CREAM"
+          ]
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater",
+            "Cardigan"
+          ],
+          "colors": [
+            "NAVY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers",
+            "Flats",
+            "Sneakers"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Navy against head-to-toe white is a crisp, nautical contrast that always looks fresh.",
+      "src": [
+        "f51"
+      ]
+    },
+    {
+      "id": "f012",
+      "name": "Trench coat, jeans, ballet flats or loafers",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats",
+            "Loafers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Handbag",
+            "Crossbody"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A trench is the most polished way to top denim; flat shoes keep it light and easy.",
+      "src": [
+        "f51",
+        "f9"
+      ]
+    },
+    {
+      "id": "f013",
+      "name": "Pale jeans, black tee, black sandals",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": [
+            "CREAM",
+            "WHITE",
+            "BEIGE"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flip-flops",
+            "Sandals"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Black against pale denim is a sharp, graphic contrast; matching shoe to tee ties it together.",
+      "src": [
+        "f7"
+      ]
+    },
+    {
+      "id": "f014",
+      "name": "White shirt, straight jeans, sandals",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sandals"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Sunglasses"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A crisp white shirt keeps denim fresh in the heat; simple slides make it off-duty.",
+      "src": [
+        "f7"
+      ]
+    },
+    {
+      "id": "f015",
+      "name": "White tank, dark jeans, knit over the shoulders",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": [
+            "NAVY"
+          ]
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": [],
+          "optional": true
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats",
+            "Loafers",
+            "Sandals"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Dark denim instantly looks refined; a white tank keeps it light and a knit covers the evening chill.",
+      "src": [
+        "f7"
+      ]
+    },
+    {
+      "id": "f016",
+      "name": "Double denim: denim jacket and jeans",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Denim jacket"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Loafers",
+            "Boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Keep everything else simple and let the denim talk; a tee breaks up the two blues.",
+      "src": [
+        "f7",
+        "f38"
+      ]
+    },
+    {
+      "id": "f017",
+      "name": "Linen shirt and shorts, sandals",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Shorts",
+            "Tailored shorts"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sandals",
+            "Flip-flops"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Tote"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "An airy shirt and shorts in the same light fabric is the easiest hot-day uniform going.",
+      "src": [
+        "f20"
+      ]
+    },
+    {
+      "id": "f018",
+      "name": "Linen tee, loose shorts, sandals, sunglasses",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt",
+            "Tank top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Shorts"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sandals",
+            "Flip-flops",
+            "Espadrilles"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Sunglasses"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "LOUNGE"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        1,
+        2
+      ],
+      "why": "Loose, breathable pieces let air move; sunglasses add character without adding fabric.",
+      "src": [
+        "f21",
+        "f20"
+      ]
+    },
+    {
+      "id": "f019",
+      "name": "Tank top, white midi skirt, sandals",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Midi skirt",
+            "Skirt"
+          ],
+          "colors": [
+            "WHITE",
+            "CREAM"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sandals",
+            "Flats"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Two simple pieces in pale tones: cool in the heat and quietly polished.",
+      "src": [
+        "f20",
+        "f22"
+      ]
+    },
+    {
+      "id": "f020",
+      "name": "Simple black dress, minimal sandals",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress",
+            "Slip dress",
+            "Sundress",
+            "Maxi dress"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sandals"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "DATE"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A plain black dress needs no styling and goes day to night; pared-back sandals keep it light.",
+      "src": [
+        "f20"
+      ]
+    },
+    {
+      "id": "f021",
+      "name": "Mini dress, flats, sunglasses",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress",
+            "Sundress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats",
+            "Sandals",
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Sunglasses"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "One easy dress and flat shoes is a whole outfit; good sunglasses finish it.",
+      "src": [
+        "f20"
+      ]
+    },
+    {
+      "id": "f022",
+      "name": "Midi dress, loafers, trench",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress",
+            "Shirt dress",
+            "Slip dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "WORK",
+        "SMART"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Loafers ground a midi dress so it reads smart, not fussy; a trench makes it commute-proof.",
+      "src": [
+        "f5"
+      ]
+    },
+    {
+      "id": "f023",
+      "name": "Tailored trousers, tee, trainers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Wide-leg trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Sharp trousers with clean trainers hit the sweet spot between polished and relaxed.",
+      "src": [
+        "f5",
+        "f39"
+      ]
+    },
+    {
+      "id": "f024",
+      "name": "White tee, black tailored trousers, pointed shoes",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels",
+            "Flats"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Necklace"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "WORK",
+        "DATE"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A boxy white tee balances tapered black trousers; a pointed toe gives a sleek finish.",
+      "src": [
+        "f5"
+      ]
+    },
+    {
+      "id": "f025",
+      "name": "Cream blazer, white tee, tailored trousers, tote",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [
+            "CREAM",
+            "BEIGE",
+            "WHITE"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Wide-leg trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers",
+            "Flats",
+            "Heels",
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Tote"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "SMART"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A pale blazer lightens tailoring for warmer months; a white tee keeps it modern.",
+      "src": [
+        "f51"
+      ]
+    },
+    {
+      "id": "f026",
+      "name": "Cardigan, leather skirt, knee-high boots",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Cardigan"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Skirt",
+            "Midi skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "WORK",
+        "DATE"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A soft knit against a sleek skirt and tall boots goes from the office to drinks.",
+      "src": [
+        "f5"
+      ]
+    },
+    {
+      "id": "f027",
+      "name": "Chunky knit, slip skirt, boots",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Skirt",
+            "Midi skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Ankle boots",
+            "Boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "DATE"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Satin brings the polish, the chunky knit brings the comfort; boots tip it up or down.",
+      "src": [
+        "f11",
+        "f12"
+      ]
+    },
+    {
+      "id": "f028",
+      "name": "Slip dress, chunky knit, ankle boots",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Slip dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater",
+            "Cardigan"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Ankle boots",
+            "Boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "DATE"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A knit over silk carries a summer slip into the cold; ankle boots keep it grounded.",
+      "src": [
+        "f11",
+        "f25",
+        "f12"
+      ]
+    },
+    {
+      "id": "f029",
+      "name": "Chunky knit, wide-leg trousers, boots",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Wide-leg trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Ankle boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Half-tuck a cable knit into wide trousers: simple, cosy and still polished.",
+      "src": [
+        "f12"
+      ]
+    },
+    {
+      "id": "f030",
+      "name": "Knit dress, chunky boots",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Knit dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Chelsea boots",
+            "Ankle boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "WORK"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A knit dress is one warm piece; sturdy boots make it practical and a wool coat makes it winter-proof.",
+      "src": [
+        "f14",
+        "f13"
+      ]
+    },
+    {
+      "id": "f031",
+      "name": "Jumper, wool coat, knee-high boots, short hem",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Skirt",
+            "Shorts",
+            "Tailored shorts"
+          ],
+          "colors": []
+        },
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Tall boots and a long coat cover the legs, so a short hem works in the cold. Add thick tights.",
+      "src": [
+        "f14"
+      ]
+    },
+    {
+      "id": "f032",
+      "name": "Long coat, knit, tailored trousers",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Wide-leg trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers",
+            "Boots",
+            "Ankle boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "SMART"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "A statement coat does the work; underneath, a knit and trousers stay warm and simple.",
+      "src": [
+        "f14"
+      ]
+    },
+    {
+      "id": "f033",
+      "name": "Camel coat, black turtleneck, black trousers",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": [
+            "CAMEL"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Turtleneck"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Wide-leg trousers"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers",
+            "Ankle boots",
+            "Chelsea boots"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Handbag",
+            "Tote"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "SMART",
+        "DATE"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "A column of black lets the camel coat glow; sleek and warm from desk to dinner.",
+      "src": [
+        "f2",
+        "f14"
+      ]
+    },
+    {
+      "id": "f034",
+      "name": "Puffer over a sweatsuit, trainers",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Puffer jacket"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Sweatshirt",
+            "Hoodie"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Joggers",
+            "Leggings"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Running shoes"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Beanie"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "LOUNGE",
+        "CASUAL"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        1,
+        2
+      ],
+      "why": "Throw a short puffer over a sweatsuit and errands are covered: warm, quick and coordinated.",
+      "src": [
+        "f17",
+        "f46"
+      ]
+    },
+    {
+      "id": "f035",
+      "name": "Puffer jacket, knit, jeans, boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Puffer jacket"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Beanie",
+            "Scarf",
+            "Gloves"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Keep the base sleek under a big puffer to balance the volume; knit and boots handle real cold.",
+      "src": [
+        "f50",
+        "f14"
+      ]
+    },
+    {
+      "id": "f036",
+      "name": "Parka, textured knit, cords, boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Parka"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt",
+            "Long-sleeve top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Corduroys",
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Hiking boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A Shetland over a shirt with five-pocket cords and a parka is a decades-old cold-weather classic.",
+      "src": [
+        "f40",
+        "f41"
+      ]
+    },
+    {
+      "id": "f037",
+      "name": "Olive field jacket, grey sweatshirt, jeans",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Jacket"
+          ],
+          "colors": [
+            "OLIVE"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Sweatshirt"
+          ],
+          "colors": [
+            "GREY",
+            "LIGHT_GREY"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans",
+            "Chinos"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Sneakers"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Olive and heather grey are easy neutrals together; the field jacket adds pockets and purpose.",
+      "src": [
+        "f38"
+      ]
+    },
+    {
+      "id": "f038",
+      "name": "Overshirt, tee, jeans, sneakers",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Overshirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans",
+            "Chinos"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A chore-style overshirt is a jacket you can keep on indoors; over a tee it looks finished.",
+      "src": [
+        "f38"
+      ]
+    },
+    {
+      "id": "f039",
+      "name": "Denim jacket over a dress, trainers",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Denim jacket"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress",
+            "Knit dress",
+            "Shirt dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Ankle boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A denim jacket dresses a dress down; white trainers or ankle boots finish it.",
+      "src": [
+        "f52"
+      ]
+    },
+    {
+      "id": "f040",
+      "name": "Shirt, midi skirt, flats",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Midi skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats",
+            "Loafers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Handbag",
+            "Crossbody"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "WORK"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A crisp shirt tucked into a midi skirt is easy and grown-up; flats keep it practical.",
+      "src": [
+        "f6"
+      ]
+    },
+    {
+      "id": "f041",
+      "name": "Leather jacket, midi skirt, boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Leather jacket"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Midi skirt",
+            "Skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Ankle boots",
+            "Sneakers"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "DATE"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Tough leather against a fluid skirt is a balanced mix of hard and soft.",
+      "src": [
+        "f9"
+      ]
+    },
+    {
+      "id": "f042",
+      "name": "Long wool coat, loose jeans, heels",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Handbag"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "DATE",
+        "SMART"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A long coat and a heel lift relaxed denim into something evening-ready.",
+      "src": [
+        "f9"
+      ]
+    },
+    {
+      "id": "f043",
+      "name": "Beige trench, black dress, pointed heels",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat"
+          ],
+          "colors": [
+            "BEIGE",
+            "CAMEL",
+            "KHAKI"
+          ]
+        },
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress",
+            "Slip dress",
+            "Knit dress"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "DATE",
+        "SMART"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "A beige trench over a black dress is pure classic; a pointed heel finishes it neatly.",
+      "src": [
+        "f8"
+      ]
+    },
+    {
+      "id": "f044",
+      "name": "Striped tee, long skirt, ballet flats",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt",
+            "Long-sleeve top"
+          ],
+          "colors": [
+            "WHITE",
+            "NAVY"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Skirt",
+            "Midi skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A navy-and-white stripe with a long skirt and flats is effortless, French-leaning simplicity.",
+      "src": [
+        "f9"
+      ]
+    },
+    {
+      "id": "f045",
+      "name": "Hoodie, oversized blazer, joggers, trainers",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Hoodie",
+            "Sweatshirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Joggers",
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Handbag"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A blazer over sweats is high-low done right; keep the colours tonal so it looks intentional.",
+      "src": [
+        "f2",
+        "f49"
+      ]
+    },
+    {
+      "id": "f046",
+      "name": "Sweatshirt, skirt, heeled ankle boots",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Sweatshirt",
+            "Hoodie"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Skirt",
+            "Midi skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Ankle boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A sweatshirt with a sleek skirt and a heeled boot is relaxed but clearly styled.",
+      "src": [
+        "f49"
+      ]
+    },
+    {
+      "id": "f047",
+      "name": "Black trousers, white top, black boots",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt",
+            "Shirt",
+            "Blouse"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Jeans"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Ankle boots",
+            "Chelsea boots"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater",
+            "Cardigan",
+            "Blazer"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Hard to get wrong without colour: black, white and an extra layer when it turns cold.",
+      "src": [
+        "f1"
+      ]
+    },
+    {
+      "id": "f048",
+      "name": "Turtleneck, sleek black trousers, ankle boots",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Turtleneck"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": [
+            "BLACK",
+            "BROWN"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Ankle boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "SMART",
+        "CASUAL"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Leather-look trousers and a fine turtleneck: dress it up with a heeled boot, down with a flat one.",
+      "src": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f049",
+      "name": "Wool coat, big scarf, jeans, boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Ankle boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Scarf"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A big scarf turns a plain coat into the statement; jeans and boots keep it wearable.",
+      "src": [
+        "f8"
+      ]
+    },
+    {
+      "id": "f050",
+      "name": "Oversized blazer, tank, black trousers, flats",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Wide-leg trousers"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "WORK"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A fitted tank under a roomy blazer balances proportions; relaxed trousers and flats keep it easy.",
+      "src": [
+        "f6"
+      ]
+    },
+    {
+      "id": "f051",
+      "name": "Long trench, shirt, jeans, pointed heels",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "DATE"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "Shirt and jeans under a long trench, sharpened by a pointed heel: polished for little effort.",
+      "src": [
+        "f6"
+      ]
+    },
+    {
+      "id": "f052",
+      "name": "Navy blazer, grey trousers, loafers",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [
+            "NAVY"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt",
+            "Dress shirt",
+            "Polo"
+          ],
+          "colors": [
+            "WHITE",
+            "LIGHT_BLUE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": [
+            "GREY",
+            "LIGHT_GREY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers"
+          ],
+          "colors": [
+            "BROWN",
+            "BURGUNDY"
+          ]
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Belt"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "SMART"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "Navy over mid-grey gives clean contrast and brown loafers warm it up: the definitive separates pairing.",
+      "src": [
+        "f38",
+        "f39",
+        "f42",
+        "f37"
+      ]
+    },
+    {
+      "id": "f053",
+      "name": "Navy blazer, blue oxford shirt, dark jeans",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [
+            "NAVY"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": [
+            "LIGHT_BLUE",
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": [
+            "NAVY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers",
+            "Boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "DATE",
+        "WORK"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "Dark, dressy denim bridges the gap to tailoring; skip the tie to keep it relaxed.",
+      "src": [
+        "f39",
+        "f38"
+      ]
+    },
+    {
+      "id": "f054",
+      "name": "Blazer, chinos, white sneakers",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt",
+            "Shirt",
+            "Polo"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Chinos"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "CASUAL"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Plain white trainers dress tailoring down neatly when the jacket is soft and the collar open.",
+      "src": [
+        "f39",
+        "f38"
+      ]
+    },
+    {
+      "id": "f055",
+      "name": "Oxford shirt, chinos, loafers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": [
+            "LIGHT_BLUE",
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Chinos"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Belt"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "SMART",
+        "CASUAL"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "The oxford button-down is the most versatile shirt there is; with chinos and loafers it suits most offices.",
+      "src": [
+        "f36",
+        "f38"
+      ]
+    },
+    {
+      "id": "f056",
+      "name": "Navy blazer, oxford shirt, khakis, brown loafers",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [
+            "NAVY"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": [
+            "LIGHT_BLUE",
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Chinos"
+          ],
+          "colors": [
+            "KHAKI",
+            "BEIGE"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers"
+          ],
+          "colors": [
+            "BROWN"
+          ]
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Watch"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "SMART"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "The business-casual classic: navy, pale blue and khaki sit together without any effort.",
+      "src": [
+        "f36"
+      ]
+    },
+    {
+      "id": "f057",
+      "name": "Knit polo, tailored trousers, loafers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Polo"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Chinos"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "WORK",
+        "DATE"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A collared polo is smarter than a tee yet cooler than a shirt; loafers keep it sleek.",
+      "src": [
+        "f36",
+        "f39"
+      ]
+    },
+    {
+      "id": "f058",
+      "name": "Merino knit over a shirt, dark jeans",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt",
+            "Dress shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": [
+            "NAVY",
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers",
+            "Boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "WORK"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A collar under a fine knit frames the face; with dark jeans it is quietly smart almost anywhere.",
+      "src": [
+        "f40",
+        "f36"
+      ]
+    },
+    {
+      "id": "f059",
+      "name": "Shetland knit, oxford shirt, grey trousers, suede boots",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": [
+            "GREY",
+            "LIGHT_GREY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Chelsea boots"
+          ],
+          "colors": [
+            "BROWN"
+          ]
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "WORK"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "Textured wool over oxford cloth with grey flannels and brown suede: soft, warm and tonal.",
+      "src": [
+        "f38",
+        "f40",
+        "f41"
+      ]
+    },
+    {
+      "id": "f060",
+      "name": "Wool topcoat over tailoring",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": [
+            "CHARCOAL",
+            "NAVY",
+            "CAMEL",
+            "GREY"
+          ]
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer",
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt",
+            "Dress shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Dress shoes",
+            "Loafers",
+            "Chelsea boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Scarf",
+            "Gloves"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "SMART"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "A wool topcoat lends tailoring's polish without the formality; a scarf seals in the warmth.",
+      "src": [
+        "f38",
+        "f37"
+      ]
+    },
+    {
+      "id": "f061",
+      "name": "Shawl cardigan, checked shirt, cords, chukkas",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Cardigan"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Corduroys"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Loafers"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "CASUAL"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Texture does the work: chunky knit, checked cotton and corduroy for a smart-casual invitation.",
+      "src": [
+        "f35",
+        "f36"
+      ]
+    },
+    {
+      "id": "f062",
+      "name": "Linen shirt, pale trousers, loafers or espadrilles",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Wide-leg trousers",
+            "Chinos"
+          ],
+          "colors": [
+            "WHITE",
+            "CREAM",
+            "BEIGE",
+            "KHAKI"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers",
+            "Espadrilles",
+            "Sandals"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Pale colours reflect the sun and linen breathes: smart dressing that stays cool.",
+      "src": [
+        "f22",
+        "f35"
+      ]
+    },
+    {
+      "id": "f063",
+      "name": "Polo or shirt, tailored shorts, loafers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Polo",
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Tailored shorts"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers",
+            "Espadrilles",
+            "Flats"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "CASUAL",
+        "WORK"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Tailored shorts with a collared top and a proper shoe keep summer looking sharp.",
+      "src": [
+        "f22",
+        "f35"
+      ]
+    },
+    {
+      "id": "f064",
+      "name": "Suede jacket, layered knit, jeans",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Leather jacket",
+            "Jacket"
+          ],
+          "colors": [
+            "BROWN",
+            "CAMEL",
+            "BEIGE"
+          ]
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Loafers",
+            "Chelsea boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "SMART"
+      ],
+      "seasons": [
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Suede and knit are a rich texture pairing; warm browns against blue denim always work.",
+      "src": [
+        "f9"
+      ]
+    },
+    {
+      "id": "f065",
+      "name": "Sport coat, turtleneck, trousers",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Turtleneck"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Chinos"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers",
+            "Chelsea boots",
+            "Boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "DATE",
+        "WORK"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A turtleneck stands in for shirt and tie, so tailoring looks relaxed without looking undone.",
+      "src": [
+        "f40"
+      ]
+    },
+    {
+      "id": "f066",
+      "name": "Tweed jacket, turtleneck, short skirt, flats",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Turtleneck"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Handbag"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "SMART"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A tweed jacket over a turtleneck with a short skirt and flats is smart and a little playful.",
+      "src": [
+        "f23"
+      ]
+    },
+    {
+      "id": "f067",
+      "name": "Blazer, white blouse, cropped jeans, ankle boots",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Blouse"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Ankle boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "SMART"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A white blouse under a blazer is elegant; cropped jeans and boots keep it relaxed.",
+      "src": [
+        "f24",
+        "f4"
+      ]
+    },
+    {
+      "id": "f068",
+      "name": "Tweed blazer, pale shirt, black jeans, black loafers",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": [
+            "WHITE",
+            "CREAM",
+            "YELLOW"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "WORK"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "Black denim and black loafers modernise a tweed blazer; a soft pale shirt lifts the face.",
+      "src": [
+        "f51"
+      ]
+    },
+    {
+      "id": "f069",
+      "name": "Blazer, slip skirt, kitten heels",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top",
+            "T-shirt",
+            "Blouse"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Skirt",
+            "Midi skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Necklace",
+            "Belt"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "SMART",
+        "DATE",
+        "WORK"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "Sharp tailoring against fluid satin is a classic tension; a low heel keeps it wearable.",
+      "src": [
+        "f51"
+      ]
+    },
+    {
+      "id": "f070",
+      "name": "Suit, shirt and tie, dress shoes",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [
+            "NAVY",
+            "CHARCOAL",
+            "GREY"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Dress shirt"
+          ],
+          "colors": [
+            "WHITE",
+            "LIGHT_BLUE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": [
+            "NAVY",
+            "CHARCOAL",
+            "GREY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Dress shoes"
+          ],
+          "colors": [
+            "BLACK",
+            "BROWN"
+          ]
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Tie"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "FORMAL"
+      ],
+      "seasons": [],
+      "formality": [
+        4,
+        4
+      ],
+      "why": "A dark suit, pale shirt and tie covers business and most cocktail or daytime weddings.",
+      "src": [
+        "f34",
+        "f28",
+        "f39"
+      ]
+    },
+    {
+      "id": "f071",
+      "name": "Blazer, blouse, tailored trousers, heels",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Blouse",
+            "Tank top",
+            "Turtleneck"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Wide-leg trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels",
+            "Loafers"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "WORK"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "Tailored separates read polished; one trend-led accessory stops it looking corporate.",
+      "src": [
+        "f3",
+        "f2"
+      ]
+    },
+    {
+      "id": "f072",
+      "name": "Blouse, skirt, heels, optional blazer",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Blouse"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Skirt",
+            "Midi skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels",
+            "Flats"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "SMART"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "A blouse and skirt is the softer side of the suit; add the jacket for meetings.",
+      "src": [
+        "f34",
+        "f6"
+      ]
+    },
+    {
+      "id": "f073",
+      "name": "Fine knit, tailored trousers, loafers",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Knit sweater"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt",
+            "Turtleneck",
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Wide-leg trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Loafers"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "SMART"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A fine merino or cashmere knit in navy, grey or green is polished enough to skip the jacket.",
+      "src": [
+        "f36",
+        "f5"
+      ]
+    },
+    {
+      "id": "f074",
+      "name": "Waistcoat, linen trousers, sandals",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Waistcoat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top",
+            "T-shirt",
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Wide-leg trousers",
+            "Trousers",
+            "Tailored shorts"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sandals",
+            "Loafers",
+            "Flats"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "SMART",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A waistcoat adds polish to summer linen without the heat of a jacket.",
+      "src": [
+        "f20"
+      ]
+    },
+    {
+      "id": "f075",
+      "name": "Pale linen trousers, tank, flat sandals",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Wide-leg trousers"
+          ],
+          "colors": [
+            "WHITE",
+            "CREAM",
+            "BEIGE"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sandals",
+            "Flats"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Tote"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "WORK",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Loose pale linen lets air circulate and reflects the sun, yet still looks office-ready.",
+      "src": [
+        "f22"
+      ]
+    },
+    {
+      "id": "f076",
+      "name": "Trench, shirt, trousers, rubber-soled boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt",
+            "Blouse",
+            "Dress shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Chelsea boots",
+            "Boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "WORK"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "A trench is the rain layer that suits tailoring; rubber soles survive the wet where leather won't.",
+      "src": [
+        "f19",
+        "f15"
+      ]
+    },
+    {
+      "id": "f077",
+      "name": "Sport coat, shirt and tie, grey trousers, brown derbies",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt",
+            "Dress shirt"
+          ],
+          "colors": [
+            "WHITE",
+            "LIGHT_BLUE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": [
+            "GREY",
+            "LIGHT_GREY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Dress shoes"
+          ],
+          "colors": [
+            "BROWN"
+          ]
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Tie"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "WORK"
+      ],
+      "seasons": [],
+      "formality": [
+        4,
+        4
+      ],
+      "why": "Coat and tie without a suit: grey trousers, a pale shirt and dark brown derbies go with everything.",
+      "src": [
+        "f39",
+        "f38"
+      ]
+    },
+    {
+      "id": "f078",
+      "name": "Slip dress, oversized blazer, strappy sandals",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Slip dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sandals",
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Clutch",
+            "Handbag"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "DATE"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A slip under a roomy blazer is sleek but relaxed; strappy sandals and a small bag finish it.",
+      "src": [
+        "f23",
+        "f53"
+      ]
+    },
+    {
+      "id": "f079",
+      "name": "Lace camisole, wide-leg trousers, pumps",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top",
+            "Blouse"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Wide-leg trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Bracelet"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "SMART"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "Swap the work top for lace and add a heel: the same trousers go straight from desk to drinks.",
+      "src": [
+        "f23"
+      ]
+    },
+    {
+      "id": "f080",
+      "name": "Statement top, jeans, pointed heels",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Blouse",
+            "Crop top",
+            "Tank top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Handbag",
+            "Clutch"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "DATE"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "One standout top carries the night; jeans and a sharp heel keep the rest easy.",
+      "src": [
+        "f23",
+        "f24"
+      ]
+    },
+    {
+      "id": "f081",
+      "name": "Little black dress, tights, heels, clutch",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress",
+            "Knit dress"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Clutch"
+          ],
+          "colors": []
+        },
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "SMART"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "Sheer or coloured tights winterise the little black dress; a pointed heel and clutch dress it up.",
+      "src": [
+        "f25",
+        "f23"
+      ]
+    },
+    {
+      "id": "f082",
+      "name": "Black tee, leather jacket, dark jeans",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Leather jacket"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": [
+            "BLACK",
+            "NAVY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Chelsea boots",
+            "Sneakers"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A good black tee always works at night, and leather beats an office jacket for cool.",
+      "src": [
+        "f26",
+        "f1"
+      ]
+    },
+    {
+      "id": "f083",
+      "name": "Loose shirt, dark jeans, clean trainers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans",
+            "Chinos",
+            "Trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "CASUAL"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A relaxed button-down, slightly open, over well-cut trousers and subtle trainers looks effortless.",
+      "src": [
+        "f26"
+      ]
+    },
+    {
+      "id": "f084",
+      "name": "Red dress, heels, clutch",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress"
+          ],
+          "colors": [
+            "RED"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels",
+            "Sandals"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Clutch"
+          ],
+          "colors": [],
+          "optional": true
+        },
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Leather jacket",
+            "Trench coat"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "DATE"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "A red dress makes the statement on its own; comfortable heels keep you dancing.",
+      "src": [
+        "f23"
+      ]
+    },
+    {
+      "id": "f085",
+      "name": "Sleek maxi dress, statement jewellery, heels",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Maxi dress",
+            "Knit dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Clutch"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Earrings",
+            "Bracelet"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "DATE"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "A long, sleek dress with one bold piece of jewellery is evening-ready without a gown.",
+      "src": [
+        "f23"
+      ]
+    },
+    {
+      "id": "f086",
+      "name": "Trench, tee, jeans, ankle boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Ankle boots",
+            "Boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Belt"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A trench and a good belt make your comfiest tee and jeans look dressed for an evening out.",
+      "src": [
+        "f23",
+        "f15"
+      ]
+    },
+    {
+      "id": "f087",
+      "name": "White tee, belted jeans, knee-high boots",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Belt"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "CASUAL"
+      ],
+      "seasons": [
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "Tuck the tee, add a belt and tall boots: the simplest pairing becomes a night-out look.",
+      "src": [
+        "f24"
+      ]
+    },
+    {
+      "id": "f088",
+      "name": "Silk camisole, leather skirt, heels",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top",
+            "Blouse"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Skirt",
+            "Midi skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels",
+            "Ankle boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "DATE"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        3
+      ],
+      "why": "Silk against leather is a sensual texture mix that works with or without sheer tights.",
+      "src": [
+        "f25"
+      ]
+    },
+    {
+      "id": "f089",
+      "name": "Bright blazer, slouchy jeans, heeled sandals",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [
+            "RED",
+            "PINK",
+            "HOT_PINK",
+            "GREEN",
+            "BLUE",
+            "ORANGE",
+            "YELLOW",
+            "PURPLE",
+            "LAVENDER",
+            "TEAL",
+            "MINT"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sandals",
+            "Heels"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A bright blazer does all the talking; slouchy denim and a heeled sandal keep it relaxed.",
+      "src": [
+        "f24"
+      ]
+    },
+    {
+      "id": "f090",
+      "name": "Knit tank, white jeans, trainers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": [
+            "WHITE",
+            "CREAM"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "DATE"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "White jeans with a fitted knit tank are casual yet elevated for warm evenings.",
+      "src": [
+        "f24"
+      ]
+    },
+    {
+      "id": "f091",
+      "name": "Jumpsuit, blazer, heels",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Jumpsuit"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [],
+          "optional": true
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Clutch"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "DATE",
+        "FORMAL"
+      ],
+      "seasons": [],
+      "formality": [
+        3,
+        4
+      ],
+      "why": "A jumpsuit is one easy piece that reads dressed up; a blazer carries it into colder months.",
+      "src": [
+        "f27",
+        "f25"
+      ]
+    },
+    {
+      "id": "f092",
+      "name": "Black tie: dinner jacket, white shirt, bow tie",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [
+            "BLACK",
+            "NAVY"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Dress shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": [
+            "BLACK",
+            "NAVY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Dress shoes"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Tie"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        }
+      ],
+      "occasions": [
+        "FORMAL"
+      ],
+      "seasons": [],
+      "formality": [
+        5,
+        5
+      ],
+      "why": "Black or midnight dinner jacket, white shirt, black bow tie and polished black shoes: the timeless rule.",
+      "src": [
+        "f29",
+        "f33"
+      ]
+    },
+    {
+      "id": "f093",
+      "name": "Evening gown, heels, clutch",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Evening dress",
+            "Maxi dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels",
+            "Sandals"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Clutch"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Earrings",
+            "Necklace",
+            "Bracelet"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "FORMAL"
+      ],
+      "seasons": [],
+      "formality": [
+        5,
+        5
+      ],
+      "why": "A long gown is the safest black-tie choice; evening sandals, a small bag and some sparkle finish it.",
+      "src": [
+        "f31",
+        "f33"
+      ]
+    },
+    {
+      "id": "f094",
+      "name": "Black tie optional: dark suit, white shirt, dark tie",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [
+            "BLACK",
+            "CHARCOAL",
+            "NAVY"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Dress shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": [
+            "BLACK",
+            "CHARCOAL",
+            "NAVY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Dress shoes"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Tie"
+          ],
+          "colors": [
+            "BLACK",
+            "NAVY",
+            "CHARCOAL",
+            "BURGUNDY"
+          ]
+        }
+      ],
+      "occasions": [
+        "FORMAL"
+      ],
+      "seasons": [],
+      "formality": [
+        4,
+        5
+      ],
+      "why": "No dinner suit? A very dark suit, white shirt and solid dark necktie is correct. Skip the bow tie.",
+      "src": [
+        "f30",
+        "f29"
+      ]
+    },
+    {
+      "id": "f095",
+      "name": "Cocktail dress, heels, clutch",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress",
+            "Slip dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Clutch"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Earrings",
+            "Bracelet"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "FORMAL",
+        "DATE"
+      ],
+      "seasons": [],
+      "formality": [
+        4,
+        4
+      ],
+      "why": "A mini-to-midi dress, a heel and a clutch is the cocktail sweet spot; choose one standout accessory.",
+      "src": [
+        "f27",
+        "f53"
+      ]
+    },
+    {
+      "id": "f096",
+      "name": "Cocktail trouser suit, silk top, heels",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Blouse",
+            "Tank top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers",
+            "Wide-leg trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Clutch"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "FORMAL",
+        "DATE"
+      ],
+      "seasons": [],
+      "formality": [
+        4,
+        4
+      ],
+      "why": "Sleek trousers are as dressy as a dress; a silk top, heels and a clutch make it cocktail-ready.",
+      "src": [
+        "f27"
+      ]
+    },
+    {
+      "id": "f097",
+      "name": "Daytime wedding suit in a lighter colour",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [
+            "BLUE",
+            "LIGHT_BLUE",
+            "GREEN",
+            "OLIVE",
+            "BROWN",
+            "BEIGE",
+            "CAMEL"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Dress shirt"
+          ],
+          "colors": [
+            "WHITE",
+            "LIGHT_BLUE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": [
+            "BLUE",
+            "LIGHT_BLUE",
+            "GREEN",
+            "OLIVE",
+            "BROWN",
+            "BEIGE",
+            "CAMEL"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Dress shoes"
+          ],
+          "colors": [
+            "BROWN"
+          ]
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Tie"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "FORMAL",
+        "SMART"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        4,
+        4
+      ],
+      "why": "Before five, a mid-blue, green or brown suit is right; brown shoes and a pale shirt keep it fresh.",
+      "src": [
+        "f28"
+      ]
+    },
+    {
+      "id": "f098",
+      "name": "Colourful midi dress, heels, small bag",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress"
+          ],
+          "colors": [
+            "RED",
+            "PINK",
+            "HOT_PINK",
+            "GREEN",
+            "MINT",
+            "BLUE",
+            "LIGHT_BLUE",
+            "TEAL",
+            "YELLOW",
+            "MUSTARD",
+            "ORANGE",
+            "RUST",
+            "PURPLE",
+            "LAVENDER",
+            "BURGUNDY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels",
+            "Sandals"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Clutch",
+            "Handbag"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Earrings"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "FORMAL",
+        "SMART"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        4,
+        4
+      ],
+      "why": "A midi in colour or print is the safest cocktail-wedding look; let a single accessory shine.",
+      "src": [
+        "f27"
+      ]
+    },
+    {
+      "id": "f099",
+      "name": "Evening dress, dark coat, heels, clutch",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Evening dress",
+            "Dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Heels"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Clutch"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Gloves",
+            "Necklace"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "FORMAL",
+        "DATE"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        4,
+        5
+      ],
+      "why": "An evening coat or faux fur over the dress, plus gloves, keeps formal dressing elegant in the cold.",
+      "src": [
+        "f31",
+        "f23"
+      ]
+    },
+    {
+      "id": "f100",
+      "name": "Black tie in winter: dinner suit and dark overcoat",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Coat"
+          ],
+          "colors": [
+            "BLACK",
+            "NAVY",
+            "CHARCOAL"
+          ]
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": [
+            "BLACK",
+            "NAVY"
+          ]
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Dress shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Trousers"
+          ],
+          "colors": [
+            "BLACK",
+            "NAVY"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Dress shoes"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Tie"
+          ],
+          "colors": [
+            "BLACK"
+          ]
+        }
+      ],
+      "occasions": [
+        "FORMAL"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        5,
+        5
+      ],
+      "why": "Over a dinner suit wear a dark knee-length overcoat, never a trench; a white silk scarf is the classic finish.",
+      "src": [
+        "f32",
+        "f29"
+      ]
+    },
+    {
+      "id": "f101",
+      "name": "Leggings, sports top, running shoes, windbreaker",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Sports top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Leggings",
+            "Running shorts"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Running shoes"
+          ],
+          "colors": []
+        },
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Windbreaker"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "ACTIVE"
+      ],
+      "seasons": [],
+      "formality": [
+        1,
+        1
+      ],
+      "why": "Technical basics plus a light windbreaker you can stash: ready for the run or the class.",
+      "src": [
+        "f46"
+      ]
+    },
+    {
+      "id": "f102",
+      "name": "Activewear set under a trench",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Sports top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Leggings"
+          ],
+          "colors": []
+        },
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Running shoes"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "ACTIVE",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        1,
+        2
+      ],
+      "why": "A classic trench over a matching set takes you from workout to coffee looking put together.",
+      "src": [
+        "f46"
+      ]
+    },
+    {
+      "id": "f103",
+      "name": "Oversized sweatshirt, leggings, trainers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Sweatshirt",
+            "Hoodie"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Leggings"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Running shoes"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Overshirt"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "LOUNGE",
+        "ACTIVE",
+        "TRAVEL"
+      ],
+      "seasons": [],
+      "formality": [
+        1,
+        2
+      ],
+      "why": "A roomy sweatshirt over leggings is comfort first; an overshirt on top makes it look intentional.",
+      "src": [
+        "f47",
+        "f45",
+        "f46"
+      ]
+    },
+    {
+      "id": "f104",
+      "name": "Matching sweatsuit, trainers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Sweatshirt",
+            "Hoodie"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Joggers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Handbag",
+            "Crossbody"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "LOUNGE",
+        "TRAVEL",
+        "CASUAL"
+      ],
+      "seasons": [],
+      "formality": [
+        1,
+        2
+      ],
+      "why": "A matching top and bottom makes comfort look deliberate; a polished bag lifts it further.",
+      "src": [
+        "f45",
+        "f49"
+      ]
+    },
+    {
+      "id": "f105",
+      "name": "Hiking layers: sports top, gilet or fleece, hiking boots",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Sports top",
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Leggings",
+            "Shorts",
+            "Running shorts",
+            "Cargo trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Fleece",
+            "Gilet"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Hiking boots",
+            "Running shoes"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Cap"
+          ],
+          "colors": [],
+          "optional": true
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Backpack",
+            "Belt bag"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "ACTIVE"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER",
+        "AUTUMN"
+      ],
+      "formality": [
+        1,
+        1
+      ],
+      "why": "Effort warms you and altitude cools you: a packable gilet or fleece and a cap handle both.",
+      "src": [
+        "f47",
+        "f48"
+      ]
+    },
+    {
+      "id": "f106",
+      "name": "Rainy trail: raincoat, fleece, hiking boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Raincoat",
+            "Windbreaker"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Fleece"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Long-sleeve top",
+            "Sports top",
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Leggings",
+            "Cargo trousers",
+            "Joggers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Hiking boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Backpack"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "ACTIVE"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        1,
+        1
+      ],
+      "why": "A packable shell over a fleece keeps you dry and warm; proper boots grip wet ground.",
+      "src": [
+        "f19",
+        "f47"
+      ]
+    },
+    {
+      "id": "f107",
+      "name": "Running shorts, tank, cap",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top",
+            "Sports top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Running shorts"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Running shoes"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Cap"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "ACTIVE"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        1,
+        1
+      ],
+      "why": "Minimal, sweat-friendly layers and a cap against the sun: nothing more needed in the heat.",
+      "src": [
+        "f47",
+        "f46"
+      ]
+    },
+    {
+      "id": "f108",
+      "name": "Winter run: base layer, fleece, leggings",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Long-sleeve top",
+            "Sports top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Leggings",
+            "Joggers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Fleece",
+            "Zip hoodie"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Running shoes",
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Beanie",
+            "Gloves"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "ACTIVE"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        1,
+        1
+      ],
+      "why": "Dress for the second mile, not the first: a light fleece over a base layer, plus hat and gloves.",
+      "src": [
+        "f46"
+      ]
+    },
+    {
+      "id": "f109",
+      "name": "Zip hoodie, joggers, trainers, gym bag",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Zip hoodie"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Sports top",
+            "T-shirt",
+            "Tank top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Joggers",
+            "Leggings",
+            "Running shorts"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Running shoes",
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Gym bag"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "ACTIVE"
+      ],
+      "seasons": [],
+      "formality": [
+        1,
+        1
+      ],
+      "why": "A zip hoodie goes on and off between warm-up and cool-down; joggers get you home.",
+      "src": [
+        "f46"
+      ]
+    },
+    {
+      "id": "f110",
+      "name": "Joggers, oversized shirt, trainers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Joggers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "LAYER",
+          "types": [
+            "Sweater vest"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "LOUNGE",
+        "CASUAL"
+      ],
+      "seasons": [],
+      "formality": [
+        1,
+        2
+      ],
+      "why": "An oversized button-down makes sweatpants look ready for a video call; add a sweater vest when it cools.",
+      "src": [
+        "f2"
+      ]
+    },
+    {
+      "id": "f111",
+      "name": "Knit cardigan set, tee, trainers",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Cardigan"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt",
+            "Tank top"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Joggers",
+            "Wide-leg trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Flats"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "LOUNGE",
+        "TRAVEL"
+      ],
+      "seasons": [],
+      "formality": [
+        1,
+        2
+      ],
+      "why": "A matching knit cardigan and trousers is a softer, smarter tracksuit for home or a flight.",
+      "src": [
+        "f44"
+      ]
+    },
+    {
+      "id": "f112",
+      "name": "Wide trousers, white shirt, trainers",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Shirt"
+          ],
+          "colors": [
+            "WHITE"
+          ]
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Wide-leg trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Flats",
+            "Sandals"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Tote"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "TRAVEL",
+        "CASUAL"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Roomy trousers and a crisp shirt take you off the plane and straight to lunch.",
+      "src": [
+        "f45"
+      ]
+    },
+    {
+      "id": "f113",
+      "name": "Jeans, tee, blazer, flats, big scarf",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Blazer"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats",
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Scarf"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "TRAVEL"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A blazer stops travel jeans looking sloppy; a big scarf doubles as a blanket on board.",
+      "src": [
+        "f44",
+        "f43"
+      ]
+    },
+    {
+      "id": "f114",
+      "name": "Trench, hoodie, wide trousers, trainers",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Hoodie",
+            "Sweatshirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Wide-leg trousers",
+            "Trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers",
+            "Sandals"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Tote"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "TRAVEL",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Pyjama-soft trousers and a hoodie for the flight; a trench on top looks put together on landing.",
+      "src": [
+        "f44"
+      ]
+    },
+    {
+      "id": "f115",
+      "name": "Long cardigan, tank, jeans, tote",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Cardigan"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Tank top",
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Tote"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "TRAVEL"
+      ],
+      "seasons": [],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Something to wrap up in for a cold cabin and a big tote for everything: travel layers sorted.",
+      "src": [
+        "f44",
+        "f43"
+      ]
+    },
+    {
+      "id": "f116",
+      "name": "Quilted coat, comfy bottoms, chunky trainers, shoulder bag",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Puffer jacket",
+            "Coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans",
+            "Leggings",
+            "Joggers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Crossbody",
+            "Handbag",
+            "Tote"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "TRAVEL"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A quilted coat doubles as a pillow on the plane and keeps you warm when you land somewhere cold.",
+      "src": [
+        "f45"
+      ]
+    },
+    {
+      "id": "f117",
+      "name": "Bomber jacket, jeans, shoulder bag",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Bomber jacket"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Crossbody",
+            "Handbag"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "TRAVEL",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "For a day of exploring, a zip-up jacket handles changing temperatures and a shoulder bag frees your hands.",
+      "src": [
+        "f45"
+      ]
+    },
+    {
+      "id": "f118",
+      "name": "Sundress, sandals, big tote",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Sundress",
+            "Dress",
+            "Maxi dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Sandals",
+            "Espadrilles",
+            "Flip-flops"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Tote"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Sunglasses",
+            "Hat"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "TRAVEL",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SUMMER"
+      ],
+      "formality": [
+        1,
+        2
+      ],
+      "why": "A light dress, easy sandals and a tote big enough for the beach: the holiday uniform.",
+      "src": [
+        "f45"
+      ]
+    },
+    {
+      "id": "f119",
+      "name": "Knit polo, long skirt, crossbody",
+      "slots": [
+        {
+          "category": "TOP",
+          "types": [
+            "Polo"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Skirt",
+            "Midi skirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats",
+            "Sandals",
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Crossbody",
+            "Handbag"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "TRAVEL",
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Two pieces, five minutes, pulled together; a crossbody keeps valuables close in a new city.",
+      "src": [
+        "f45"
+      ]
+    },
+    {
+      "id": "f120",
+      "name": "Trench, dress, knee-high boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress",
+            "Shirt dress",
+            "Knit dress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Rain boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL",
+        "WORK"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        3
+      ],
+      "why": "A good trench and tall boots are all a rainy day needs; a midi hem stays clear of puddles.",
+      "src": [
+        "f15",
+        "f16",
+        "f17"
+      ]
+    },
+    {
+      "id": "f121",
+      "name": "Trench, dark jeans, tall rain boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat",
+            "Raincoat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans"
+          ],
+          "colors": [
+            "NAVY",
+            "BLACK"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Rain boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ACCESSORY",
+          "types": [
+            "Hat"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Black rain boots and dark denim hide splashes; a trench and a brimmed hat keep the rest dry.",
+      "src": [
+        "f16"
+      ]
+    },
+    {
+      "id": "f122",
+      "name": "Raincoat, sweatshirt, jeans, rain boots",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Raincoat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [
+            "Sweatshirt",
+            "Hoodie",
+            "T-shirt"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans",
+            "Joggers",
+            "Leggings"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Rain boots",
+            "Boots"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Backpack"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        1,
+        2
+      ],
+      "why": "A packable raincoat over a warm sweatshirt, with rubber soles underfoot, makes a wet commute painless.",
+      "src": [
+        "f17",
+        "f19"
+      ]
+    },
+    {
+      "id": "f123",
+      "name": "Puffer gilet, jeans, lug-sole boots",
+      "slots": [
+        {
+          "category": "LAYER",
+          "types": [
+            "Gilet"
+          ],
+          "colors": []
+        },
+        {
+          "category": "TOP",
+          "types": [],
+          "colors": []
+        },
+        {
+          "category": "BOTTOM",
+          "types": [
+            "Jeans",
+            "Trousers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Boots",
+            "Chelsea boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "AUTUMN",
+        "WINTER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "A puffer gilet adds core warmth without bulk; keep the colours tonal so it looks considered.",
+      "src": [
+        "f15"
+      ]
+    },
+    {
+      "id": "f124",
+      "name": "Trench, white mini dress, ballet flats",
+      "slots": [
+        {
+          "category": "OUTERWEAR",
+          "types": [
+            "Trench coat"
+          ],
+          "colors": []
+        },
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress"
+          ],
+          "colors": [
+            "WHITE",
+            "CREAM"
+          ]
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Flats",
+            "Sneakers"
+          ],
+          "colors": []
+        },
+        {
+          "category": "BAG",
+          "types": [
+            "Crossbody",
+            "Handbag"
+          ],
+          "colors": [],
+          "optional": true
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "Summer staples go rain-ready with a trench and a closed toe; the white dress keeps it bright.",
+      "src": [
+        "f18"
+      ]
+    },
+    {
+      "id": "f125",
+      "name": "Breezy dress, rain boots",
+      "slots": [
+        {
+          "category": "ONE_PIECE",
+          "types": [
+            "Dress",
+            "Sundress"
+          ],
+          "colors": []
+        },
+        {
+          "category": "SHOES",
+          "types": [
+            "Rain boots"
+          ],
+          "colors": []
+        }
+      ],
+      "occasions": [
+        "CASUAL"
+      ],
+      "seasons": [
+        "SPRING",
+        "SUMMER"
+      ],
+      "formality": [
+        2,
+        2
+      ],
+      "why": "When it is warm and wet, a breezy dress with rain boots beats tight hems and open toes.",
+      "src": [
+        "f18",
+        "f16"
+      ]
+    }
+  ]
+}

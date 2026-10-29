@@ -64,6 +64,8 @@ object TestGuide {
                "summary": "Deep red is the colour of the season", "colors": ["BURGUNDY"], "match": "any"},
               {"id": "t2", "name": "Brown and blue", "kind": "pairing", "season": "AW26", "from": "2026-09-01", "to": "2027-02-28",
                "summary": "Chocolate with powder blue", "colors": ["BROWN", "LIGHT_BLUE"], "match": "all"},
+              {"id": "t4", "name": "Dark florals", "kind": "pattern", "season": "AW26", "from": "2026-09-01", "to": "2027-02-28",
+               "summary": "Moody florals on black", "colors": ["BLACK"], "patterns": ["FLORAL"], "match": "all"},
               {"id": "t3", "name": "Butter yellow", "kind": "colour", "season": "SS27", "from": "2027-03-01", "to": "2027-08-31",
                "summary": "Soft yellow returns", "colors": ["YELLOW"], "match": "any"}
             ],
@@ -87,10 +89,15 @@ object TestGuide {
         """.trimIndent(),
     )
 
+    /** A guide with no content, for "without the guide" baselines. */
+    val empty = StyleKnowledge(version = 1, updated = "")
+
     /** Run [block] with the test guide installed. */
-    fun <T> use(block: () -> T): T {
+    fun <T> use(block: () -> T): T = with(knowledge, block)
+
+    fun <T> with(guide: StyleKnowledge, block: () -> T): T {
         val previous = StyleKnowledge.override
-        StyleKnowledge.override = knowledge
+        StyleKnowledge.override = guide
         try {
             return block()
         } finally {

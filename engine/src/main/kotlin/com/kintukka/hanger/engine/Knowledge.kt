@@ -351,11 +351,19 @@ data class Trend(
         return if (match == "any") hits.any { it } else hits.all { it }
     }
 
-    /** Whether a single piece expresses part of the trend (for "pieces you own" lists). */
-    fun matchesPiece(g: Garment): Boolean =
-        (colors.isNotEmpty() && g.colors.firstOrNull() in colors) ||
-            types.any { it.equals(g.subcategory, ignoreCase = true) } ||
-            (patterns.isNotEmpty() && g.pattern in patterns)
+    /**
+     * Whether a single piece expresses the trend (for "pieces you own" lists). For "all" trends a piece must fit
+     * every dimension the trend names (dark florals = a floral piece in black; brown jeans = jeans in brown), while
+     * a pairing's colours or types are alternatives; "any" trends take a hit on any dimension.
+     */
+    fun matchesPiece(g: Garment): Boolean {
+        if (!recognisable) return false
+        val colorOk = g.colors.firstOrNull() in colors
+        val typeOk = types.any { it.equals(g.subcategory, ignoreCase = true) }
+        val patternOk = g.pattern in patterns
+        return if (match == "any") colorOk || typeOk || patternOk
+        else (colors.isEmpty() || colorOk) && (types.isEmpty() || typeOk) && (patterns.isEmpty() || patternOk)
+    }
 }
 
 @Serializable
@@ -398,8 +406,14 @@ data class ClosetCheck(
     val minItems: Int = 0,
     val message: String,
     val action: String = "",
+    /** "positive" (well done) or "corrective" (worth fixing). */
+    val tone: String = "corrective",
+    /** 1 = most useful to show (weather and occasion gaps) ... 6 = least. */
+    val priority: Int = 3,
     val src: List<String> = emptyList(),
-)
+) {
+    val positive: Boolean get() = tone == "positive"
+}
 
 @Serializable
 data class Ratios(val summary: String, val perBottom: Map<Category, Double> = emptyMap(), val src: List<String> = emptyList())

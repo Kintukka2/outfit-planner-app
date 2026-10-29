@@ -408,7 +408,8 @@ def build_wardrobe(raw):
         checks.append({"id": str(c.get("id")), "title": text(c.get("title"), where, 50), "metric": c["metric"], "op": c["op"],
                        "value": float(c.get("value")), "minItems": int(c.get("minItems") or 0),
                        "message": text(c.get("message"), where, 180), "action": text(c.get("action"), where, 120) if c.get("action") else "",
-                       "src": remap(c.get("src"), m, where)})
+                       "tone": "positive" if c.get("tone") == "positive" else "corrective",
+                       "priority": int(c.get("priority") or 3), "src": remap(c.get("src"), m, where)})
     ratios = None
     if raw.get("ratios"):
         r = raw["ratios"]

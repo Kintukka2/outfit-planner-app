@@ -64,6 +64,12 @@ internal object Evaluator {
     /** Classic pairings lift a little (capped); clashing pairings cost more, so one bad pair still shows. */
     fun typeAdjustment(lift: Double, cost: Double): Double = (min(lift, 0.05) - cost).coerceAtLeast(-0.3)
 
+    /**
+     * Identity below 0.9, then eases towards 1 so great outfits keep their order instead of all saturating at 1.
+     * Monotonic, so thresholds below 0.9 (the capsule counter's 0.55) are unaffected.
+     */
+    fun softCap(x: Double): Double = if (x <= 0.9) x else 0.9 + 0.1 * tanh((x - 0.9) / 0.1)
+
     fun formalityScore(spread: Int): Double = when {
         spread <= 1 -> 1.0
         spread == 2 -> 0.7
@@ -459,7 +465,7 @@ internal object Evaluator {
 
         // --- Combine --------------------------------------------------------------------------
         val base = combine(colorScore, patternScore, formalityScore, occasionScore, weatherScore)
-        val score = (base * factor + affinityAdj + typeAdj).coerceIn(0.0, 1.0)
+        val score = softCap(base * factor + affinityAdj + typeAdj).coerceIn(0.0, 1.0)
 
         return if (explain) {
             EvalResult(score, dedupe(notes!!), dedupe(warnings!!), spread)

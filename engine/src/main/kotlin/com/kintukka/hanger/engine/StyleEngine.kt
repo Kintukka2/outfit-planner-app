@@ -119,10 +119,17 @@ internal object ClosetChecks {
             val d = maxOfNullable(lastWorn[g.id], g.lastWorn)
             d != null && ChronoUnit.DAYS.between(d, today) in 0 until days
         }.toDouble() / n
-        m["wornShare30"] = worn(30)
-        m["wornShare90"] = worn(90)
-        val settled = closet.filter { it.added != null && ChronoUnit.DAYS.between(it.added, today) > 60 }
-        if (settled.isNotEmpty()) m["neverWornShare"] = settled.count { it.wearCount == 0 && lastWorn[it.id] == null }.toDouble() / settled.size
+        // Wear-based metrics only mean something once wears are being logged and the closet has had a month
+        // in the app; before that they'd read as "nothing gets worn".
+        val logging = wearLog.isNotEmpty() || closet.any { it.wearCount > 0 }
+        val oldest = closet.mapNotNull { it.added }.minOrNull()
+        val settledIn = oldest == null || ChronoUnit.DAYS.between(oldest, today) >= 30
+        if (logging && settledIn) {
+            m["wornShare30"] = worn(30)
+            m["wornShare90"] = worn(90)
+            val settled = closet.filter { it.added != null && ChronoUnit.DAYS.between(it.added, today) > 60 }
+            if (settled.isNotEmpty()) m["neverWornShare"] = settled.count { it.wearCount == 0 && lastWorn[it.id] == null }.toDouble() / settled.size
+        }
         val cpw = closet.mapNotNull { g -> g.price?.takeIf { g.wearCount > 0 }?.div(g.wearCount) }
         if (cpw.isNotEmpty()) m["avgCostPerWear"] = cpw.average()
         m["summerPieces"] = closet.count { Season.SUMMER in it.seasons || it.warmth <= 2 }.toDouble()
@@ -153,13 +160,13 @@ internal object ClosetChecks {
                 else -> false
             }
             if (!fires) null else ClosetInsight(c, v, c.message.replace("{value}", format(c.metric, v, currency)))
-        }
+        }.sortedWith(compareBy<ClosetInsight> { it.check.positive }.thenBy { it.check.priority })
     }
 
     fun format(metric: String, v: Double, currency: String): String = when {
         metric.endsWith("Share") || metric.startsWith("wornShare") -> "${(v * 100).roundToInt()}%"
         metric == "avgCostPerWear" -> currency + String.format(java.util.Locale.ROOT, "%.2f", v)
-        metric == "topsPerBottom" -> String.format(java.util.Locale.ROOT, "%.1f", v)
+        metric == "topsPerBottom" -> if (v % 1.0 == 0.0) v.toInt().toString() else String.format(java.util.Locale.ROOT, "%.1f", v)
         else -> v.roundToInt().toString()
     }
 }

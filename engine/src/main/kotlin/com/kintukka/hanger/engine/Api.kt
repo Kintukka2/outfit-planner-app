@@ -156,6 +156,13 @@ data class FormulaCoverage(val ready: List<FormulaMatch>, val oneAway: List<Form
 /** A closet check from the guide that fired, with its message filled in. */
 data class ClosetInsight(val check: ClosetCheck, val value: Double, val message: String)
 
+/** The few insights worth showing at once: the top fixes plus one positive, so the screen never nags. */
+fun List<ClosetInsight>.headline(max: Int = 4): List<ClosetInsight> {
+    val fixes = filter { !it.check.positive }
+    val praise = firstOrNull { it.check.positive }
+    return fixes.take(if (praise != null) max - 1 else max) + listOfNotNull(praise)
+}
+
 /** Everything the built-in style guide can say about a closet or an outfit. */
 object StyleGuide {
     val knowledge: StyleKnowledge get() = StyleKnowledge.bundled
@@ -169,7 +176,7 @@ object StyleGuide {
     fun closetMetrics(closet: List<Garment>, wearLog: List<WearRecord>, today: LocalDate, wishlist: Int = 0): Map<String, Double> =
         ClosetChecks.metrics(closet, wearLog, today, wishlist)
 
-    /** The guide's closet checks that fire for this closet. */
+    /** The guide's closet checks that fire for this closet: fixes first (most useful first), then positives. */
     fun closetInsights(
         closet: List<Garment>,
         wearLog: List<WearRecord>,

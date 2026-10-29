@@ -930,7 +930,9 @@
       "src": [
         "w25",
         "w13"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 3
     },
     {
       "id": "k02",
@@ -944,7 +946,9 @@
       "src": [
         "w25",
         "w26"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 3
     },
     {
       "id": "k03",
@@ -958,7 +962,9 @@
       "src": [
         "w26",
         "w25"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 3
     },
     {
       "id": "k04",
@@ -971,7 +977,9 @@
       "action": "Repeat each accent in a top, a layer or an accessory.",
       "src": [
         "w26"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k05",
@@ -985,7 +993,9 @@
       "src": [
         "w25",
         "w13"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k06",
@@ -998,7 +1008,9 @@
       "action": "Pair each print with solids and make your next buy a plain piece.",
       "src": [
         "w15"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 3
     },
     {
       "id": "k07",
@@ -1011,7 +1023,9 @@
       "action": "Add one print you love to lift the solids.",
       "src": [
         "w15"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k08",
@@ -1026,7 +1040,9 @@
         "w11",
         "w8",
         "w1"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 5
     },
     {
       "id": "k09",
@@ -1040,7 +1056,9 @@
       "src": [
         "w11",
         "w12"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k10",
@@ -1054,7 +1072,9 @@
       "src": [
         "w12",
         "w26"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 2
     },
     {
       "id": "k11",
@@ -1068,7 +1088,9 @@
       "src": [
         "w26",
         "w12"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 2
     },
     {
       "id": "k12",
@@ -1081,7 +1103,9 @@
       "action": "Change the shoes and layer to take them from day to evening.",
       "src": [
         "w15"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k13",
@@ -1094,7 +1118,9 @@
       "action": "Add a neutral cardigan, knit or overshirt that goes over most tops.",
       "src": [
         "w15"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 2
     },
     {
       "id": "k14",
@@ -1107,7 +1133,9 @@
       "action": "Try each layer over a top you rarely wear.",
       "src": [
         "w15"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k15",
@@ -1120,7 +1148,9 @@
       "action": "Keep your best one per weather type and pass on the rest.",
       "src": [
         "w15"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 5
     },
     {
       "id": "k16",
@@ -1134,7 +1164,9 @@
       "src": [
         "w22",
         "w26"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 2
     },
     {
       "id": "k17",
@@ -1148,7 +1180,9 @@
       "src": [
         "w12",
         "w26"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 5
     },
     {
       "id": "k18",
@@ -1162,7 +1196,9 @@
       "src": [
         "w14",
         "w26"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 2
     },
     {
       "id": "k19",
@@ -1176,7 +1212,9 @@
       "src": [
         "w29",
         "w26"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 2
     },
     {
       "id": "k20",
@@ -1189,7 +1227,9 @@
       "action": "Restyle a favourite outfit with a different accessory this week.",
       "src": [
         "w29"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k21",
@@ -1203,7 +1243,9 @@
       "src": [
         "w16",
         "w15"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 2
     },
     {
       "id": "k22",
@@ -1217,7 +1259,9 @@
       "src": [
         "w16",
         "w15"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 2
     },
     {
       "id": "k23",
@@ -1231,7 +1275,9 @@
       "src": [
         "w15",
         "w27"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 1
     },
     {
       "id": "k24",
@@ -1245,7 +1291,9 @@
       "src": [
         "w2",
         "w14"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 1
     },
     {
       "id": "k25",
@@ -1259,7 +1307,9 @@
       "src": [
         "w22",
         "w27"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 1
     },
     {
       "id": "k26",
@@ -1272,7 +1322,9 @@
       "action": "Rotate them and use shoe trees to keep their shape.",
       "src": [
         "w22"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k27",
@@ -1286,7 +1338,9 @@
       "src": [
         "w27",
         "w15"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 1
     },
     {
       "id": "k28",
@@ -1300,7 +1354,9 @@
       "src": [
         "w27",
         "w22"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 1
     },
     {
       "id": "k29",
@@ -1313,7 +1369,9 @@
       "action": "Mix one smart piece into a casual outfit to stretch both.",
       "src": [
         "w15"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k30",
@@ -1326,7 +1384,9 @@
       "action": "Keep logging wears to spot your true favourites.",
       "src": [
         "w18"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k31",
@@ -1340,7 +1400,9 @@
       "src": [
         "w18",
         "w1"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 4
     },
     {
       "id": "k32",
@@ -1354,7 +1416,9 @@
       "src": [
         "w18",
         "w1"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k33",
@@ -1368,7 +1432,9 @@
       "src": [
         "w1",
         "w3"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 4
     },
     {
       "id": "k34",
@@ -1382,7 +1448,9 @@
       "src": [
         "w10",
         "w1"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k35",
@@ -1396,7 +1464,9 @@
       "src": [
         "w23",
         "w10"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 4
     },
     {
       "id": "k36",
@@ -1409,7 +1479,9 @@
       "action": "Keep caring for favourites so they last even longer.",
       "src": [
         "w23"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k37",
@@ -1423,7 +1495,9 @@
       "src": [
         "w12",
         "w11"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 1
     },
     {
       "id": "k38",
@@ -1437,7 +1511,9 @@
       "src": [
         "w12",
         "w2"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 1
     },
     {
       "id": "k39",
@@ -1451,7 +1527,9 @@
       "src": [
         "w12",
         "w13"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 5
     },
     {
       "id": "k40",
@@ -1465,7 +1543,9 @@
       "src": [
         "w12",
         "w13"
-      ]
+      ],
+      "tone": "positive",
+      "priority": 6
     },
     {
       "id": "k41",
@@ -1479,7 +1559,9 @@
       "src": [
         "w21",
         "w19"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 5
     },
     {
       "id": "k42",
@@ -1493,7 +1575,9 @@
       "src": [
         "w10",
         "w12"
-      ]
+      ],
+      "tone": "corrective",
+      "priority": 5
     }
   ],
   "ratios": {
