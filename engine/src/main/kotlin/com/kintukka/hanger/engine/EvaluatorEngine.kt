@@ -255,6 +255,7 @@ internal object Evaluator {
             }
             var s = if (wSum > 0) fSum / wSum else 1.0
             var sportyIssue: Garment? = null
+            val sportyPenalised = HashSet<Long>()
             var nonSportyCore: Garment? = null
             var allSporty = true
             when (occasion) {
@@ -272,6 +273,7 @@ internal object Evaluator {
                 Occasion.WORK, Occasion.SMART, Occasion.FORMAL, Occasion.DATE -> for (g in items) {
                     if (g.sporty && g.category != Category.OTHER) {
                         s -= 0.3
+                        sportyPenalised += g.id
                         if (sportyIssue == null) sportyIssue = g
                     }
                 }
@@ -280,9 +282,9 @@ internal object Evaluator {
             // Pieces the dress-code guide rules out for this occasion.
             var avoided: Garment? = null
             guide.occasions[occasion]?.let { og ->
-                for (g in items) if (og.avoids(g.subcategory)) {
+                for (g in items) if (g.id !in sportyPenalised && og.avoids(g.subcategory)) {
                     s -= 0.25
-                    if (avoided == null && g !== sportyIssue) avoided = g
+                    if (avoided == null) avoided = g
                 }
             }
             occasionScore = s.coerceIn(0.0, 1.0)
@@ -438,10 +440,11 @@ internal object Evaluator {
         // --- Garment pairings (style guide) -----------------------------------------------------
         var lift = 0.0
         var cost = 0.0
-        val typeIdx = IntArray(items.size) { guide.typeIndex(items[it].subcategory) }
+        val k = guide
+        val typeIdx = IntArray(items.size) { k.typeIndex(items[it].subcategory) }
         for (i in items.indices) for (j in i + 1 until items.size) {
             if (items[i].id == items[j].id) continue
-            val v = guide.typeScore(typeIdx[i], typeIdx[j])
+            val v = k.typeScore(typeIdx[i], typeIdx[j])
             lift += typeLift(v)
             cost += typeCost(v)
         }
@@ -455,7 +458,9 @@ internal object Evaluator {
             for (v in verdicts.filter { it.score < 0 }.sortedBy { it.score }.take(2)) {
                 warnings!! += Note(v.why, if (v.score == -2) 0.85 else 0.6)
             }
-            Formulas.match(items, occasion)?.let { notes!! += Note("Proven formula: ${it.name}", 0.9) }
+            Formulas.match(items, occasion)
+                ?.takeIf { occasion == null || it.occasions.isEmpty() || occasion in it.occasions }
+                ?.let { notes!! += Note("Proven formula: ${it.name}", 0.9) }
             if (date != null) {
                 guide.liveTrends(date).firstOrNull { it.matchesOutfit(items) }?.let {
                     notes!! += Note("On trend: ${it.name.replaceFirstChar(Char::lowercase)}", 0.66)

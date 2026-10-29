@@ -14,7 +14,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.produceState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -22,6 +23,9 @@ import com.kintukka.hanger.data.db.ItemEntity
 import com.kintukka.hanger.engine.ClosetInsight
 import com.kintukka.hanger.engine.FashionColor
 import com.kintukka.hanger.engine.StyleGuide
+import com.kintukka.hanger.engine.Tip
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import com.kintukka.hanger.engine.WeatherContext
 import com.kintukka.hanger.engine.WeatherRule
 import com.kintukka.hanger.ui.components.ColorDot
@@ -31,7 +35,7 @@ import java.time.LocalDate
 /** Today's rotating tip from the built-in guide, with a way into the full guide. */
 @Composable
 fun TipOfTheDayCard(date: LocalDate, onOpenGuide: () -> Unit, modifier: Modifier = Modifier) {
-    val tip = remember(date) { runCatching { StyleGuide.knowledge.tipOfTheDay(date) }.getOrNull() }
+    val tip by produceState<Tip?>(null, date) { value = withContext(Dispatchers.Default) { runCatching { StyleGuide.knowledge.tipOfTheDay(date) }.getOrNull() } }
     Card(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainerLowest),
         shape = MaterialTheme.shapes.large,
@@ -57,6 +61,15 @@ fun weatherAdvice(weather: WeatherContext, limit: Int = 2): List<WeatherRule> =
     runCatching { StyleGuide.knowledge.weatherRulesFor(weather) }.getOrDefault(emptyList())
         .sortedByDescending { r -> with(r.condition) { (if (rain || snow) 2 else 0) + (if (windKphMin != null || uvMin != null || minHighC != null) 1 else 0) } }
         .take(limit)
+
+/** The day's top weather advice from the guide, worked out off the main thread. */
+@Composable
+fun WeatherAdviceLine(weather: WeatherContext, modifier: Modifier = Modifier) {
+    val advice by produceState<String?>(null, weather) {
+        value = withContext(Dispatchers.Default) { weatherAdvice(weather, limit = 1).firstOrNull()?.advice }
+    }
+    advice?.let { Text(it, style = MaterialTheme.typography.bodySmall, modifier = modifier) }
+}
 
 /** Closet check results for Insights, with formula counts and a link to the guide. */
 @Composable
@@ -99,7 +112,9 @@ fun StyleCheckCard(
 /** What the guide says about one piece: what it pairs with, its colour and its fabric. */
 @Composable
 fun StyleNotes(e: ItemEntity, modifier: Modifier = Modifier) {
-    val notes = remember(e.subcategory, e.colors, e.material) { notesFor(e) }
+    val notes by produceState(emptyList<StyleNote>(), e.subcategory, e.colors, e.material) {
+        value = withContext(Dispatchers.Default) { notesFor(e) }
+    }
     if (notes.isEmpty()) return
     Column(modifier) {
         SectionHeader("Style notes")

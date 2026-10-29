@@ -15,13 +15,20 @@ internal object Formulas {
         return m
     }
 
-    /** Assign every slot a distinct item (tiny backtracking search; outfits have a handful of pieces). */
-    private fun assign(slots: List<FormulaSlot>, pick: (FormulaSlot) -> List<Garment>, index: Int, used: MutableList<Garment>): Boolean {
+    /**
+     * Assign every slot a distinct item from [pool] (tiny backtracking search; outfits have a handful of pieces).
+     * Each slot considers at most [perSlot] accepted candidates, in pool order. No allocation per step.
+     */
+    private fun assign(slots: List<FormulaSlot>, pool: List<Garment>, perSlot: Int, index: Int, used: MutableList<Garment>): Boolean {
         if (index == slots.size) return true
-        for (g in pick(slots[index])) {
+        val slot = slots[index]
+        var tried = 0
+        for (g in pool) {
+            if (!slot.accepts(g)) continue
+            if (++tried > perSlot) break
             if (used.any { it.id == g.id }) continue
             used += g
-            if (assign(slots, pick, index + 1, used)) return true
+            if (assign(slots, pool, perSlot, index + 1, used)) return true
             used.removeAt(used.size - 1)
         }
         return false
@@ -36,7 +43,7 @@ internal object Formulas {
         for (p in guide.preparedFormulas) {
             if (p.categoryMask and mask != p.categoryMask) continue
             if (best != null && p.specificity < best.specificity && bestFits) break
-            if (!assign(p.slots, { s -> items.filter(s::accepts) }, 0, ArrayList())) continue
+            if (!assign(p.slots, items, Int.MAX_VALUE, 0, ArrayList(p.slots.size))) continue
             val fits = occasion == null || p.formula.occasions.isEmpty() || occasion in p.formula.occasions
             if (best == null || (fits && !bestFits) || (fits == bestFits && p.specificity > best.specificity)) {
                 best = p
@@ -56,7 +63,7 @@ internal object Formulas {
     fun fill(formula: Formula, pool: List<Garment>): List<Garment>? {
         val used = ArrayList<Garment>()
         val slots = formula.required.sortedByDescending { it.constraint }
-        return if (assign(slots, { s -> pool.filter(s::accepts).take(6) }, 0, used)) used else null
+        return if (assign(slots, pool, 6, 0, used)) used else null
     }
 
     fun coverage(closet: List<Garment>): FormulaCoverage {
@@ -130,8 +137,9 @@ internal object ClosetChecks {
             val settled = closet.filter { it.added != null && ChronoUnit.DAYS.between(it.added, today) > 60 }
             if (settled.isNotEmpty()) m["neverWornShare"] = settled.count { it.wearCount == 0 && lastWorn[it.id] == null }.toDouble() / settled.size
         }
-        val cpw = closet.mapNotNull { g -> g.price?.takeIf { g.wearCount > 0 }?.div(g.wearCount) }
-        if (cpw.isNotEmpty()) m["avgCostPerWear"] = cpw.average()
+        // Same definition as the Insights stat (total price over total wears), so the two never disagree.
+        val pricedWorn = closet.filter { it.price != null && it.wearCount > 0 }
+        if (pricedWorn.isNotEmpty()) m["avgCostPerWear"] = pricedWorn.sumOf { it.price!! } / pricedWorn.sumOf { it.wearCount }
         m["summerPieces"] = closet.count { Season.SUMMER in it.seasons || it.warmth <= 2 }.toDouble()
         m["winterPieces"] = closet.count { Season.WINTER in it.seasons || it.warmth >= 4 }.toDouble()
         m["duplicates"] = closet.filter { it.subcategory.isNotBlank() && it.colors.isNotEmpty() }

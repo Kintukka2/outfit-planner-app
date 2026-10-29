@@ -19,6 +19,12 @@ a connection (apart from the weather forecast).
   <img src="docs/screenshots/15_insights.png" width="200" alt="Insights">
   <img src="docs/screenshots/dark_today.png" width="200" alt="Dark mode">
 </p>
+<p align="center">
+  <img src="docs/screenshots/18_guide_for_you.png" width="200" alt="Style guide: for you">
+  <img src="docs/screenshots/19_guide_colours.png" width="200" alt="Style guide: colours">
+  <img src="docs/screenshots/20_guide_formulas.png" width="200" alt="Style guide: outfit formulas">
+  <img src="docs/screenshots/21_guide_trends.png" width="200" alt="Style guide: trends">
+</p>
 
 ## Install it on your phone
 

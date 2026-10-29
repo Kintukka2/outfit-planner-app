@@ -136,9 +136,11 @@ internal object Generator {
         val deferOuter = willAddOuter ||
             (needs?.wantsWaterproof == true && !forcedHas(Category.OUTERWEAR) && outerPool.any { it.waterproof })
 
-        fun formulaBoost(items: List<Garment>): Double {
-            val f = Formulas.match(items, ctx.occasion) ?: return 1.0
-            return if (f.occasions.isEmpty() || ctx.occasion in f.occasions) 1.0 + FORMULA_BONUS else 1.0
+        // The same combination is ranked several times (core, add-on candidates, final), so match each once.
+        val boosts = HashMap<String, Double>()
+        fun formulaBoost(items: List<Garment>): Double = boosts.getOrPut(OutfitSignature.of(items.map { it.id })) {
+            val f = Formulas.match(items, ctx.occasion)
+            if (f != null && (f.occasions.isEmpty() || ctx.occasion in f.occasions)) 1.0 + FORMULA_BONUS else 1.0
         }
 
         fun priorFactor(items: List<Garment>): Double {

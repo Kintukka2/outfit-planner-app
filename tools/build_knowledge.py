@@ -331,7 +331,8 @@ def build_occasions(raw):
     weather = []
     for i, w in enumerate(raw.get("weather", [])):
         where = f"weather[{i}]"
-        cond = {k: v for k, v in (w.get("when") or {}).items() if v not in (None, False)}
+        # `is` checks: 0 == False in Python, and a 0 °C bound must survive.
+        cond = {k: v for k, v in (w.get("when") or {}).items() if v is not None and v is not False}
         allowed = {"minFeelsC", "maxFeelsC", "rain", "snow", "windKphMin", "uvMin", "minHighC"}
         for k in list(cond):
             if k not in allowed:

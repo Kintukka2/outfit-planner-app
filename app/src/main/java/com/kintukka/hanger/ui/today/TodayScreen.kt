@@ -409,9 +409,7 @@ private fun WeatherCard(state: TodayUi, onRefresh: () -> Unit, onSetLocation: ()
                     }
                     val summary = runCatching { WeatherAdvisor.needs(w.wearing).summary }.getOrNull()
                     Text(summary ?: "${w.precipitationProbability}% chance of rain", style = MaterialTheme.typography.bodyMedium)
-                    com.kintukka.hanger.ui.guide.weatherAdvice(w.wearing, limit = 1).firstOrNull()?.let { rule ->
-                        Text(rule.advice, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 4.dp))
-                    }
+                    com.kintukka.hanger.ui.guide.WeatherAdviceLine(w.wearing, Modifier.padding(top = 4.dp))
                     Text(s.locationName.orEmpty(), style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(top = 4.dp))
                 }
             }

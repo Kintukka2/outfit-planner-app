@@ -247,7 +247,7 @@ internal object Capsule {
         }
     }
 
-    private fun valid(core: CorePart, shoe: Feat): Boolean {
+    private fun valid(core: CorePart, shoe: Feat, guide: StyleKnowledge): Boolean {
         val shoeFormality = Evaluator.adjustedFormality(shoe.formality, Category.SHOES, core.coreMax)
         val spread = max(core.coreMax, shoeFormality) - min(core.coreMin, shoeFormality)
         if (spread > MAX_SPREAD) return false
@@ -258,7 +258,6 @@ internal object Capsule {
             bold++
             if (p1 == null) p1 = shoe.pattern else if (p2 == null) p2 = shoe.pattern
         }
-        val guide = StyleKnowledge.bundled
         val withA = guide.typeScore(core.typeA, shoe.type)
         val withB = guide.typeScore(core.typeB, shoe.type)
         val lift = Evaluator.typeLift(core.pairScore) + Evaluator.typeLift(withA) + Evaluator.typeLift(withB)
@@ -288,8 +287,9 @@ internal object Capsule {
     private fun pairTooFar(a: Feat, b: Feat) = abs(a.formality - b.formality) > MAX_SPREAD
 
     private fun countWithShoes(core: CorePart, shoes: List<Feat>): Int {
+        val guide = StyleKnowledge.bundled
         var n = 0
-        for (s in shoes) if (valid(core, s)) n++
+        for (s in shoes) if (valid(core, s, guide)) n++
         return n
     }
 

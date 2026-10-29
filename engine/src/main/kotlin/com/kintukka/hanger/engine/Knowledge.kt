@@ -34,6 +34,9 @@ data class StyleKnowledge(
     /** Colour-pair score (-2..2), 0 when the guide has no view on the pair. */
     fun colorScore(a: FashionColor, b: FashionColor): Int = colorMatrix[a.ordinal * COLORS + b.ordinal].toInt()
 
+    /** Row-major colour-pair scores by ordinal, for hot loops that read it once per call. */
+    internal val colorTable: ByteArray get() = colorMatrix
+
     fun colorPair(a: FashionColor, b: FashionColor): ColorPair? = colorPairs[key(a.ordinal, b.ordinal)]
 
     fun profile(color: FashionColor): ColorProfile? = colors.profiles[color]
@@ -78,12 +81,12 @@ data class StyleKnowledge(
 
     fun upcomingTrends(today: LocalDate): List<Trend> = trends.trends.filter { it.startDate?.isAfter(today) == true }
 
-    fun weatherRulesFor(weather: WeatherContext): List<WeatherRule> = weather.let { w ->
-        val feels = w.feelsLikeC ?: (w.tempMinC + w.tempMaxC) / 2
-        val rain = w.condition == WeatherCondition.RAIN || w.condition == WeatherCondition.DRIZZLE ||
-            w.condition == WeatherCondition.STORM || w.precipitationProbability >= 50
+    /** Rules for a day, judged with the same temperature and rain test as the rest of the engine. */
+    fun weatherRulesFor(w: WeatherContext): List<WeatherRule> {
+        val feels = WeatherMath.effective(w)
         val snow = w.condition == WeatherCondition.SNOW
-        this.weather.filter { it.condition.matches(feels, rain, snow, w.windKph, w.uvIndex, w.tempMaxC) }
+        val rain = WeatherMath.wantsWaterproof(w) && !snow
+        return weather.filter { it.condition.matches(feels, rain, snow, w.windKph, w.uvIndex, w.tempMaxC) }
     }
 
     fun tipOfTheDay(date: LocalDate): Tip? =
@@ -332,11 +335,18 @@ data class Trend(
     val match: String = "all",
     val src: List<String> = emptyList(),
 ) {
-    val startDate: LocalDate? get() = runCatching { LocalDate.parse(from) }.getOrNull()
-    val endDate: LocalDate? get() = runCatching { LocalDate.parse(to) }.getOrNull()
+    @kotlinx.serialization.Transient
+    val startDate: LocalDate? = runCatching { LocalDate.parse(from) }.getOrNull()
 
-    fun isLive(today: LocalDate): Boolean =
-        (startDate?.let { !today.isBefore(it) } ?: true) && (endDate?.let { !today.isAfter(it) } ?: true)
+    @kotlinx.serialization.Transient
+    val endDate: LocalDate? = runCatching { LocalDate.parse(to) }.getOrNull()
+
+    /** Live between its dates, inclusive; a trend with a date that doesn't parse is never live. */
+    fun isLive(today: LocalDate): Boolean {
+        val start = startDate ?: return false
+        val end = endDate ?: return false
+        return !today.isBefore(start) && !today.isAfter(end)
+    }
 
     /** Whether the trend can be recognised in clothes at all. */
     val recognisable: Boolean get() = colors.isNotEmpty() || types.isNotEmpty() || patterns.isNotEmpty()

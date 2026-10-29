@@ -354,6 +354,9 @@ internal object Harmony {
 
     /** Sum of the guide's adjustments for the colour pairs in [mask] (allocation-free). */
     private fun guideAdjustment(mask: Int): Double {
+        val k = guide
+        val table = k.colorTable
+        val n = colors.size
         var plus = 0.0
         var minus = 0.0
         var outer = mask
@@ -364,7 +367,7 @@ internal object Harmony {
             while (inner != 0) {
                 val j = Integer.numberOfTrailingZeros(inner)
                 inner = inner and (inner - 1)
-                when (guide.colorScore(colors[i], colors[j])) {
+                when (table[i * n + j].toInt()) {
                     2 -> plus += 0.03
                     1 -> plus += 0.015
                     -1 -> minus += 0.05
@@ -372,7 +375,7 @@ internal object Harmony {
                 }
             }
         }
-        for ((pm, _) in paletteMasks) if (mask and pm == pm) { plus += 0.02; break }
+        for ((pm, _) in k.paletteMasks) if (mask and pm == pm) { plus += 0.02; break }
         return minOf(plus, 0.06) - minus
     }
 

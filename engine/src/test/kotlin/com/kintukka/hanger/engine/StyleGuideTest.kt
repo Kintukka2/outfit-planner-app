@@ -77,6 +77,24 @@ class StyleGuideTest {
     }
 
     @Test
+    fun formulaNotesOnlyForTheirOccasion() = TestGuide.use {
+        val office = listOf(blazer, shirt, trousers, loafers)
+        assertTrue(OutfitEvaluator.evaluate(office, occasion = Occasion.WORK).notes.any { it.startsWith("Proven formula") })
+        assertTrue(OutfitEvaluator.evaluate(office, occasion = Occasion.ACTIVE).notes.none { it.startsWith("Proven formula") })
+    }
+
+    @Test
+    fun sportyPiecesOnTheAvoidListArentPenalisedTwice() {
+        val outfit = listOf(shirt, trousers, runningShoes)
+        val base = TestGuide.knowledge
+        val workGuide = base.occasions.getValue(Occasion.WORK)
+        val avoiding = base.copy(occasions = base.occasions + (Occasion.WORK to workGuide.copy(avoid = workGuide.avoid + "Running shoes")))
+        val plain = TestGuide.with(base) { OutfitEvaluator.evaluate(outfit, occasion = Occasion.WORK).score }
+        val listed = TestGuide.with(avoiding) { OutfitEvaluator.evaluate(outfit, occasion = Occasion.WORK).score }
+        assertEquals(plain, listed, 1e-9)
+    }
+
+    @Test
     fun occasionAvoidListsCostAndExplain() = TestGuide.use {
         val e = OutfitEvaluator.evaluate(listOf(shirt, trousers, flipFlops), occasion = Occasion.WORK)
         assertTrue(e.warnings.toString(), e.warnings.any { it.contains("aren't right for work") })

@@ -100,6 +100,8 @@ fun StyleGuideScreen(navController: NavHostController) {
     val vm = hangerViewModel { c -> StyleGuideViewModel(c.repo, c.settings) }
     val state by vm.state.collectAsStateWithLifecycle()
     var tab by rememberSaveable { mutableStateOf(0) }
+    var occasion by rememberSaveable { mutableStateOf<Occasion?>(null) }
+    var showAllFormulas by rememberSaveable { mutableStateOf(false) }
 
     Scaffold(
         topBar = {
@@ -132,7 +134,7 @@ fun StyleGuideScreen(navController: NavHostController) {
             when (tab) {
                 0 -> forYou(state, open, openItem, onTab = { tab = it })
                 1 -> colours(state)
-                2 -> formulas(state, open)
+                2 -> formulas(state, occasion, { occasion = it }, showAllFormulas, { showAllFormulas = !showAllFormulas }, open)
                 3 -> trends(state, openItem)
                 else -> guide(state)
             }
@@ -333,42 +335,39 @@ private fun Swatch(color: FashionColor, selected: Boolean, size: Int, onClick: (
 
 // --- Formulas -----------------------------------------------------------------------------------------------------
 
-private fun LazyListScope.formulas(state: GuideState, open: (List<Long>) -> Unit) {
-    item(key = "occ-filter") {
-        var occasion by rememberSaveable { mutableStateOf<Occasion?>(null) }
-        FormulaLists(state, occasion, onOccasion = { occasion = it }, open)
-    }
-}
-
-@Composable
-private fun FormulaLists(state: GuideState, occasion: Occasion?, onOccasion: (Occasion?) -> Unit, open: (List<Long>) -> Unit) {
+private fun LazyListScope.formulas(
+    state: GuideState,
+    occasion: Occasion?,
+    onOccasion: (Occasion?) -> Unit,
+    showAll: Boolean,
+    onToggleAll: () -> Unit,
+    open: (List<Long>) -> Unit,
+) {
     fun fits(f: Formula) = occasion == null || occasion in f.occasions
-    val all = StyleGuide.knowledge.formulas.filter(::fits)
     val ready = state.ready.filter { fits(it.formula) }
     val gaps = state.oneAway.filter { fits(it.formula) }
-    var showAll by rememberSaveable { mutableStateOf(false) }
-    Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
+    val all = StyleGuide.knowledge.formulas.filter(::fits)
+    item(key = "occ-filter") {
         LazyRow(contentPadding = PaddingValues(horizontal = Page), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             item { FilterChip(selected = occasion == null, onClick = { onOccasion(null) }, label = { Text("All") }) }
             items(Occasion.entries) { o -> FilterChip(selected = occasion == o, onClick = { onOccasion(if (occasion == o) null else o) }, label = { Text(o.label) }) }
         }
-        SectionHeader("Ready to wear · ${ready.size}", Modifier.padding(horizontal = Page))
-        if (ready.isEmpty()) Hint("Nothing ready for this yet. The formulas one piece away show what would unlock one.")
-        ready.forEach { m -> FormulaCard(m.formula, m.itemIds, state.items, Modifier.padding(horizontal = Page), action = "Try it" to { open(m.itemIds) }) }
-        if (gaps.isNotEmpty()) {
-            SectionHeader("One piece away · ${gaps.size}", Modifier.padding(horizontal = Page))
-            gaps.forEach { g ->
-                FormulaCard(g.formula, g.itemIds, state.items, Modifier.padding(horizontal = Page), missing = describe(g.missing))
-            }
-        }
-        SectionHeader(
-            "Every formula · ${all.size}",
-            Modifier.padding(horizontal = Page),
-            action = if (showAll) "Hide" else "Show",
-            onAction = { showAll = !showAll },
-        )
-        if (showAll) all.forEach { f -> FormulaRow(f, Modifier.padding(horizontal = Page)) }
     }
+    item(key = "ready-h") { SectionHeader("Ready to wear · ${ready.size}", Modifier.padding(horizontal = Page)) }
+    if (ready.isEmpty()) item(key = "ready-none") { Hint("Nothing ready for this yet. The formulas one piece away show what would unlock one.") }
+    items(ready, key = { "r-" + it.formula.id }) { m ->
+        FormulaCard(m.formula, m.itemIds, state.items, Modifier.padding(horizontal = Page), action = "Try it" to { open(m.itemIds) })
+    }
+    if (gaps.isNotEmpty()) {
+        item(key = "gap-h") { SectionHeader("One piece away · ${gaps.size}", Modifier.padding(horizontal = Page)) }
+        items(gaps, key = { "g-" + it.formula.id }) { g ->
+            FormulaCard(g.formula, g.itemIds, state.items, Modifier.padding(horizontal = Page), missing = describe(g.missing))
+        }
+    }
+    item(key = "all-h") {
+        SectionHeader("Every formula · ${all.size}", Modifier.padding(horizontal = Page), action = if (showAll) "Hide" else "Show", onAction = onToggleAll)
+    }
+    if (showAll) items(all, key = { "a-" + it.id }) { f -> FormulaRow(f, Modifier.padding(horizontal = Page)) }
 }
 
 @Composable

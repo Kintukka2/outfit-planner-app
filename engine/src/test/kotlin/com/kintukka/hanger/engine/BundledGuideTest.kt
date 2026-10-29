@@ -91,10 +91,15 @@ class BundledGuideTest {
     }
 
     @Test
-    fun weatherBandsCoverEveryTemperature() {
+    fun everyTemperatureFallsInExactlyOneBand() {
+        // A dry, calm, overcast day isolates the temperature bands (no rain, snow, wind, UV or heat rules).
+        val bands = k.weather.filter { r ->
+            with(r.condition) { !rain && !snow && windKphMin == null && uvMin == null && minHighC == null }
+        }
         for (t in -15..40) {
-            val w = WeatherContext(t - 1.0, t + 1.0, feelsLikeC = t.toDouble())
-            assertTrue("no rule for $t C", k.weatherRulesFor(w).isNotEmpty())
+            val w = WeatherContext(t.toDouble(), t.toDouble(), feelsLikeC = t.toDouble(), condition = WeatherCondition.CLOUDY)
+            val hits = k.weatherRulesFor(w).filter { it in bands }.map { it.title }
+            assertEquals("bands at $t C: $hits", 1, hits.size)
         }
     }
 
