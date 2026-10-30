@@ -476,7 +476,7 @@ fun EvaluationStrip(evaluation: OutfitEvaluation?, modifier: Modifier = Modifier
                 Text(
                     text,
                     style = MaterialTheme.typography.bodySmall,
-                    maxLines = 1,
+                    maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.padding(start = 6.dp),
                 )

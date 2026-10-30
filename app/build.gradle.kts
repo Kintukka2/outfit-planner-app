@@ -26,8 +26,8 @@ android {
         applicationId = "com.kintukka.hanger"
         minSdk = 29
         targetSdk = 35
-        versionCode = 2
-        versionName = "1.1.0"
+        versionCode = 3
+        versionName = "1.2.0"
         vectorDrawables { useSupportLibrary = true }
         // Modern Pixels are 64-bit ARM only; this drops ~30 MB of unused ML Kit native code.
         ndk { abiFilters += listOf("arm64-v8a") }
@@ -116,7 +116,6 @@ dependencies {
     implementation(libs.mlkit.subject.segmentation)
     implementation(libs.mlkit.image.labeling)
     implementation(libs.play.services.location)
-    implementation(libs.anthropic.java)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)

@@ -22,6 +22,9 @@ internal object SeasonMath {
 
 /** Weather plus the derived needs and effective temperature, computed once per request. */
 internal class WeatherCtx(val weather: WeatherContext, val needs: WeatherNeeds, val effective: Double) {
+    /** The style guide's weather rules that apply today. */
+    val guideRules: List<WeatherRule> by lazy { StyleKnowledge.bundled.weatherRulesFor(weather) }
+
     val isSunny: Boolean
         get() = weather.uvIndex >= 5.0 ||
             (weather.condition in setOf(WeatherCondition.CLEAR, WeatherCondition.PARTLY_CLOUDY) && effective >= 15.0)

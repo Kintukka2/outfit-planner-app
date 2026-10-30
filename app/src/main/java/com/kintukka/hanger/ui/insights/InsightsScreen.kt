@@ -60,6 +60,8 @@ import com.kintukka.hanger.ui.components.SectionHeader
 import com.kintukka.hanger.ui.components.StatPill
 import com.kintukka.hanger.ui.formatMoney
 import com.kintukka.hanger.ui.hangerViewModel
+import com.kintukka.hanger.ui.guide.StyleCheckCard
+import com.kintukka.hanger.ui.navigation.StyleGuideRoute
 import com.kintukka.hanger.ui.navigation.ClosetRoute
 import com.kintukka.hanger.ui.navigation.ItemRoute
 import com.kintukka.hanger.ui.navigation.SettingsRoute
@@ -90,6 +92,7 @@ fun InsightsScreen(navController: NavHostController) {
             }
         },
         onOpenSettings = { navController.navigate(SettingsRoute) },
+        onOpenGuide = { navController.navigate(StyleGuideRoute) },
     )
 }
 
@@ -102,6 +105,7 @@ internal fun InsightsContent(
     onOpenCloset: () -> Unit,
     onOpenSettings: () -> Unit,
     modifier: Modifier = Modifier,
+    onOpenGuide: () -> Unit = {},
 ) {
     val statusBar = WindowInsets.statusBars.asPaddingValues()
     LazyColumn(
@@ -138,7 +142,7 @@ internal fun InsightsContent(
                     },
                 )
             }
-            else -> insightsContent(state, onOpenItem, onStyleItem)
+            else -> insightsContent(state, onOpenItem, onStyleItem, onOpenGuide)
         }
     }
 }
@@ -147,6 +151,7 @@ private fun LazyListScope.insightsContent(
     state: InsightsUiState,
     openItem: (Long) -> Unit,
     styleItem: (Long) -> Unit,
+    openGuide: () -> Unit,
 ) {
     item(key = "stats") { StatGrid(state, Modifier.padding(horizontal = PagePadding)) }
 
@@ -160,6 +165,12 @@ private fun LazyListScope.insightsContent(
 
     if (state.categories.isNotEmpty() || state.colors.isNotEmpty()) {
         item(key = "closet-mix") { ClosetMixSection(state, Modifier.padding(horizontal = PagePadding)) }
+    }
+
+    if (state.styleChecks.isNotEmpty() || state.formulasReady != null) {
+        item(key = "style-check") {
+            StyleCheckCard(state.styleChecks, state.formulasReady, state.formulasOneAway, openGuide, Modifier.padding(horizontal = PagePadding))
+        }
     }
 
     itemRow("most-worn", "Most worn", "Your hardest-working pieces.", state.mostWorn, openItem)

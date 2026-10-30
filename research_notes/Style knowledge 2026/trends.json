@@ -1,0 +1,763 @@
+{
+  "updated": "2026-10-29",
+  "sources": [
+    {"id": "t1", "title": "5 colour trends the fashion crowd are wearing this autumn/winter", "publisher": "RTÉ Lifestyle", "url": "https://www.rte.ie/lifestyle/fashion/2026/1022/1596414-5-colour-trends-the-fashion-crowd-are-wearing-this-autumn-winter/", "date": "2026-10-22"},
+    {"id": "t2", "title": "FW26 Womenswear Trends (all cities), Runway Index", "publisher": "T-Fashion", "url": "https://tfashion.ai/runway/fw26", "date": "2026-10-07"},
+    {"id": "t3", "title": "Paris Fashion Week Fall 2026 Trends (FW26), Runway Index", "publisher": "T-Fashion", "url": "https://tfashion.ai/runway/fw26/paris", "date": "2026-10-07"},
+    {"id": "t4", "title": "Milan Fashion Week Fall 2026 Trends (FW26), Runway Index", "publisher": "T-Fashion", "url": "https://tfashion.ai/runway/fw26/milan", "date": "2026-10-07"},
+    {"id": "t5", "title": "New York Fashion Week Fall 2026 Trends (FW26), Runway Index", "publisher": "T-Fashion", "url": "https://tfashion.ai/runway/fw26/new-york", "date": "2026-10-07"},
+    {"id": "t6", "title": "SS27 Womenswear Runway Trends (all cities), Runway Index", "publisher": "T-Fashion", "url": "https://tfashion.ai/runway/ss27", "date": "2026-10-18"},
+    {"id": "t7", "title": "Paris Fashion Week Spring 2027 Trends (SS27), Runway Index", "publisher": "T-Fashion", "url": "https://tfashion.ai/runway/ss27/paris", "date": "2026-10-18"},
+    {"id": "t8", "title": "Milan Fashion Week Spring 2027 Trends (SS27), Runway Index", "publisher": "T-Fashion", "url": "https://tfashion.ai/runway/ss27/milan", "date": "2026-10-18"},
+    {"id": "t9", "title": "New York Fashion Week Spring 2027 Trends (SS27), Runway Index", "publisher": "T-Fashion", "url": "https://tfashion.ai/runway/ss27/new-york", "date": "2026-10-18"},
+    {"id": "t10", "title": "Spring 2027 Color Trends from London Fashion Week", "publisher": "T-Fashion", "url": "https://tfashion.ai/runway/ss27/london/colors", "date": "2026-10-18"},
+    {"id": "t11", "title": "FW26 Color Stats", "publisher": "Sarah Constantin (Substack)", "url": "https://sarahconstantin.substack.com/p/fw26-color-stats", "date": "2026-03-14"},
+    {"id": "t12", "title": "20 Fashion Month Trends for Fall 2026: From Cartoon Fringe to Jazzy Jacquards", "publisher": "InStyle (syndicated by AOL)", "url": "https://www.aol.com/articles/20-fashion-month-trends-fall-130230680.html", "date": "2026-03-19"},
+    {"id": "t13", "title": "The Best New York Fashion Week Street-Style Looks Are a Master Class in Winter Dressing", "publisher": "Harper's Bazaar (syndicated by AOL)", "url": "https://www.aol.com/articles/best-york-fashion-week-street-195500446.html", "date": "2026-02-17"},
+    {"id": "t14", "title": "Paris Fashion Week's Boldest Trends For Fall/Winter 2026", "publisher": "The Zoe Report", "url": "https://www.thezoereport.com/fashion/paris-fashion-week-fall/winter-2026-trends", "date": "2026-03-11"},
+    {"id": "t15", "title": "The 5 Trends That'll Rule The Streets This Fashion Month", "publisher": "The Zoe Report", "url": "https://www.thezoereport.com/fashion/fashion-month-fall-winter-2026-street-style-predictions", "date": "2026-02-03"},
+    {"id": "t16", "title": "The Biggest Runway Trends from Autumn/Winter 2026 Fashion Month", "publisher": "Style Academy International", "url": "https://www.styleacademyintl.com/post/the-biggest-runway-trends-from-autumn-winter-2026-fashion-month", "date": "2026-03-12"},
+    {"id": "t17", "title": "Fall 2026 Color Trends: The New Rules of Autumn Color", "publisher": "Style Academy International", "url": "https://www.styleacademyintl.com/post/fall-2026-color-trends", "date": "2026-09-01"},
+    {"id": "t18", "title": "Autumn/Winter 2026 Fashion Trends worth investing in", "publisher": "Fenwick", "url": "https://fenwick.co.uk/blogs/daily-muse/the-autumn-fashion-trends-worth-investing-in", "date": "2026-09-01"},
+    {"id": "t19", "title": "Autumn-Winter 2026 Colour Trends: The Shades Defining the Season", "publisher": "Editor & Co", "url": "https://editorandco.com/article/autumn-winter-2026-colour-trends-the-shades-defining-the-season", "date": "2026-07-27"},
+    {"id": "t20", "title": "PANTONE Fall/Winter Color Trends For 2026-2027 Paint A Bold Balancing Act (NYFW AW26/27 report)", "publisher": "DesignTAXI", "url": "https://designtaxi.com/news/427452/PANTONE-Fall-Winter-Color-Trends-For-2026-2027-Paint-A-Bold-Balancing-Act/", "date": "2026-02-12"},
+    {"id": "t21", "title": "LFW Fall 2026: The Trends To Know", "publisher": "Haute Garbage (Substack)", "url": "https://hautegarbage.substack.com/p/lfw-fall-2026-trends", "date": "2026-02-26"},
+    {"id": "t22", "title": "Womenswear autumn/winter 2026 runway report (part 2 of 4)", "publisher": "#legend", "url": "https://hashtaglegend.com/post/womenswear-autumn-winter-2026-runway-report-2", "date": "2026-10-07"},
+    {"id": "t23", "title": "10 Things We Saw and Loved at Milan Fashion Week Fall 2026", "publisher": "W Magazine", "url": "https://www.wmagazine.com/fashion/milan-fashion-week-fall-2026-recap", "date": "2026-03-02"},
+    {"id": "t24", "title": "Men's Fashion Week: Fall Winter 2026-27 Trend Report", "publisher": "Style Arcade", "url": "https://www.stylearcade.com/blog/mens-fashion-week-fall-winter-2026-27-trend-report", "date": "2026-02-03"},
+    {"id": "t25", "title": "Inside Milan Fashion Week Men's FW 2026-2027", "publisher": "Istituto Marangoni", "url": "https://www.istitutomarangoni.com/en/maze35/industry/milan-fashion-week-menswear-fw-2026-27-trends", "date": "2026-01-28"},
+    {"id": "t26", "title": "Fall/Winter '26: Has Menswear Had Enough of Novelty?", "publisher": "GQ Singapore", "url": "https://www.gqsingapore.com/fall-winter-26-report-has-menswear-had-enough-of-novelty/", "date": "2026-09-08"},
+    {"id": "t27", "title": "The Lyst Index Q3-26", "publisher": "Lyst", "url": "https://www.lyst.com/the-lyst-index/Q3-26/", "date": "2026-10-28"},
+    {"id": "t28", "title": "Prada is back on top, dethroning Chanel in Lyst's Q3 2026 Index", "publisher": "FashionUnited", "url": "https://fashionunited.in/news/fashion/prada-is-back-on-top-dethroning-chanel-in-lysts-q3-2026-index/2026102856741", "date": "2026-10-28"},
+    {"id": "t29", "title": "After the barrel jean, denim settles into the relaxed straight leg", "publisher": "FashionUnited", "url": "https://fashionunited.com/news/fashion/after-the-barrel-jean-denim-settles-into-the-relaxed-straight-leg/2026101375097", "date": "2026-10-13"},
+    {"id": "t30", "title": "SS27 Double denim trend at Conner Ives, Zimmermann and more", "publisher": "FashionUnited", "url": "https://fashionunited.com/news/fashion/ss27-double-denim-trend-at-conner-ives-zimmermann-and-more/2026101775133", "date": "2026-10-17"},
+    {"id": "t31", "title": "SS27 Color Trend: Many shades of green at Chanel, Prada, Loewe", "publisher": "FashionUnited", "url": "https://fashionunited.com/news/fashion/ss27-color-trend-many-shades-of-green-at-chanel-prada-loewe/2026102475309", "date": "2026-10-24"},
+    {"id": "t32", "title": "SS27 Color Trend: Visual ASMR and harmonious pastels shown at Bottega Veneta, Dior and more", "publisher": "FashionUnited", "url": "https://fashionunited.com/news/fashion/ss27-color-trend-visual-asmr-and-harmonious-pastels-shown-at-bottega-veneta-dior-and-more/2026102975414", "date": "2026-10-29"},
+    {"id": "t33", "title": "PFW SS27 trend watch: Metallics shine at Saint Laurent, Dior and Balmain", "publisher": "FashionUnited", "url": "https://fashionunited.com/news/fashion/pfw-ss27-trend-watch-metallics-shine-at-saint-laurent-dior-and-balmain/2026101075076", "date": "2026-10-10"},
+    {"id": "t34", "title": "Galeries Lafayette's Victoria Dartigues on SS27: 'We want joyful and sparkling fashion'", "publisher": "FashionUnited", "url": "https://fashionunited.com/news/fashion/galeries-lafayettes-victoria-dartigues-on-ss27-we-want-joyful-and-sparkling-fashion/2026102375268", "date": "2026-10-23"},
+    {"id": "t35", "title": "Spring/Summer 2027 trend report: navigating a polycrisis season of pleasure, protection and the quiet return of elegance", "publisher": "FashionUnited", "url": "https://fashionunited.com/news/fashion/spring-summer-2027-trend-report-navigating-a-polycrisis-season-of-pleasure-protection-and-the-quiet-return-of-elegance/2026052872627", "date": "2026-05-28"},
+    {"id": "t36", "title": "Pantone NYFW spring/summer 2027 color trend report: the top 10 colors", "publisher": "FashionUnited", "url": "https://fashionunited.com/news/fashion/pantone-nyfw-spring-summer-2027-color-trend-report-the-top-10-colors/2026092174743", "date": "2026-09-21"},
+    {"id": "t37", "title": "The Top Trends From Paris Fashion Week Spring/Summer 2027", "publisher": "The Zoe Report", "url": "https://www.thezoereport.com/fashion/paris-fashion-weeks-spring-summer-2027-trends", "date": "2026-10-07"},
+    {"id": "t38", "title": "7 Trends That Took Over Paris Fashion Week!", "publisher": "Daily Front Row", "url": "https://fashionweekdaily.com/7-trends-that-took-over-paris-fashion-week/", "date": "2026-10-14"},
+    {"id": "t39", "title": "The 6 Biggest Trends I Spotted At The Spring 2027 Runway Shows", "publisher": "Florré", "url": "https://www.florre.co/master-blogs/the-spring-2027-trend-report-fashion", "date": "2026-10-10"},
+    {"id": "t40", "title": "Are Men Okay? At Spring 2027 Fashion Week, They're Great", "publisher": "i-D", "url": "https://i-d.co/article/pitti-uomo-milan-fashion-week-mens-spring-2027-recap/", "date": "2026-06-23"},
+    {"id": "t41", "title": "Milan & Paris men's Fashion Week Spring Summer 2027", "publisher": "TheDoubleF (The Rooster)", "url": "https://www.thedoublef.com/en-it/blogs/the-rooster/paris-milan-fashion-week-2027-spring-summer-menswear", "date": "2026-07-02"},
+    {"id": "t42", "title": "From Florence to Paris: The 5 Menswear Trends Defining Spring/Summer 2027", "publisher": "Style Cartel", "url": "https://stylecartel.com/from-florence-to-paris-the-5-menswear-trends-defining-spring-summer-2027/", "date": "2026-07-09"},
+    {"id": "t43", "title": "London Fashion Week SS27: The Key Fashion Trends Shaping Summer 2027", "publisher": "Forbes", "url": "https://www.forbes.com/sites/laiafarrangraves/2026/09/24/london-fashion-week-springsummer-2027-key-trends-to-know/", "date": "2026-09-24"},
+    {"id": "t44", "title": "Paris Fashion Week Spring/Summer 2027: Key Trends To Know", "publisher": "Forbes", "url": "https://www.forbes.com/sites/laiafarrangraves/2026/10/08/paris-fashion-week-springsummer-2027-key-trends-to-know/", "date": "2026-10-08"},
+    {"id": "t45", "title": "WGSN and Coloro reveal Colour of the Year 2027, Luminous Blue, and the S/S 27 Key Colours", "publisher": "WGSN", "url": "https://www.wgsn.com/en/wgsn/press/press-releases/wgsn-and-coloro-reveal-colour-year-2027-luminous-blue-and-s-s-27-key", "date": "2025-04-29"},
+    {"id": "t46", "title": "Colour of the Year 2026: Transformative Teal", "publisher": "WGSN", "url": "https://www.wgsn.com/en/blog/colour-year-2026-transformative-teal", "date": "2024-09-03"},
+    {"id": "t47", "title": "Pantone Chooses White as Color of the Year for the First Time", "publisher": "TIME", "url": "https://time.com/7338176/pantone-color-of-the-year-2026/", "date": "2025-12-04"},
+    {"id": "t48", "title": "AW25-26: what is out of fashion", "publisher": "Brunette from Wall Street (Substack)", "url": "https://fashiontrendsandoutfits.substack.com/p/aw25-26-out-of-fashion", "date": "2025-04-30"}
+  ],
+  "trends": [
+    {
+      "id": "t01", "name": "Chocolate brown and powder blue", "kind": "pairing", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Pale sky blue lifts deep chocolate brown. It walked in London and is the season's easiest colour contrast.",
+      "howToWear": "A pale blue shirt or jumper under a chocolate coat, or brown cords with a sky-blue knit.",
+      "colors": ["BROWN", "LIGHT_BLUE"], "types": [], "patterns": [], "match": "all",
+      "src": ["t1", "t17", "t2"]
+    },
+    {
+      "id": "t02", "name": "Chocolate brown as the new neutral", "kind": "colour", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "peak",
+      "summary": "Chocolate was the most-used runway colour after black for autumn and now does the job of black or navy.",
+      "howToWear": "Swap black for brown: brown trousers or a suede jacket with cream knits, denim and tan boots.",
+      "colors": ["BROWN"], "types": [], "patterns": [], "match": "any",
+      "src": ["t2", "t5", "t13", "t18"]
+    },
+    {
+      "id": "t03", "name": "Royal purple", "kind": "colour", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Royal purple and aubergine are the bright of the season, from chunky knits to sharp tailoring.",
+      "howToWear": "Start with one purple jumper over navy or brown trousers; mohair or suede keeps it relaxed.",
+      "colors": ["PURPLE"], "types": [], "patterns": [], "match": "any",
+      "src": ["t1", "t14", "t16"]
+    },
+    {
+      "id": "t04", "name": "Purple and chocolate", "kind": "pairing", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "Stylists ground the season's purple with chocolate instead of black for a richer, softer contrast.",
+      "howToWear": "A purple knit with chocolate wide-leg trousers, or a plum shirt under a brown blazer.",
+      "colors": ["PURPLE", "BROWN"], "types": [], "patterns": [], "match": "all",
+      "src": ["t1"]
+    },
+    {
+      "id": "t05", "name": "Burgundy and oxblood", "kind": "colour", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Burgundy was the most-used non-neutral on the autumn runways and a defining street-style shade.",
+      "howToWear": "Treat it as a neutral: a burgundy jumper with denim, or burgundy loafers and bag with grey or camel.",
+      "colors": ["BURGUNDY"], "types": [], "patterns": [], "match": "any",
+      "src": ["t11", "t13", "t19", "t24"]
+    },
+    {
+      "id": "t06", "name": "Cobalt and electric blue", "kind": "colour", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Saturated cobalt is autumn's sharpest bright and runs into 2027, when forecasters back a vivid luminous blue.",
+      "howToWear": "One cobalt jumper with ecru or mid-blue jeans; for more punch, add brown or burgundy.",
+      "colors": ["BLUE"], "types": [], "patterns": [], "match": "any",
+      "src": ["t1", "t11", "t24", "t45"]
+    },
+    {
+      "id": "t07", "name": "Cobalt and chocolate", "kind": "pairing", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "Vivid blue against deep brown is the season's confident clash, warm and cool at once.",
+      "howToWear": "Pull a cobalt knit over brown trousers, or wear a brown coat with a blue jumper or scarf.",
+      "colors": ["BLUE", "BROWN"], "types": [], "patterns": [], "match": "all",
+      "src": ["t1", "t17"]
+    },
+    {
+      "id": "t08", "name": "Poppy red", "kind": "colour", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "A bright, orange-leaning red takes over from wine shades as the accent that pops against dark winter fabrics.",
+      "howToWear": "A red jumper tied over the shoulders with indigo jeans, or red socks with black loafers.",
+      "colors": ["RED"], "types": [], "patterns": [], "match": "any",
+      "src": ["t1", "t17", "t24"]
+    },
+    {
+      "id": "t09", "name": "Red and purple", "kind": "pairing", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "Red worn with purple is the bold clash stylists took from the autumn runways.",
+      "howToWear": "A red knit with purple trousers, or keep it small with a purple scarf on a red coat.",
+      "colors": ["RED", "PURPLE"], "types": [], "patterns": [], "match": "all",
+      "src": ["t1"]
+    },
+    {
+      "id": "t10", "name": "Mustard yellow", "kind": "colour", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "Mustard climbed sharply in autumn runway colour counts, used as the accent against browns and blues.",
+      "howToWear": "A mustard jumper or scarf with navy, cobalt or chocolate pieces; keep everything else plain.",
+      "colors": ["MUSTARD"], "types": [], "patterns": [], "match": "any",
+      "src": ["t11", "t24", "t1"]
+    },
+    {
+      "id": "t11", "name": "Burnt olive", "kind": "colour", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "A deep, muted olive works as a neutral this autumn and sits in the colour forecasters' winter palette.",
+      "howToWear": "Swap black trousers or a black coat for olive, then add cream, camel, chocolate or navy.",
+      "colors": ["OLIVE"], "types": [], "patterns": [], "match": "any",
+      "src": ["t20", "t2", "t11", "t18"]
+    },
+    {
+      "id": "t12", "name": "Fuchsia accents", "kind": "colour", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Punchy fuchsia cuts through the earthy autumn palette and carries into 2027, when forecasters back a vivid pink.",
+      "howToWear": "One pink piece only: a fuchsia knit with chocolate trousers, or a pink bag with navy.",
+      "colors": ["HOT_PINK"], "types": [], "patterns": [], "match": "any",
+      "src": ["t20", "t11", "t45"]
+    },
+    {
+      "id": "t13", "name": "Tonal grey", "kind": "styling", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Head-to-toe grey in mixed shades and textures is the quiet power look; charcoal rose on the Paris runways.",
+      "howToWear": "Charcoal roll-neck, grey pleated trousers and a grey coat; vary the textures and keep shoes dark.",
+      "colors": ["CHARCOAL", "GREY"], "types": [], "patterns": [], "match": "all",
+      "src": ["t13", "t3", "t12"]
+    },
+    {
+      "id": "t14", "name": "Relaxed grey suiting", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Roomy, 1990s-style grey suits came back across the autumn shows, worn easy rather than sharp.",
+      "howToWear": "A grey blazer and trousers with a plain tee and trainers, or split them up with jeans.",
+      "colors": ["GREY"], "types": ["Blazer", "Trousers"], "patterns": [], "match": "all",
+      "src": ["t12", "t22", "t3"]
+    },
+    {
+      "id": "t15", "name": "Leopard as a neutral", "kind": "pattern", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "peak",
+      "summary": "Leopard is worn like a neutral, from coats to bags, and spring keeps animal print tone-on-tone.",
+      "howToWear": "One leopard piece, a coat, scarf or flats, with denim and black or brown basics.",
+      "colors": [], "types": [], "patterns": ["ANIMAL"], "match": "any",
+      "src": ["t13", "t12", "t22", "t35"]
+    },
+    {
+      "id": "t16", "name": "Playful checks and plaid", "kind": "pattern", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Checks are the season's most wearable print, now looser, bigger and layered rather than strictly heritage.",
+      "howToWear": "A checked shirt or overshirt worn open over a knit, or check trousers with a plain jumper.",
+      "colors": [], "types": [], "patterns": ["CHECK"], "match": "any",
+      "src": ["t12", "t24", "t21"]
+    },
+    {
+      "id": "t17", "name": "Dark florals", "kind": "pattern", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "Florals turn moody for winter, set on black grounds and worked into knits and jacquards.",
+      "howToWear": "A dark floral blouse or dress with a black knit, opaque tights and boots.",
+      "colors": ["BLACK"], "types": [], "patterns": ["FLORAL"], "match": "all",
+      "src": ["t12", "t2"]
+    },
+    {
+      "id": "t18", "name": "Polka dots", "kind": "pattern", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Dots in every size are back on runways and in street style, on dresses, shirts and scarves.",
+      "howToWear": "A spotted scarf or shirt with denim and a plain coat; one dotted piece is enough.",
+      "colors": [], "types": [], "patterns": ["DOT"], "match": "any",
+      "src": ["t15", "t23", "t13", "t22"]
+    },
+    {
+      "id": "t19", "name": "Velvet by day", "kind": "fabric", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Velvet returns for day as well as night, in tailoring, skirts and relaxed separates.",
+      "howToWear": "A velvet blazer over a T-shirt and jeans, or velvet trousers with a chunky knit.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t16", "t24", "t15"]
+    },
+    {
+      "id": "t20", "name": "Suede in warm browns", "kind": "fabric", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Suede in tan, chestnut and chocolate leads the season's textures, from jackets to boots and bags.",
+      "howToWear": "A suede jacket over a grey hoodie or knit with straight jeans and boots.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t18", "t13"]
+    },
+    {
+      "id": "t21", "name": "Leather beyond the jacket", "kind": "fabric", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Leather moves into trousers, skirts, shirts and long coats and is one of autumn's most-used runway fabrics.",
+      "howToWear": "Leather trousers or a leather skirt with a fine knit and loafers; one leather piece per outfit.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t16", "t2", "t13"]
+    },
+    {
+      "id": "t22", "name": "Faux fur and shearling coats", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Statement faux fur, shearling and calf-hair coats are the headline outerwear, often oversized or belted.",
+      "howToWear": "Throw a faux fur or shearling coat over jeans, a roll-neck and ankle boots.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t15", "t16", "t13", "t12"]
+    },
+    {
+      "id": "t23", "name": "Bombers and flight jackets", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "peak",
+      "summary": "Oversized leather bombers and shearling-collared flight jackets lead casual outerwear into spring.",
+      "howToWear": "A bomber over a knit with straight jeans, or with a midi skirt and boots.",
+      "colors": [], "types": ["Bomber jacket"], "patterns": [], "match": "any",
+      "src": ["t14", "t13", "t26", "t31"]
+    },
+    {
+      "id": "t24", "name": "Funnel necks and high collars", "kind": "silhouette", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Necklines rise: funnel necks, roll-necks and high collars replace plunging lines for autumn.",
+      "howToWear": "A fine roll-neck under a blazer or coat with the collar turned up; tuck it into trousers.",
+      "colors": [], "types": ["Turtleneck"], "patterns": [], "match": "any",
+      "src": ["t16", "t12", "t14", "t13"]
+    },
+    {
+      "id": "t25", "name": "Cinched-waist tailoring", "kind": "silhouette", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "peak",
+      "summary": "Jackets nip in at the waist with peplums, wraps and belts, and spring keeps the defined waist.",
+      "howToWear": "Belt a blazer over a shirt or fine knit and wear it with straight trousers or jeans.",
+      "colors": [], "types": ["Blazer", "Belt"], "patterns": [], "match": "all",
+      "src": ["t14", "t18", "t24", "t35"]
+    },
+    {
+      "id": "t26", "name": "The skirt suit", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "rising",
+      "summary": "The matching skirt suit is back, from sharp pencil skirts to relaxed cuts, and spring pairs knee skirts with jackets.",
+      "howToWear": "A blazer with a matching skirt, knee boots and a fine knit; or split them and wear each with jeans.",
+      "colors": [], "types": ["Blazer", "Skirt"], "patterns": [], "match": "all",
+      "src": ["t16", "t21", "t39"]
+    },
+    {
+      "id": "t27", "name": "Tailored trousers", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "peak",
+      "summary": "Tailored trousers were the most-shown key item for autumn, still rising, and stay core for spring.",
+      "howToWear": "Pressed trousers with a knit and trainers for weekdays, or with a shirt and loafers.",
+      "colors": [], "types": ["Trousers"], "patterns": [], "match": "any",
+      "src": ["t2", "t3", "t6"]
+    },
+    {
+      "id": "t28", "name": "Wide-leg tailoring for winter", "kind": "silhouette", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Wide-leg trousers rose in Paris for autumn; spring shows narrow the line, so this is their last big season.",
+      "howToWear": "Wide-leg trousers with a tucked-in knit and a short jacket; finish with loafers or boots.",
+      "colors": [], "types": ["Wide-leg trousers"], "patterns": [], "match": "any",
+      "src": ["t3", "t4", "t7"]
+    },
+    {
+      "id": "t29", "name": "Pea coats and sailor details", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "Nautical codes, pea coats, sailor collars and toggles, came through in luxe autumn fabrics.",
+      "howToWear": "A navy double-breasted coat over a striped top, jeans and loafers.",
+      "colors": ["NAVY"], "types": ["Coat"], "patterns": [], "match": "all",
+      "src": ["t12", "t23"]
+    },
+    {
+      "id": "t30", "name": "Shirt and tie", "kind": "styling", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Ties return as a styling accent with shirts and suits, and spring loosens them into belts and sashes.",
+      "howToWear": "A loosened skinny tie with a shirt and knit, or a tie threaded through jean belt loops.",
+      "colors": [], "types": ["Tie"], "patterns": [], "match": "any",
+      "src": ["t12", "t22", "t40", "t35"]
+    },
+    {
+      "id": "t31", "name": "Knee-high and Western boots", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Tall leather boots, Western suede pairs and lace-up knee boots lead the season's footwear.",
+      "howToWear": "Knee boots under a midi skirt or over straight jeans; Western boots with denim.",
+      "colors": [], "types": ["Boots"], "patterns": [], "match": "any",
+      "src": ["t13", "t16", "t30"]
+    },
+    {
+      "id": "t32", "name": "Ballet flats", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "peak",
+      "summary": "Ballet flats stay among the most-wanted shoes in shopping data and on the street.",
+      "howToWear": "Flats with straight jeans and a trench, or with tailored trousers and a fine knit.",
+      "colors": [], "types": ["Flats"], "patterns": [], "match": "any",
+      "src": ["t27", "t13"]
+    },
+    {
+      "id": "t33", "name": "Slim retro trainers", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "peak",
+      "summary": "Low-profile retro court and skate trainers ranked among the hottest products of the quarter.",
+      "howToWear": "Slim trainers with tailored trousers or a skirt, or with straight jeans and a long coat.",
+      "colors": [], "types": ["Sneakers"], "patterns": [], "match": "any",
+      "src": ["t27", "t28", "t15"]
+    },
+    {
+      "id": "t34", "name": "Cardigan as a jacket", "kind": "styling", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Chunky and cashmere cardigans are worn as the outer layer, buttoned over shirts and tees.",
+      "howToWear": "Button a chunky cardigan over a T-shirt, add trousers or jeans and skip the coat on mild days.",
+      "colors": [], "types": ["Cardigan"], "patterns": [], "match": "any",
+      "src": ["t13", "t18", "t24"]
+    },
+    {
+      "id": "t35", "name": "Shirt under a sweater vest", "kind": "styling", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "School-uniform layering returns: shrunken or patterned vests over collared shirts, often with a tie.",
+      "howToWear": "A knitted vest over a crisp shirt with jeans or tailored trousers; let the collar show.",
+      "colors": [], "types": ["Shirt", "Sweater vest"], "patterns": [], "match": "all",
+      "src": ["t24", "t22", "t21"]
+    },
+    {
+      "id": "t36", "name": "Mixed textures, one palette", "kind": "styling", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "peak",
+      "summary": "Street style's key trick: suede, leather, knits and faux fur layered within one colour family.",
+      "howToWear": "Keep to browns or greys and mix a cable knit, a suede jacket and leather boots.",
+      "colors": [], "types": [], "patterns": ["TEXTURE"], "match": "any",
+      "src": ["t13", "t18"]
+    },
+    {
+      "id": "t37", "name": "Scarves everywhere", "kind": "styling", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "peak",
+      "summary": "The scarf is the go-to finish, at the neck, knotted at the waist or tied onto a bag.",
+      "howToWear": "Knot a silk scarf at the neck with a shirt, or tie one through the belt loops of jeans.",
+      "colors": [], "types": ["Scarf"], "patterns": [], "match": "any",
+      "src": ["t13", "t27", "t40", "t34"]
+    },
+    {
+      "id": "t38", "name": "Statement gloves", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "Gloves become the accent: leather or brightly coloured pairs finish coats and suits.",
+      "howToWear": "Bright leather gloves with a neutral coat, or match gloves to a scarf or trousers.",
+      "colors": [], "types": ["Gloves"], "patterns": [], "match": "any",
+      "src": ["t12", "t13"]
+    },
+    {
+      "id": "t39", "name": "Newsboy caps and berets", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "Looks are finished from the top: newsboy caps, berets, silk kerchiefs and pillbox hats.",
+      "howToWear": "A newsboy cap or beret with a long coat and jeans, or a silk scarf tied under the chin.",
+      "colors": [], "types": ["Hat"], "patterns": [], "match": "any",
+      "src": ["t15", "t24"]
+    },
+    {
+      "id": "t40", "name": "Gold and silver metallics", "kind": "colour", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Gold lamé and metallic accents marked autumn, and the spring shows push gold and silver into daywear.",
+      "howToWear": "A metallic skirt with a grey sweatshirt or plain knit, or silver shoes with denim.",
+      "colors": ["GOLD", "SILVER"], "types": [], "patterns": [], "match": "any",
+      "src": ["t12", "t33", "t44", "t19"]
+    },
+    {
+      "id": "t41", "name": "Big statement jewellery", "kind": "styling", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Oversized gold jewellery, chunky bracelets worn over sleeves and bold necklaces lead accessories.",
+      "howToWear": "Stack a chunky bracelet over a coat cuff, or wear a bold necklace over a plain knit.",
+      "colors": [], "types": ["Necklace", "Bracelet", "Earrings"], "patterns": [], "match": "any",
+      "src": ["t15", "t12", "t34"]
+    },
+    {
+      "id": "t42", "name": "Sleek rain slickers", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-02-28", "status": "rising",
+      "summary": "Rain slickers get sharper cuts and glossy technical finishes, and utility macs rise in tailoring collections.",
+      "howToWear": "A glossy raincoat over a knit and tailored trousers, with boots or loafers.",
+      "colors": [], "types": ["Raincoat"], "patterns": [], "match": "any",
+      "src": ["t12", "t24"]
+    },
+    {
+      "id": "t43", "name": "Slimmer trousers creep back", "kind": "silhouette", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "rising",
+      "summary": "After years of wide legs, slim trousers, stirrups and skinny jeans are back on runways; shops follow slowly.",
+      "howToWear": "Try slim trousers with a long cardigan or an oversized coat to balance the line.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t14", "t23", "t25", "t40", "t29"]
+    },
+    {
+      "id": "t44", "name": "Brown jeans", "kind": "item", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Searches for brown jeans are growing faster than for blue or black as warmer washes reach the runway.",
+      "howToWear": "Brown jeans with a cream knit and loafers, or a pale blue shirt for the brown-and-blue pairing.",
+      "colors": ["BROWN"], "types": ["Jeans"], "patterns": [], "match": "all",
+      "src": ["t29", "t2"]
+    },
+    {
+      "id": "t45", "name": "Jeans with a blazer", "kind": "styling", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "peak",
+      "summary": "Paris paired relaxed straight jeans with tailoring; wool suiting appeared in nearly a quarter of denim looks.",
+      "howToWear": "A tailored blazer over a tee or shirt with straight-leg jeans and loafers or flats.",
+      "colors": [], "types": ["Jeans", "Blazer"], "patterns": [], "match": "all",
+      "src": ["t29", "t40"]
+    },
+    {
+      "id": "t46", "name": "Chartreuse and lime accents", "kind": "colour", "season": "AW26",
+      "from": "2026-09-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Sharp chartreuse and lime are the accent colour from autumn into spring, used in small doses.",
+      "howToWear": "Show a chartreuse top under a jacket, or add lime shoes or a bag to navy and khaki.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t1", "t41", "t36", "t31"]
+    },
+    {
+      "id": "t47", "name": "Orange and citrus", "kind": "colour", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Orange is spring's new bright, from citrus shirt dresses to skirts, and forecasters back an energetic orange.",
+      "howToWear": "An orange shirt or skirt with white and denim, or one orange accessory with navy.",
+      "colors": ["ORANGE"], "types": [], "patterns": [], "match": "any",
+      "src": ["t37", "t45", "t36"]
+    },
+    {
+      "id": "t48", "name": "Every shade of green", "kind": "colour", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Green ran through all four fashion capitals for spring, from emerald to mint, worn almost as a neutral.",
+      "howToWear": "A green skirt or shirt with grey, white or denim; mix two greens for a tonal look.",
+      "colors": ["GREEN", "MINT"], "types": [], "patterns": [], "match": "any",
+      "src": ["t31", "t45", "t36"]
+    },
+    {
+      "id": "t49", "name": "Mint and lavender", "kind": "pairing", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Spring pastels are layered together rather than worn alone, and mint with lavender is the key pairing.",
+      "howToWear": "A mint shirt with lavender trousers or a lavender knit; keep everything else white or grey.",
+      "colors": ["MINT", "LAVENDER"], "types": [], "patterns": [], "match": "all",
+      "src": ["t32", "t31"]
+    },
+    {
+      "id": "t50", "name": "Soft pink and pistachio", "kind": "pairing", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Pistachio and mint paired with soft rose pink featured across the spring collections.",
+      "howToWear": "A pale pink shirt with a mint skirt or trousers; white trainers keep it fresh.",
+      "colors": ["PINK", "MINT"], "types": [], "patterns": [], "match": "all",
+      "src": ["t31", "t45"]
+    },
+    {
+      "id": "t51", "name": "Butter yellow and lilac", "kind": "pairing", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Pale butter yellow returns for spring, paired with lilac or sage for a soft colour story.",
+      "howToWear": "A pale yellow knit with lavender trousers, or a yellow shirt with white jeans.",
+      "colors": ["YELLOW", "LAVENDER"], "types": [], "patterns": [], "match": "all",
+      "src": ["t32", "t36"]
+    },
+    {
+      "id": "t52", "name": "Powder blue", "kind": "colour", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Powder blue rose into the top ten runway colours for spring in both New York and Milan.",
+      "howToWear": "A powder blue shirt or knit with white jeans or grey tailored trousers.",
+      "colors": ["LIGHT_BLUE"], "types": [], "patterns": [], "match": "any",
+      "src": ["t9", "t8", "t32"]
+    },
+    {
+      "id": "t53", "name": "Tonal whites", "kind": "styling", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "White was the fastest-rising runway colour for spring, worn head to toe with ecru and cream.",
+      "howToWear": "White jeans with a cream knit or shirt; vary the textures and add tan sandals or flats.",
+      "colors": ["WHITE", "CREAM"], "types": [], "patterns": [], "match": "all",
+      "src": ["t6", "t43", "t10", "t47"]
+    },
+    {
+      "id": "t54", "name": "White jeans", "kind": "item", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Searches for white jeans are climbing and the spring shows dress them up as statement trousers.",
+      "howToWear": "White jeans with a navy knit or striped shirt, or with a blazer and loafers.",
+      "colors": ["WHITE"], "types": ["Jeans"], "patterns": [], "match": "all",
+      "src": ["t29", "t37"]
+    },
+    {
+      "id": "t55", "name": "Double denim", "kind": "styling", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Head-to-toe denim in matching washes was a defining spring look, often tailored or sold as sets.",
+      "howToWear": "A denim jacket with jeans in the same wash, a white tee and loafers or boots.",
+      "colors": [], "types": ["Denim jacket", "Jeans"], "patterns": [], "match": "all",
+      "src": ["t30", "t29"]
+    },
+    {
+      "id": "t56", "name": "The skirt is back", "kind": "item", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Skirts jumped from a fifth to over a quarter of spring runway looks; straight and midi lengths led.",
+      "howToWear": "A straight midi skirt with a tee and trainers, or with a bomber or blazer and flats.",
+      "colors": [], "types": ["Skirt", "Midi skirt"], "patterns": [], "match": "any",
+      "src": ["t6", "t9", "t34", "t39"]
+    },
+    {
+      "id": "t57", "name": "Trench as the outfit", "kind": "styling", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Spring trenches are buttoned and belted as the whole outfit, with little showing beneath.",
+      "howToWear": "Belt a trench over a slip skirt or shorts so it reads as a dress, then add a strong shoe.",
+      "colors": [], "types": ["Trench coat"], "patterns": [], "match": "any",
+      "src": ["t39", "t33", "t38"]
+    },
+    {
+      "id": "t58", "name": "Florals in full bloom", "kind": "pattern", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Florals are spring's top print and rising, now 3D, garlanded or embroidered as well as printed.",
+      "howToWear": "A floral skirt with a plain knit and trainers, or a floral shirt under a denim jacket.",
+      "colors": [], "types": [], "patterns": ["FLORAL"], "match": "any",
+      "src": ["t6", "t8", "t37", "t38"]
+    },
+    {
+      "id": "t59", "name": "Stripes on stripes", "kind": "pattern", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Stripes are spring's second print and rose in New York, often clashed in more than one width.",
+      "howToWear": "A striped shirt with striped trousers in a different width; keep the colours in one family.",
+      "colors": [], "types": [], "patterns": ["STRIPE"], "match": "any",
+      "src": ["t6", "t9", "t23"]
+    },
+    {
+      "id": "t60", "name": "Gingham and picnic checks", "kind": "pattern", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Checks move into spring as gingham, handkerchief checks and plaid prep separates.",
+      "howToWear": "A gingham shirt with white jeans, or a checked skirt with a plain tee.",
+      "colors": [], "types": [], "patterns": ["CHECK"], "match": "any",
+      "src": ["t6", "t35", "t37"]
+    },
+    {
+      "id": "t61", "name": "Polos and prep", "kind": "item", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Prep returns for spring: knit polos, rugby shirts, argyle knits and plaid separates.",
+      "howToWear": "A knit polo tucked into tailored trousers or a skirt, with loafers.",
+      "colors": [], "types": ["Polo"], "patterns": [], "match": "any",
+      "src": ["t37", "t40", "t21"]
+    },
+    {
+      "id": "t62", "name": "Soft linen tailoring", "kind": "fabric", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Spring suiting goes soft and unstructured in linen, light cotton and silk blends.",
+      "howToWear": "A linen blazer with matching trousers and a tee, or split the suit and wear the jacket with jeans.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t40", "t42", "t41"]
+    },
+    {
+      "id": "t63", "name": "Graphic and slogan tees", "kind": "item", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Playful graphics, slogans and poster prints return to tees, skirts and denim for spring.",
+      "howToWear": "A graphic tee under a blazer with a midi skirt or tailored trousers.",
+      "colors": [], "types": ["T-shirt"], "patterns": ["GRAPHIC"], "match": "all",
+      "src": ["t37", "t21"]
+    },
+    {
+      "id": "t64", "name": "Sleeveless tops", "kind": "item", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Sleeveless tops were the fastest-rising key item in Milan for spring, worn with skirts and tailoring.",
+      "howToWear": "A fine-knit or crisp sleeveless top tucked into a midi skirt or tailored trousers.",
+      "colors": [], "types": ["Tank top"], "patterns": [], "match": "any",
+      "src": ["t8"]
+    },
+    {
+      "id": "t65", "name": "Bubble and balloon volume", "kind": "silhouette", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Bubble hems, balloon skirts and puffed shapes bring volume back for spring.",
+      "howToWear": "Balance a balloon skirt or puffed top with a fitted knit or slim trousers.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t35", "t38", "t39"]
+    },
+    {
+      "id": "t66", "name": "Lowered waists", "kind": "silhouette", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Waists drop: low-rise trousers, hip-slung skirts and dropped-waist dresses rose for spring.",
+      "howToWear": "Wear trousers or a skirt on the hips with a belt and a short knit or tucked-in tee.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t39", "t6"]
+    },
+    {
+      "id": "t67", "name": "Lace and lingerie details", "kind": "fabric", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Lace, sheer blouses and lingerie-inspired details lead spring tops, and lace pieces are selling now.",
+      "howToWear": "A lace-trimmed cami under a blazer, or a sheer blouse over a plain vest with jeans.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t27", "t34", "t39"]
+    },
+    {
+      "id": "t68", "name": "Hand-made knits", "kind": "fabric", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Knits with visible stitching, loose threads and hand-finished texture sell the human touch for spring.",
+      "howToWear": "A textured hand-knit over a slip skirt, or with relaxed jeans and loafers.",
+      "colors": [], "types": [], "patterns": [], "match": "any",
+      "src": ["t39", "t42", "t43", "t35"]
+    },
+    {
+      "id": "t69", "name": "Belts as the statement", "kind": "item", "season": "SS27",
+      "from": "2027-03-01", "to": "2027-08-31", "status": "rising",
+      "summary": "Belts move centre stage for spring: doubled up, chain-trimmed or slung low on the hips.",
+      "howToWear": "A statement belt over a long knit or shirt dress, or two thin belts on jeans.",
+      "colors": [], "types": ["Belt"], "patterns": [], "match": "any",
+      "src": ["t34", "t35", "t13"]
+    }
+  ],
+  "fading": [
+    {
+      "name": "All-beige quiet luxury",
+      "summary": "The beige-on-beige uniform is giving way to colour and ornament; beige fell in runway counts and buyers want joy.",
+      "colors": ["BEIGE"], "types": [], "src": ["t31", "t34", "t11", "t27"]
+    },
+    {
+      "name": "Palazzo and very loose trousers",
+      "summary": "Loose and palazzo trousers dropped hard on the spring runways as straight skirts and tailored trousers took over.",
+      "colors": [], "types": [], "src": ["t6", "t7", "t8"]
+    },
+    {
+      "name": "Chinos as the default trouser",
+      "summary": "Chinos fell from about 7% to under 2% of spring runway looks; tailored wool trousers replace them.",
+      "colors": [], "types": ["Chinos"], "src": ["t6", "t7"]
+    },
+    {
+      "name": "Mini dresses",
+      "summary": "Mini dresses halved on the spring runways as midi skirts, maxi dresses and dropped waists rose.",
+      "colors": [], "types": [], "src": ["t6", "t9"]
+    },
+    {
+      "name": "Barrel-leg jeans",
+      "summary": "Searches peaked in April and have halved; the relaxed straight leg is now searched three times as often.",
+      "colors": [], "types": [], "src": ["t29"]
+    },
+    {
+      "name": "Mom jeans and flares",
+      "summary": "Searches are falling (mom jeans down 10%, flares down 20%) as relaxed straight legs lead denim.",
+      "colors": [], "types": [], "src": ["t29"]
+    },
+    {
+      "name": "Athleisure as an outfit",
+      "summary": "Streetwear's grip is loosening as tailoring and the defined waist return; keep joggers and hoodies for rest days.",
+      "colors": [], "types": ["Joggers", "Hoodie"], "src": ["t35", "t48"]
+    },
+    {
+      "name": "Cargo trousers",
+      "summary": "Years of saturation and the move to tailoring leave cargos looking dated outside of hiking and travel.",
+      "colors": [], "types": ["Cargo trousers"], "src": ["t48", "t6"]
+    },
+    {
+      "name": "Sheer-everything layering",
+      "summary": "Sheer looks fell on the Milan spring runway despite heavy press; lace and lingerie details replace full sheer.",
+      "colors": [], "types": [], "src": ["t8"]
+    }
+  ],
+  "classics": [
+    {
+      "name": "Trench coat",
+      "summary": "Fits every season's story, from autumn utility to spring's trench-as-dress, and works over anything.",
+      "colors": [], "types": ["Trench coat"], "src": ["t18", "t39", "t33"]
+    },
+    {
+      "name": "Navy blazer",
+      "summary": "The blazer is a top runway key item every season; navy dresses up jeans and down tailoring.",
+      "colors": ["NAVY"], "types": ["Blazer"], "src": ["t7", "t29", "t40"]
+    },
+    {
+      "name": "Tailored trousers",
+      "summary": "The most-shown key item for autumn and still core for spring; a good pair outlasts every leg-width cycle.",
+      "colors": [], "types": ["Trousers"], "src": ["t2", "t6"]
+    },
+    {
+      "name": "Straight mid-blue jeans",
+      "summary": "Fits shift between barrel, flare and skinny, but the straight leg in mid-blue is denim's steady centre.",
+      "colors": ["DENIM"], "types": ["Jeans"], "src": ["t29", "t18"]
+    },
+    {
+      "name": "Crisp white shirt",
+      "summary": "Poplin keeps rising on the runway; a white shirt layers under knits and suits all year.",
+      "colors": ["WHITE"], "types": ["Shirt"], "src": ["t2", "t40"]
+    },
+    {
+      "name": "Fine knit and roll-neck",
+      "summary": "Crew-necks and roll-necks in merino or cashmere anchor every autumn, whatever the trend colour.",
+      "colors": [], "types": ["Knit sweater", "Turtleneck"], "src": ["t18", "t13"]
+    },
+    {
+      "name": "Camel coat",
+      "summary": "Camel stays in the top runway colours season after season, and a wool coat in it goes over everything.",
+      "colors": ["CAMEL"], "types": ["Coat"], "src": ["t6", "t23", "t18"]
+    },
+    {
+      "name": "White leather trainers",
+      "summary": "Clean, low trainers keep topping shopping charts; they suit tailoring as easily as denim.",
+      "colors": ["WHITE"], "types": ["Sneakers"], "src": ["t27", "t28"]
+    },
+    {
+      "name": "Loafers",
+      "summary": "Loafers bridge smart and casual and return on runways season after season in new shapes.",
+      "colors": [], "types": ["Loafers"], "src": ["t26", "t41"]
+    },
+    {
+      "name": "Breton stripe top",
+      "summary": "Stripes rank among the top three runway prints every season; the navy-and-white stripe never dates.",
+      "colors": ["NAVY", "WHITE"], "types": ["Long-sleeve top"], "src": ["t2", "t6"]
+    },
+    {
+      "name": "Leather jacket",
+      "summary": "Leather is one of the most-used runway fabrics; a plain black or brown jacket adds edge for decades.",
+      "colors": ["BLACK", "BROWN"], "types": ["Leather jacket"], "src": ["t16", "t13"]
+    },
+    {
+      "name": "Denim jacket",
+      "summary": "Worn as a trucker over knits in winter and as double denim in spring, it suits every season.",
+      "colors": [], "types": ["Denim jacket"], "src": ["t13", "t30"]
+    },
+    {
+      "name": "Black dress",
+      "summary": "Black is the runway's number-one colour every season; a simple black dress goes from desk to dinner.",
+      "colors": ["BLACK"], "types": ["Dress"], "src": ["t11", "t2"]
+    },
+    {
+      "name": "Cashmere cardigan",
+      "summary": "Works as a layer or a light jacket and returns every autumn, whether chunky or fine.",
+      "colors": [], "types": ["Cardigan"], "src": ["t13", "t18"]
+    },
+    {
+      "name": "Ankle and Chelsea boots",
+      "summary": "Sleek ankle boots finish jeans, trousers and dresses alike, whatever the season's statement boot.",
+      "colors": [], "types": ["Ankle boots", "Chelsea boots"], "src": ["t13"]
+    },
+    {
+      "name": "White T-shirt",
+      "summary": "The base under blazers, knits and denim; even the most pared-back runways build on it.",
+      "colors": ["WHITE"], "types": ["T-shirt"], "src": ["t40"]
+    },
+    {
+      "name": "Ballet flats",
+      "summary": "A decades-old shape that keeps returning to the top of shopping charts.",
+      "colors": [], "types": ["Flats"], "src": ["t27", "t13"]
+    },
+    {
+      "name": "Simple watch",
+      "summary": "A slim classic watch made the hottest-products list for the first time in years; it never dates.",
+      "colors": [], "types": ["Watch"], "src": ["t27"]
+    }
+  ],
+  "colourOfTheYear": [
+    {
+      "name": "Cloud Dancer (11-4201)", "by": "Pantone", "year": 2026, "nearest": "WHITE",
+      "summary": "A soft, airy white and the first white ever picked; a calm base for crisp shirts, knits and tonal white looks.",
+      "src": ["t47"]
+    },
+    {
+      "name": "Transformative Teal", "by": "WGSN x Coloro", "year": 2026, "nearest": "TEAL",
+      "summary": "A blend of dark blue and aquatic green; a deep teal knit or coat is an easy way to wear it.",
+      "src": ["t46"]
+    },
+    {
+      "name": "Luminous Blue (125-28-38)", "by": "WGSN x Coloro", "year": 2027, "nearest": "BLUE",
+      "summary": "A vivid lapis-to-cobalt blue heading the spring 2027 palette with orange, pink, green and clay.",
+      "src": ["t45"]
+    }
+  ]
+}

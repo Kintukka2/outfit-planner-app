@@ -19,7 +19,6 @@ mlkitSubjectSegmentation = "16.0.0-beta1"
 mlkitImageLabeling = "17.0.9"
 playServicesLocation = "21.3.0"
 junit = "4.13.2"
-anthropic = "2.34.0"
 robolectric = "4.14.1"
 roborazzi = "1.39.0"
 androidxTestCore = "1.6.1"
@@ -58,7 +57,6 @@ mlkit-subject-segmentation = { module = "com.google.android.gms:play-services-ml
 mlkit-image-labeling = { module = "com.google.mlkit:image-labeling", version.ref = "mlkitImageLabeling" }
 play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 junit = { module = "junit:junit", version.ref = "junit" }
-anthropic-java = { module = "com.anthropic:anthropic-java", version.ref = "anthropic" }
 robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 roborazzi = { module = "io.github.takahirom.roborazzi:roborazzi", version.ref = "roborazzi" }
 roborazzi-compose = { module = "io.github.takahirom.roborazzi:roborazzi-compose", version.ref = "roborazzi" }

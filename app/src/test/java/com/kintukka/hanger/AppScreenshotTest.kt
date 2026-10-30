@@ -146,6 +146,8 @@ class AppScreenshotTest {
 
         tab("Insights")
         shot("15_insights")
+        compose.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("Style check"))
+        shot("16_insights_style")
         compose.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("Most worn"))
         shot("16_insights_more")
 
@@ -153,6 +155,26 @@ class AppScreenshotTest {
         scrollTop()
         compose.onNodeWithContentDescription("Settings").performClick(); settle()
         shot("17_settings")
+        back()
+
+        // The built-in style guide (replaces the old AI chat): every tab renders from the bundled research.
+        scrollTop()
+        compose.onNodeWithContentDescription("Style guide").performClick(); settle()
+        shot("18_guide_for_you")
+        for ((label, name) in listOf("Colours" to "19_guide_colours", "Formulas" to "20_guide_formulas", "Trends" to "21_guide_trends", "Guide" to "22_guide_rules")) {
+            compose.onNodeWithTag("guide-tab-$label").performClick(); settle()
+            shot(name)
+        }
+        compose.onNodeWithTag("guide-tab-Formulas").performClick(); settle()
+        compose.onAllNodes(hasText("Try it") and hasClickAction()).onFirst().performClick(); settle()
+        shot("23_guide_formula_in_builder")
+        back(); back()
+
+        // Style notes on an item come from the guide too.
+        tab("Closet")
+        clickText("Breton stripe top")
+        compose.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("Style notes"))
+        shot("24_item_style_notes")
     }
 }
 

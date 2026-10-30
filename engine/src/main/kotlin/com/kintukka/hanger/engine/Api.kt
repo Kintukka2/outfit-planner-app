@@ -92,8 +92,10 @@ object OutfitEvaluator {
         weather: WeatherContext? = null,
         occasion: Occasion? = null,
         affinity: AffinityModel = AffinityModel(),
+        /** Enables "on trend" notes for trends live on this date. */
+        date: LocalDate? = null,
     ): OutfitEvaluation {
-        val result = Evaluator.run(items, weather?.let { WeatherCtx.of(it) }, occasion, affinity, explain = true)
+        val result = Evaluator.run(items, weather?.let { WeatherCtx.of(it) }, occasion, affinity, explain = true, date = date)
         return OutfitEvaluation(result.score, result.notes.map { it.text }, result.warnings.map { it.text })
     }
 }
@@ -141,4 +143,52 @@ object CapsuleAnalyzer {
 
     /** How many extra valid outfits [candidate] would unlock if added to [closet]. */
     fun wishlistImpact(closet: List<Garment>, candidate: Garment): Int = Capsule.wishlistImpact(closet, candidate)
+}
+
+/** A formula the closet can make right now, with the pieces that make it. */
+data class FormulaMatch(val formula: Formula, val itemIds: List<Long>)
+
+/** A formula one piece away: [missing] is the slot nothing in the closet fills. */
+data class FormulaGap(val formula: Formula, val missing: FormulaSlot, val itemIds: List<Long>)
+
+data class FormulaCoverage(val ready: List<FormulaMatch>, val oneAway: List<FormulaGap>)
+
+/** A closet check from the guide that fired, with its message filled in. */
+data class ClosetInsight(val check: ClosetCheck, val value: Double, val message: String)
+
+/** The few insights worth showing at once: the top fixes plus one positive, so the screen never nags. */
+fun List<ClosetInsight>.headline(max: Int = 4): List<ClosetInsight> {
+    val fixes = filter { !it.check.positive }
+    val praise = firstOrNull { it.check.positive }
+    return fixes.take(if (praise != null) max - 1 else max) + listOfNotNull(praise)
+}
+
+/** Everything the built-in style guide can say about a closet or an outfit. */
+object StyleGuide {
+    val knowledge: StyleKnowledge get() = StyleKnowledge.bundled
+
+    /** The proven formula an outfit follows, if any. */
+    fun formulaFor(items: List<Garment>, occasion: Occasion? = null): Formula? = Formulas.match(items, occasion)
+
+    /** Formulas the closet can make, and those one piece away. */
+    fun formulaCoverage(closet: List<Garment>): FormulaCoverage = Formulas.coverage(closet)
+
+    fun closetMetrics(closet: List<Garment>, wearLog: List<WearRecord>, today: LocalDate, wishlist: Int = 0): Map<String, Double> =
+        ClosetChecks.metrics(closet, wearLog, today, wishlist)
+
+    /** The guide's closet checks that fire for this closet: fixes first (most useful first), then positives. */
+    fun closetInsights(
+        closet: List<Garment>,
+        wearLog: List<WearRecord>,
+        today: LocalDate,
+        wishlist: Int = 0,
+        currency: String = "£",
+    ): List<ClosetInsight> = ClosetChecks.run(ClosetChecks.metrics(closet, wearLog, today, wishlist), currency)
+
+    /** Live trends and the closet pieces that already speak to each. */
+    fun trendPieces(closet: List<Garment>, today: LocalDate): List<Pair<Trend, List<Garment>>> =
+        knowledge.liveTrends(today).map { t -> t to closet.filter(t::matchesPiece) }
+
+    /** Garment types the guide advises against for [occasion]. */
+    fun avoidsFor(occasion: Occasion): List<String> = knowledge.occasions[occasion]?.avoid.orEmpty()
 }

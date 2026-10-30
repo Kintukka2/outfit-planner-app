@@ -292,34 +292,10 @@ internal object Harmony {
         }
     }
 
-    /** Pairings stylists call classics. */
-    private val classicPairs: List<Pair<FashionColor, FashionColor>> = listOf(
-        FashionColor.NAVY to FashionColor.CAMEL,
-        FashionColor.BLACK to FashionColor.WHITE,
-        FashionColor.NAVY to FashionColor.WHITE,
-        FashionColor.DENIM to FashionColor.WHITE,
-        FashionColor.CAMEL to FashionColor.BLACK,
-        FashionColor.CAMEL to FashionColor.WHITE,
-        FashionColor.OLIVE to FashionColor.CREAM,
-        FashionColor.OLIVE to FashionColor.RUST,
-        FashionColor.BURGUNDY to FashionColor.NAVY,
-        FashionColor.BROWN to FashionColor.LIGHT_BLUE,
-        FashionColor.RUST to FashionColor.DENIM,
-        FashionColor.KHAKI to FashionColor.NAVY,
-        FashionColor.MUSTARD to FashionColor.NAVY,
-        FashionColor.NAVY to FashionColor.RED,
-        FashionColor.CHARCOAL to FashionColor.LIGHT_BLUE,
-        FashionColor.GREY to FashionColor.PINK,
-        FashionColor.DENIM to FashionColor.CAMEL,
-        FashionColor.BEIGE to FashionColor.WHITE,
-    )
+    /** The researched colour pairings and palettes from the built-in style guide. */
+    private val guide get() = StyleKnowledge.bundled
 
-    /** Debated pairings that earn a small penalty. */
-    private val clashPairs: List<Triple<FashionColor, FashionColor, Double>> = listOf(
-        Triple(FashionColor.NAVY, FashionColor.BLACK, 0.04),
-        Triple(FashionColor.BROWN, FashionColor.BLACK, 0.02),
-        Triple(FashionColor.GOLD, FashionColor.SILVER, 0.02),
-    )
+    private val paletteMasks: List<Pair<Int, Palette>> get() = guide.paletteMasks
 
     /** Artist's-wheel complements that sit outside the 150–210° hue window of this palette. */
     private val extraComplements: Set<Set<HueFamily>> = setOf(setOf(HueFamily.YELLOW, HueFamily.PURPLE))
@@ -368,8 +344,51 @@ internal object Harmony {
         return 360.0 - maxGap
     }
 
-    fun classicPair(mask: Int): Pair<FashionColor, FashionColor>? =
-        classicPairs.firstOrNull { has(mask, it.first) && has(mask, it.second) }
+    /** Guide verdicts on every colour pair in [mask], strongest first. */
+    fun guidePairs(mask: Int): List<ColorPair> {
+        val present = colors.filter { has(mask, it) }
+        val out = ArrayList<ColorPair>()
+        for (i in present.indices) for (j in i + 1 until present.size) guide.colorPair(present[i], present[j])?.let(out::add)
+        return out.sortedByDescending { kotlin.math.abs(it.score) * 10 + it.score }
+    }
+
+    /** Sum of the guide's adjustments for the colour pairs in [mask] (allocation-free). */
+    private fun guideAdjustment(mask: Int): Double {
+        val k = guide
+        val table = k.colorTable
+        val n = colors.size
+        var plus = 0.0
+        var minus = 0.0
+        var outer = mask
+        while (outer != 0) {
+            val i = Integer.numberOfTrailingZeros(outer)
+            outer = outer and (outer - 1)
+            var inner = outer
+            while (inner != 0) {
+                val j = Integer.numberOfTrailingZeros(inner)
+                inner = inner and (inner - 1)
+                when (table[i * n + j].toInt()) {
+                    2 -> plus += 0.03
+                    1 -> plus += 0.015
+                    -1 -> minus += 0.05
+                    -2 -> minus += 0.12
+                }
+            }
+        }
+        for ((pm, _) in k.paletteMasks) if (mask and pm == pm) { plus += 0.02; break }
+        return minOf(plus, 0.06) - minus
+    }
+
+    /** Whether the guide rates some pairing between the two hue families' colours in [mask] as good. */
+    private fun guideBlesses(mask: Int, f1: HueFamily, f2: HueFamily): Boolean {
+        for (a in colors) {
+            if (!has(mask, a) || familyOf[a.ordinal] != f1) continue
+            for (b in colors) if (has(mask, b) && familyOf[b.ordinal] == f2 && guide.colorScore(a, b) > 0) return true
+        }
+        return false
+    }
+
+    fun palette(mask: Int): Palette? = paletteMasks.firstOrNull { (pm, _) -> mask and pm == pm }?.second
 
     fun hasNeutral(mask: Int): Boolean {
         var m = mask
@@ -406,7 +425,7 @@ internal object Harmony {
                 when (relationOf(fams[0], fams[1])) {
                     Relation.ANALOGOUS -> 0.82
                     Relation.COMPLEMENTARY -> 0.80
-                    else -> 0.62
+                    else -> if (guideBlesses(mask, fams[0], fams[1])) 0.80 else 0.62
                 }
             }
             3 -> {
@@ -416,8 +435,7 @@ internal object Harmony {
             else -> maxOf(0.15, 0.30 - 0.05 * (nf - 4))
         }
         if (nf > 0 && neutral) s += if (nf <= 3) 0.05 else 0.03
-        if (classicPair(mask) != null) s += 0.02
-        for ((a, b, penalty) in clashPairs) if (has(mask, a) && has(mask, b)) s -= penalty
+        s += guideAdjustment(mask)
         val distinct = Integer.bitCount(mask)
         if (distinct > 5) s -= 0.03 * (distinct - 5)
         return s.coerceIn(0.0, 1.0)
@@ -428,9 +446,20 @@ internal object Harmony {
         if (mask == 0) return
         val fams = families(mask)
         val neutral = hasNeutral(mask)
-        classicPair(mask)?.let { (a, b) ->
-            notes += Note("${a.label} and ${b.label.lowercase()} are a classic pairing", 0.92)
-        }
+        // Talk about the pairing on the main pieces (top, bottoms, dress) before shoes and accessories.
+        fun weight(c: FashionColor): Int = items.maxOfOrNull { g ->
+            when {
+                g.colors.firstOrNull() != c -> if (c in g.colors) 1 else 0
+                g.category == Category.TOP || g.category == Category.BOTTOM || g.category == Category.ONE_PIECE -> 4
+                g.category == Category.LAYER || g.category == Category.OUTERWEAR -> 3
+                g.category == Category.SHOES -> 2
+                else -> 1
+            }
+        } ?: 0
+        val verdicts = guidePairs(mask).sortedWith(compareByDescending<ColorPair> { kotlin.math.abs(it.score) }.thenByDescending { weight(it.a) + weight(it.b) })
+        verdicts.firstOrNull { it.score > 0 }?.let { notes += Note(it.why, if (it.score == 2) 0.92 else 0.8) }
+        for (v in verdicts.filter { it.score < 0 }.take(2)) warnings += Note(v.why, if (v.score == -2) 0.78 else 0.5)
+        palette(mask)?.let { notes += Note("${it.name} palette: ${it.why.replaceFirstChar(Char::lowercase)}", 0.72) }
         when (fams.size) {
             0 -> notes += Note("An easy all-neutral palette that always works", 0.78)
             1 -> {
@@ -456,7 +485,7 @@ internal object Harmony {
                         notes += Note("${a.label} and ${b.label.lowercase()} sit side by side on the colour wheel", 0.82)
                     Relation.COMPLEMENTARY ->
                         notes += Note("${a.label} and ${b.label.lowercase()} make a confident complementary pair", 0.82)
-                    else -> if (!neutral) {
+                    else -> if (!neutral && !guideBlesses(mask, fams[0], fams[1])) {
                         warnings += Note("${a.label} with ${b.label.lowercase()} is a bold mix — a neutral piece would calm it", 0.45)
                     }
                 }
@@ -467,9 +496,6 @@ internal object Harmony {
                 warnings += Note("Three strong colours compete — swap one for a neutral", 0.6)
             }
             else -> warnings += Note("${Words.count(fams.size)} colours are fighting for attention — anchor with a neutral", 0.72)
-        }
-        if (has(mask, FashionColor.NAVY) && has(mask, FashionColor.BLACK)) {
-            warnings += Note("Navy with black is a debated pairing — keep the contrast clear", 0.2)
         }
     }
 }

@@ -262,6 +262,7 @@ fun ItemDetailScreen(navController: NavHostController, id: Long) {
                     if (e.notes.isNotBlank()) LabeledValue("Notes", e.notes)
                 }
             }
+            item(key = "style-notes") { com.kintukka.hanger.ui.guide.StyleNotes(e) }
             if (state.outfits.isNotEmpty()) {
                 item(key = "outfits") {
                     Column {

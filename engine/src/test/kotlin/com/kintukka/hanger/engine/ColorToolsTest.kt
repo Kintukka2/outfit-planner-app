@@ -159,7 +159,7 @@ class ColorToolsTest {
     }
 
     @Test
-    fun harmonyPenalisesDebatedClashesSlightly() {
+    fun harmonyPenalisesDebatedClashesSlightly() = TestGuide.use {
         val navyWhite = ColorTools.harmony(listOf(FashionColor.NAVY, FashionColor.WHITE))
         val navyBlack = ColorTools.harmony(listOf(FashionColor.NAVY, FashionColor.BLACK))
         val brownBlack = ColorTools.harmony(listOf(FashionColor.BROWN, FashionColor.BLACK))
